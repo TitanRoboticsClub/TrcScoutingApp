@@ -4,12 +4,12 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import com.travijuu.numberpicker.library.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class TeleOpFragment extends AbstractPageFragment
 {
@@ -27,45 +27,45 @@ public class TeleOpFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_teleop_page, container, false);
-        lowerCellsCounter = (NumberPicker) findViewById(R.id.lowerCellsCounter);
-        outerCellsCounter = (NumberPicker) findViewById(R.id.outerCellsCounter);
-        innerCellsCounter = (NumberPicker) findViewById(R.id.innerCellsCounter);
-        missedCellsCounter = (NumberPicker) findViewById(R.id.missedCellsCounter);
-        shieldGeneratorStage1 = (CheckBox) findViewById(R.id.shieldGeneratorStage1);
-        shieldGeneratorStage2 = (CheckBox) findViewById(R.id.shieldGeneratorStage2);
-        shieldGeneratorStage3 = (CheckBox) findViewById(R.id.shieldGeneratorStage3);
-        ctrlPanelRotationCheckBox = (CheckBox) findViewById(R.id.ctrlPanelRotationCheckBox);
-        ctrlPanelPositionCheckBox = (CheckBox) findViewById(R.id.ctrlPanelPositionCheckBox);
+        lowerCellsCounter = (NumberPicker) view.findViewById(R.id.lowerCellsCounter);
+        outerCellsCounter = (NumberPicker) view.findViewById(R.id.outerCellsCounter);
+        innerCellsCounter = (NumberPicker) view.findViewById(R.id.innerCellsCounter);
+        missedCellsCounter = (NumberPicker) view.findViewById(R.id.missedCellsCounter);
+        shieldGeneratorStage1 = (CheckBox) view.findViewById(R.id.shieldGeneratorStage1);
+        shieldGeneratorStage2 = (CheckBox) view.findViewById(R.id.shieldGeneratorStage2);
+        shieldGeneratorStage3 = (CheckBox) view.findViewById(R.id.shieldGeneratorStage3);
+        ctrlPanelRotationCheckBox = (CheckBox) view.findViewById(R.id.ctrlPanelRotationCheckBox);
+        ctrlPanelPositionCheckBox = (CheckBox) view.findViewById(R.id.ctrlPanelPositionCheckBox);
     }
 
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("teleopLower") {
+        if (fieldData.has("teleopLower")) {
             UIUtils.setNumberPickerVal(lowerCellsCounter, fieldData.getInt("teleopLower"));
         }
-        if (fieldData.has("teleopOuter") {
+        if (fieldData.has("teleopOuter")) {
             UIUtils.setNumberPickerVal(outerCellsCounter, fieldData.getInt("teleopOuter"));
         }
-        if (fieldData.has("teleopInner") {
+        if (fieldData.has("teleopInner")) {
             UIUtils.setNumberPickerVal(innerCellsCounter, fieldData.getInt("teleopInner"));
         }
-        if (fieldData.has("teleopMissed") {
+        if (fieldData.has("teleopMissed")) {
             UIUtils.setNumberPickerVal(missedCellsCounter, fieldData.getInt("teleopMissed"));
         }
-        if (fieldData.has("shieldStage1") {
+        if (fieldData.has("shieldStage1")) {
             UIUtils.setCheckbox(shieldGeneratorStage1, fieldData.getBoolean("shieldStage1"));
         }
-        if (fieldData.has("shieldStage2") {
+        if (fieldData.has("shieldStage2")) {
             UIUtils.setCheckbox(shieldGeneratorStage2, fieldData.getBoolean("shieldStage2"));
         }
-        if (fieldData.has("shieldStage3") {
+        if (fieldData.has("shieldStage3")) {
             UIUtils.setCheckbox(shieldGeneratorStage3, fieldData.getBoolean("shieldStage3"));
         }
-        if (fieldData.has("controlPanelRotated") {
+        if (fieldData.has("controlPanelRotated")) {
             UIUtils.setCheckbox(ctrlPanelRotationCheckBox, fieldData.getBoolean("controlPanelRotated"));
         }
-        if (fieldData.has("controlPanelPositioned") {
+        if (fieldData.has("controlPanelPositioned")) {
             UIUtils.setCheckbox(ctrlPanelPositionCheckBox, fieldData.getBoolean("controlPanelPositioned"));
         }
     }

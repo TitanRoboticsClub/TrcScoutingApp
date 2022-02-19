@@ -4,12 +4,12 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import com.travijuu.numberpicker.library.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class EndgameFragment extends AbstractPageFragment
 {
@@ -23,29 +23,29 @@ public class EndgameFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_endgame_page, container, false);
-        endgameparkedCB = (CheckBox) findViewById(R.id.endgameparkedCB);
-        endgamehangingCB = (CheckBox) findViewById(R.id.endgamehangingCB);
-        endgameSupportingMechanismCB = (CheckBox) findViewById(R.id.endgameSupportingMechanismCB);
-        endgameLevelCB = (CheckBox) findViewById(R.id.endgameLevelCB);
-        gameNotes = (EditText) findViewById(R.id.gameNotes);
+        endgameparkedCB = (CheckBox) view.findViewById(R.id.endgameparkedCB);
+        endgamehangingCB = (CheckBox) view.findViewById(R.id.endgamehangingCB);
+        endgameSupportingMechanismCB = (CheckBox) view.findViewById(R.id.endgameSupportingMechanismCB);
+        endgameLevelCB = (CheckBox) view.findViewById(R.id.endgameLevelCB);
+        gameNotes = (EditText) view.findViewById(R.id.gameNotes);
     }
 
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("generatorSwitchParked") {
+        if (fieldData.has("generatorSwitchParked")) {
             UIUtils.setCheckbox(endgameparkedCB, fieldData.getBoolean("generatorSwitchParked"));
         }
-        if (fieldData.has("generatorSwitchHanging") {
+        if (fieldData.has("generatorSwitchHanging")) {
             UIUtils.setCheckbox(endgamehangingCB, fieldData.getBoolean("generatorSwitchHanging"));
         }
-        if (fieldData.has("generatorSwitchSupportingMechanism") {
+        if (fieldData.has("generatorSwitchSupportingMechanism")) {
             UIUtils.setCheckbox(endgameSupportingMechanismCB, fieldData.getBoolean("generatorSwitchSupportingMechanism"));
         }
-        if (fieldData.has("generatorSwitchLevel") {
+        if (fieldData.has("generatorSwitchLevel")) {
             UIUtils.setCheckbox(endgameLevelCB, fieldData.getBoolean("generatorSwitchLevel"));
         }
-        if (fieldData.has("notes") {
+        if (fieldData.has("notes")) {
             UIUtils.setEditTextValue(gameNotes, fieldData.getString("notes"));
         }
     }

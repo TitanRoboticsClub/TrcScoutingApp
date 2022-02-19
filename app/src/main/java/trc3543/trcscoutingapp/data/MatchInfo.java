@@ -26,29 +26,21 @@ public class MatchInfo implements Serializable
     @SerializedName("alliance")
     public String alliance;
 
-    @SerializedName("matchType")
-    public String matchType;
+    @SerializedName("matchtype")
+    public String matchtype;
 
     @SerializedName("notes")
     public String notes;
 
-    // autonomous variables.
     @SerializedName("initLineCrossed")
     public Boolean initLineCrossed;
 
     @SerializedName("autonomousLower")
     public Integer autonomousLower;
 
-    @SerializedName("autonomousOuter")
-    public Integer autonomousOuter;
-
-    @SerializedName("autonomousInner")
-    public Integer autonomousInner;
-
     @SerializedName("autonomousMissed")
     public Integer autonomousMissed;
 
-    // teleop variables.
     @SerializedName("teleopLower")
     public Integer teleopLower;
 
@@ -76,7 +68,6 @@ public class MatchInfo implements Serializable
     @SerializedName("controlPanelPositioned")
     public Boolean controlPanelPositioned;
 
-    // endgame variables.
     @SerializedName("generatorSwitchParked")
     public Boolean generatorSwitchParked;
 
@@ -88,6 +79,14 @@ public class MatchInfo implements Serializable
 
     @SerializedName("generatorSwitchLevel")
     public Boolean generatorSwitchLevel;
+
+    @SerializedName("autonomousOuter")
+    public Integer autonomousOuter;
+
+    @SerializedName("autonomousInner")
+    public Integer autonomousInner;
+
+
 
     public JSONObject toJSONObject() throws JSONException
     {
@@ -135,34 +134,12 @@ public class MatchInfo implements Serializable
 
     public String getDisplayString()
     {
-        return String.format("Match # %d (%s) Team: %d", matchNumber, matchType, teamNumber);
+        return String.format("Match # %d (%s) Team: %d", matchNumber, matchtype, teamNumber);
     }
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,
-                teamNumber,
-                matchType,
-                alliance,
-                initLineCrossed,
-                autonomousLower,
-                autonomousOuter,
-                autonomousInner,
-                autonomousMissed,
-                teleopLower,
-                teleopOuter,
-                teleopInner,
-                teleopMissed,
-                shieldStage1,
-                shieldStage2,
-                shieldStage3,
-                controlPanelRotated,
-                controlPanelPositioned,
-                generatorSwitchParked,
-                generatorSwitchHanging,
-                generatorSwitchSupportingMechanism,
-                generatorSwitchLevel,
-                notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchtype,alliance,initLineCrossed,autonomousLower,autonomousOuter,autonomousInner,autonomousMissed,teleopLower,teleopOuter,teleopInner,teleopMissed,shieldStage1,shieldStage2,shieldStage3,controlPanelRotated,controlPanelPositioned,generatorSwitchParked,generatorSwitchHanging,generatorSwitchSupportingMechanism,generatorSwitchLevel,notes);
         return csvOrder.csvString;
     }
 
@@ -198,3 +175,4 @@ public class MatchInfo implements Serializable
         }
     }
 }
+

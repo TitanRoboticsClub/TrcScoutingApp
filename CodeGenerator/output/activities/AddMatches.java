@@ -44,6 +44,7 @@ import trc3543.trcscoutingapp.data.AppInfo;
 import trc3543.trcscoutingapp.data.AppSettings;
 import trc3543.trcscoutingapp.threads.AutoSaveThread;
 import trc3543.trcscoutingapp.data.IOUtils;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 import trc3543.trcscoutingapp.data.MatchInfo;
 import trc3543.trcscoutingapp.R;
 
@@ -217,7 +218,7 @@ public class AddMatches extends AppCompatActivity
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener()
         {
             @Override

@@ -2,50 +2,52 @@ package trc3543.trcscoutingapp.fragments;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
+import android.widget.*;
 
-import trc3543.trcscoutingapp.R;
-import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
+
 public class EndgameFragment extends AbstractPageFragment
 {
-    private CheckBox parkedCB;
-    private CheckBox hangingCB;
-    private CheckBox supportingCB;
-    private CheckBox levelCB;
-    private EditText notesET;
-    private Button confirmButton;
+    private CheckBox endgameparkedCB;
+    private CheckBox endgamehangingCB;
+    private CheckBox endgameSupportingMechanismCB;
+    private CheckBox endgameLevelCB;
+    private EditText gameNotes;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_endgame_page, container, false);
-        parkedCB = (CheckBox) view.findViewById(R.id.endgameParkedCB);
-        hangingCB = (CheckBox) view.findViewById(R.id.endgameHangingCB);
-        supportingCB = (CheckBox) view.findViewById(R.id.endgameSupportingMechanismCB);
-        levelCB = (CheckBox) view.findViewById(R.id.endgameLevelCB);
-        notesET = (EditText) view.findViewById(R.id.gameNotes);
-        confirmButton = (Button) view.findViewById(R.id.btnConfirm);
+        endgameparkedCB = (CheckBox) view.findViewById(R.id.endgameparkedCB);
+        endgamehangingCB = (CheckBox) view.findViewById(R.id.endgamehangingCB);
+        endgameSupportingMechanismCB = (CheckBox) view.findViewById(R.id.endgameSupportingMechanismCB);
+        endgameLevelCB = (CheckBox) view.findViewById(R.id.endgameLevelCB);
+        gameNotes = (EditText) view.findViewById(R.id.gameNotes);
     }
 
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("generatorSwitchParked"))
-            UIUtils.setCheckbox(parkedCB, fieldData.getBoolean("generatorSwitchParked"));
-        if (fieldData.has("generatorSwitchHanging"))
-            UIUtils.setCheckbox(hangingCB, fieldData.getBoolean("generatorSwitchHanging"));
-        if (fieldData.has("generatorSwitchSupportingMechanism"))
-            UIUtils.setCheckbox(supportingCB, fieldData.getBoolean("generatorSwitchSupportingMechanism"));
-        if (fieldData.has("generatorSwitchLevel"))
-            UIUtils.setCheckbox(levelCB, fieldData.getBoolean("generatorSwitchLevel"));
-        if (fieldData.has("notes"))
-            UIUtils.setEditTextValue(notesET, fieldData.getString("notes"));
+        if (fieldData.has("generatorSwitchParked")) {
+            UIUtils.setCheckbox(endgameparkedCB, fieldData.getBoolean("generatorSwitchParked"));
+        }
+        if (fieldData.has("generatorSwitchHanging")) {
+            UIUtils.setCheckbox(endgamehangingCB, fieldData.getBoolean("generatorSwitchHanging"));
+        }
+        if (fieldData.has("generatorSwitchSupportingMechanism")) {
+            UIUtils.setCheckbox(endgameSupportingMechanismCB, fieldData.getBoolean("generatorSwitchSupportingMechanism"));
+        }
+        if (fieldData.has("generatorSwitchLevel")) {
+            UIUtils.setCheckbox(endgameLevelCB, fieldData.getBoolean("generatorSwitchLevel"));
+        }
+        if (fieldData.has("notes")) {
+            UIUtils.setEditTextValue(gameNotes, fieldData.getString("notes"));
+        }
     }
 
     @Override
@@ -54,11 +56,11 @@ public class EndgameFragment extends AbstractPageFragment
         try
         {
             JSONObject data = new JSONObject();
-            data.put("generatorSwitchParked", parkedCB.isChecked());
-            data.put("generatorSwitchHanging", hangingCB.isChecked());
-            data.put("generatorSwitchSupportingMechanism", supportingCB.isChecked());
-            data.put("generatorSwitchLevel", levelCB.isChecked());
-            data.put("notes", UIUtils.getEditTextValue(notesET));
+            data.put("generatorSwitchParked", endgameparkedCB.isChecked());
+            data.put("generatorSwitchHanging", endgamehangingCB.isChecked());
+            data.put("generatorSwitchSupportingMechanism", endgameSupportingMechanismCB.isChecked());
+            data.put("generatorSwitchLevel", endgameLevelCB.isChecked());
+            data.put("notes", UIUtils.getEditTextValue(gameNotes));
             return data;
         }
         catch (Exception e)

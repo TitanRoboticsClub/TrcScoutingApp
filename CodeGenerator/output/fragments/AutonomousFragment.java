@@ -4,12 +4,12 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.*;
 
-import com.travijuu.numberpicker.library.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class AutonomousFragment extends AbstractPageFragment
 {
@@ -27,45 +27,45 @@ public class AutonomousFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_autonomous_page, container, false);
-        matchNum = (EditText) findViewById(R.id.matchNum);
-        teamNum = (EditText) findViewById(R.id.teamNum);
-        matchTypeSpinner = (Spinner) findViewById(R.id.matchTypeSpinner);
-        spectatingTeamSpinner = (Spinner) findViewById(R.id.spectatingTeamSpinner);
-        initLineCrossedCB = (CheckBox) findViewById(R.id.initLineCrossedCB);
-        lowerCellsCounter = (NumberPicker) findViewById(R.id.lowerCellsCounter);
-        outerCellsCounter = (NumberPicker) findViewById(R.id.outerCellsCounter);
-        innerCellsCounter = (NumberPicker) findViewById(R.id.innerCellsCounter);
-        missedCellsCounter = (NumberPicker) findViewById(R.id.missedCellsCounter);
+        matchNum = (EditText) view.findViewById(R.id.matchNum);
+        teamNum = (EditText) view.findViewById(R.id.teamNum);
+        matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
+        spectatingTeamSpinner = (Spinner) view.findViewById(R.id.spectatingTeamSpinner);
+        initLineCrossedCB = (CheckBox) view.findViewById(R.id.initLineCrossedCB);
+        lowerCellsCounter = (NumberPicker) view.findViewById(R.id.lowerCellsCounter);
+        outerCellsCounter = (NumberPicker) view.findViewById(R.id.outerCellsCounter);
+        innerCellsCounter = (NumberPicker) view.findViewById(R.id.innerCellsCounter);
+        missedCellsCounter = (NumberPicker) view.findViewById(R.id.missedCellsCounter);
     }
 
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("matchNumber") {
+        if (fieldData.has("matchNumber")) {
             UIUtils.setEditTextValue(matchNum, fieldData.getInt("matchNumber"));
         }
-        if (fieldData.has("teamNumber") {
+        if (fieldData.has("teamNumber")) {
             UIUtils.setEditTextValue(teamNum, fieldData.getInt("teamNumber"));
         }
-        if (fieldData.has("matchtype") {
+        if (fieldData.has("matchtype")) {
             UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchtype"));
         }
-        if (fieldData.has("alliance") {
+        if (fieldData.has("alliance")) {
             UIUtils.setSpinnerByTextValue(spectatingTeamSpinner, fieldData.getString("alliance"));
         }
-        if (fieldData.has("initLineCrossed") {
+        if (fieldData.has("initLineCrossed")) {
             UIUtils.setCheckbox(initLineCrossedCB, fieldData.getBoolean("initLineCrossed"));
         }
-        if (fieldData.has("autonomousLower") {
+        if (fieldData.has("autonomousLower")) {
             UIUtils.setNumberPickerVal(lowerCellsCounter, fieldData.getInt("autonomousLower"));
         }
-        if (fieldData.has("autonomousOuter") {
+        if (fieldData.has("autonomousOuter")) {
             UIUtils.setNumberPickerVal(outerCellsCounter, fieldData.getInt("autonomousOuter"));
         }
-        if (fieldData.has("autonomousInner") {
+        if (fieldData.has("autonomousInner")) {
             UIUtils.setNumberPickerVal(innerCellsCounter, fieldData.getInt("autonomousInner"));
         }
-        if (fieldData.has("autonomousMissed") {
+        if (fieldData.has("autonomousMissed")) {
             UIUtils.setNumberPickerVal(missedCellsCounter, fieldData.getInt("autonomousMissed"));
         }
     }
