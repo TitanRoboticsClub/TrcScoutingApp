@@ -15,13 +15,12 @@ public class AutonomousFragment extends AbstractPageFragment
 {
     private EditText matchNum;
     private EditText teamNum;
-    private Spinner matchTypeSpinner;
     private Spinner spectatingTeamSpinner;
+    private Spinner matchTypeSpinner;
     private CheckBox initLineCrossedCB;
-    private NumberPicker lowerCellsCounter;
-    private NumberPicker outerCellsCounter;
-    private NumberPicker innerCellsCounter;
-    private NumberPicker missedCellsCounter;
+    private CheckBox quintetCB;
+    private NumberPicker autoRobotLowGoalCounter;
+    private NumberPicker autoRobotHighGoalCounter;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
@@ -29,13 +28,12 @@ public class AutonomousFragment extends AbstractPageFragment
         view = inflater.inflate(R.layout.fragment_autonomous_page, container, false);
         matchNum = (EditText) view.findViewById(R.id.matchNum);
         teamNum = (EditText) view.findViewById(R.id.teamNum);
-        matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
         spectatingTeamSpinner = (Spinner) view.findViewById(R.id.spectatingTeamSpinner);
+        matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
         initLineCrossedCB = (CheckBox) view.findViewById(R.id.initLineCrossedCB);
-        lowerCellsCounter = (NumberPicker) view.findViewById(R.id.lowerCellsCounter);
-        outerCellsCounter = (NumberPicker) view.findViewById(R.id.outerCellsCounter);
-        innerCellsCounter = (NumberPicker) view.findViewById(R.id.innerCellsCounter);
-        missedCellsCounter = (NumberPicker) view.findViewById(R.id.missedCellsCounter);
+        quintetCB = (CheckBox) view.findViewById(R.id.quintetCB);
+        autoRobotLowGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotLowGoalCounter);
+        autoRobotHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotHighGoalCounter);
     }
 
     @Override
@@ -47,26 +45,23 @@ public class AutonomousFragment extends AbstractPageFragment
         if (fieldData.has("teamNumber")) {
             UIUtils.setEditTextValue(teamNum, fieldData.getInt("teamNumber"));
         }
-        if (fieldData.has("matchtype")) {
-            UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchtype"));
-        }
         if (fieldData.has("alliance")) {
             UIUtils.setSpinnerByTextValue(spectatingTeamSpinner, fieldData.getString("alliance"));
         }
-        if (fieldData.has("initLineCrossed")) {
-            UIUtils.setCheckbox(initLineCrossedCB, fieldData.getBoolean("initLineCrossed"));
+        if (fieldData.has("matchType")) {
+            UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchType"));
         }
-        if (fieldData.has("autonomousLower")) {
-            UIUtils.setNumberPickerVal(lowerCellsCounter, fieldData.getInt("autonomousLower"));
+        if (fieldData.has("taxied")) {
+            UIUtils.setCheckbox(initLineCrossedCB, fieldData.getBoolean("taxied"));
         }
-        if (fieldData.has("autonomousOuter")) {
-            UIUtils.setNumberPickerVal(outerCellsCounter, fieldData.getInt("autonomousOuter"));
+        if (fieldData.has("quintet")) {
+            UIUtils.setCheckbox(quintetCB, fieldData.getBoolean("quintet"));
         }
-        if (fieldData.has("autonomousInner")) {
-            UIUtils.setNumberPickerVal(innerCellsCounter, fieldData.getInt("autonomousInner"));
+        if (fieldData.has("autoRobotLowGoal")) {
+            UIUtils.setNumberPickerVal(autoRobotLowGoalCounter, fieldData.getInt("autoRobotLowGoal"));
         }
-        if (fieldData.has("autonomousMissed")) {
-            UIUtils.setNumberPickerVal(missedCellsCounter, fieldData.getInt("autonomousMissed"));
+        if (fieldData.has("autoRobotHighGoal")) {
+            UIUtils.setNumberPickerVal(autoRobotHighGoalCounter, fieldData.getInt("autoRobotHighGoal"));
         }
     }
 
@@ -88,13 +83,12 @@ public class AutonomousFragment extends AbstractPageFragment
                 UIUtils.launchPopUpMessage(getContext(), "Error", "teamNum cannot be empty!");
                 return null;
             }
-            data.put("matchtype", matchTypeSpinner.getSelectedItem().toString());
             data.put("alliance", spectatingTeamSpinner.getSelectedItem().toString());
-            data.put("initLineCrossed", initLineCrossedCB.isChecked());
-            data.put("autonomousLower", lowerCellsCounter.getValue());
-            data.put("autonomousOuter", outerCellsCounter.getValue());
-            data.put("autonomousInner", innerCellsCounter.getValue());
-            data.put("autonomousMissed", missedCellsCounter.getValue());
+            data.put("matchType", matchTypeSpinner.getSelectedItem().toString());
+            data.put("taxied", initLineCrossedCB.isChecked());
+            data.put("quintet", quintetCB.isChecked());
+            data.put("autoRobotLowGoal", autoRobotLowGoalCounter.getValue());
+            data.put("autoRobotHighGoal", autoRobotHighGoalCounter.getValue());
             return data;
         }
         catch (Exception e)

@@ -218,7 +218,7 @@ public class AddMatches extends AppCompatActivity
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -460,7 +460,7 @@ public class AddMatches extends AppCompatActivity
             {
                 intent.putExtra("PrevMatch", prev.matchNumber);
 		intent.putExtra("PrevAlliance", prev.alliance);
-		intent.putExtra("PrevMatchType", prev.matchtype);
+		intent.putExtra("PrevMatchType", prev.matchType);
 		
             }
         }

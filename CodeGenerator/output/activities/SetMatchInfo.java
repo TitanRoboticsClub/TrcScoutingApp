@@ -106,7 +106,7 @@ public class SetMatchInfo extends AppCompatActivity
                 if (myIntent.hasExtra("PrevAlliance"))
                     prePopObj.put("alliance", myIntent.getStringExtra("PrevAlliance"));
                 if (myIntent.hasExtra("PrevMatchType"))
-                    prePopObj.put("matchtype", myIntent.getStringExtra("PrevMatchType"));
+                    prePopObj.put("matchType", myIntent.getStringExtra("PrevMatchType"));
                 matchInfoJsonObjStr = prePopObj.toString();
             }
             catch (JSONException e)
@@ -125,7 +125,7 @@ public class SetMatchInfo extends AppCompatActivity
         viewPager.setAdapter(fpa);
 
         // Give the PagerSlidingTabStrip the ViewPager
-        PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) view.findViewById(R.id.tabs);
+        PagerSlidingTabStrip tabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         // Attach the view pager to the tab strip
         tabStrip.setViewPager(viewPager);
 

@@ -26,65 +26,92 @@ public class MatchInfo implements Serializable
     @SerializedName("alliance")
     public String alliance;
 
-    @SerializedName("matchtype")
-    public String matchtype;
+    @SerializedName("matchType")
+    public String matchType;
+
+    @SerializedName("taxied")
+    public Boolean taxied;
+
+    @SerializedName("quintet")
+    public Boolean quintet;
+
+    @SerializedName("breakdown")
+    public Boolean breakdown;
+
+    @SerializedName("autoRobotLowGoal")
+    public Integer autoRobotLowGoal;
+
+    @SerializedName("autoRobotHighGoal")
+    public Integer autoRobotHighGoal;
+
+    @SerializedName("autoHumanLowGoal")
+    public Boolean autoHumanLowGoal;
+
+    @SerializedName("autoHumanHighGoal")
+    public Boolean autoHumanHighGoal;
+
+    @SerializedName("teleopPlaystyle")
+    public String teleopPlaystyle;
+
+    @SerializedName("terminalMissed")
+    public Integer terminalMissed;
+
+    @SerializedName("terminalLowGoal")
+    public Integer terminalLowGoal;
+
+    @SerializedName("terminalHighGoal")
+    public Integer terminalHighGoal;
+
+    @SerializedName("launchpadMissed")
+    public Integer launchpadMissed;
+
+    @SerializedName("launchpadLowGoal")
+    public Integer launchpadLowGoal;
+
+    @SerializedName("launchpadHighGoal")
+    public Integer launchpadHighGoal;
+
+    @SerializedName("otherMissed")
+    public Integer otherMissed;
+
+    @SerializedName("otherLowGoal")
+    public Integer otherLowGoal;
+
+    @SerializedName("otherHighGoal")
+    public Integer otherHighGoal;
+
+    @SerializedName("fouls")
+    public Integer fouls;
+
+    @SerializedName("techFouls")
+    public Integer techFouls;
+
+    @SerializedName("hang")
+    public String hang;
+
+    @SerializedName("blockedHang")
+    public Boolean blockedHang;
+
+    @SerializedName("yellowCard1")
+    public Boolean yellowCard1;
+
+    @SerializedName("yellowCard2")
+    public Boolean yellowCard2;
+
+    @SerializedName("finalAllianceScore")
+    public Integer finalAllianceScore;
+
+    @SerializedName("finalWLT")
+    public String finalWLT;
+
+    @SerializedName("cargoBonus")
+    public Boolean cargoBonus;
+
+    @SerializedName("hangBonus")
+    public Boolean hangBonus;
 
     @SerializedName("notes")
     public String notes;
-
-    @SerializedName("initLineCrossed")
-    public Boolean initLineCrossed;
-
-    @SerializedName("autonomousLower")
-    public Integer autonomousLower;
-
-    @SerializedName("autonomousMissed")
-    public Integer autonomousMissed;
-
-    @SerializedName("teleopLower")
-    public Integer teleopLower;
-
-    @SerializedName("teleopOuter")
-    public Integer teleopOuter;
-
-    @SerializedName("teleopInner")
-    public Integer teleopInner;
-
-    @SerializedName("teleopMissed")
-    public Integer teleopMissed;
-
-    @SerializedName("shieldStage1")
-    public Boolean shieldStage1;
-
-    @SerializedName("shieldStage2")
-    public Boolean shieldStage2;
-
-    @SerializedName("shieldStage3")
-    public Boolean shieldStage3;
-
-    @SerializedName("controlPanelRotated")
-    public Boolean controlPanelRotated;
-
-    @SerializedName("controlPanelPositioned")
-    public Boolean controlPanelPositioned;
-
-    @SerializedName("generatorSwitchParked")
-    public Boolean generatorSwitchParked;
-
-    @SerializedName("generatorSwitchHanging")
-    public Boolean generatorSwitchHanging;
-
-    @SerializedName("generatorSwitchSupportingMechanism")
-    public Boolean generatorSwitchSupportingMechanism;
-
-    @SerializedName("generatorSwitchLevel")
-    public Boolean generatorSwitchLevel;
-
-    @SerializedName("autonomousOuter")
-    public Integer autonomousOuter;
-
-    @SerializedName("autonomousInner")
-    public Integer autonomousInner;
 
 
 
@@ -134,12 +161,12 @@ public class MatchInfo implements Serializable
 
     public String getDisplayString()
     {
-        return String.format("Match # %d (%s) Team: %d", matchNumber, matchtype, teamNumber);
+        return String.format("Match # %d (%s) Team: %d", matchNumber, matchType, teamNumber);
     }
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchtype,alliance,initLineCrossed,autonomousLower,autonomousOuter,autonomousInner,autonomousMissed,teleopLower,teleopOuter,teleopInner,teleopMissed,shieldStage1,shieldStage2,shieldStage3,controlPanelRotated,controlPanelPositioned,generatorSwitchParked,generatorSwitchHanging,generatorSwitchSupportingMechanism,generatorSwitchLevel,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,autoRobotLowGoal,autoRobotHighGoal,autoHumanLowGoal,autoHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,cargoBonus,hangBonus,notes);
         return csvOrder.csvString;
     }
 
