@@ -108,3 +108,5 @@ elements add hangBonusCB checkbox hangBonus
 elements add notesET edittext notes
 appinfo set csv_header "matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,automnomousRobotLowGoal,autonomousRobotHighGoal,autonomousHumanLowGoal,autonomousHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWinLossTie,cargoBonus,hangBonus,notes"
 appinfo set year_number 2022
+generatecode
+
