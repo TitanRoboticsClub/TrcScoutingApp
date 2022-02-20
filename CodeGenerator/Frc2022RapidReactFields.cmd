@@ -13,8 +13,8 @@ field add quintet bool
 field add breakdown bool
 field add autoRobotLowGoal int
 field add autoRobotHighGoal int
-field add autoHumanLowGoal bool
-field add autoHumanHighGoal bool
+field add autoHumanLowGoal int
+field add autoHumanHighGoal int
 field add teleopPlaystyle str
 field add terminalMissed int
 field add terminalLowGoal int
@@ -106,7 +106,7 @@ elements add finalLWTSpinner spinner finalWLT
 elements add cargoBonusCB checkbox cargoBonus
 elements add hangBonusCB checkbox hangBonus
 elements add notesET edittext notes
-appinfo set csv_header "matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,automnomousRobotLowGoal,autonomousRobotHighGoal,autonomousHumanLowGoal,autonomousHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWinLossTie,cargoBonus,hangBonus,notes"
+appinfo set csv_header "matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,autonomousRobotLowGoal,autonomousRobotHighGoal,autonomousHumanLowGoal,autonomousHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWinLossTie,cargoBonus,hangBonus,notes"
 appinfo set year_number 2022
 generatecode
 
