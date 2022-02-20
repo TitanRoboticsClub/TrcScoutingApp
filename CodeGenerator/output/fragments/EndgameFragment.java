@@ -2,8 +2,11 @@ package trc3543.trcscoutingapp.fragments;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Spinner;
 
+import com.travijuu.numberpicker.library.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;

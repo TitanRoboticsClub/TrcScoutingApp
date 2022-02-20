@@ -2,8 +2,11 @@ package trc3543.trcscoutingapp.fragments;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Spinner;
 
+import com.travijuu.numberpicker.library.*;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,13 +36,13 @@ public class TeleOpFragment extends AbstractPageFragment
         playStyleSpinner = (Spinner) view.findViewById(R.id.playStyleSpinner);
         terminalMissedCounter = (NumberPicker) view.findViewById(R.id.terminalMissedCounter);
         terminalLowGoalCounter = (NumberPicker) view.findViewById(R.id.terminalLowGoalCounter);
-        terminalHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoHumanLowGoalCounter);
+        terminalHighGoalCounter = (NumberPicker) view.findViewById(R.id.terminalHighGoalCounter);
         launchpadMissedCounter = (NumberPicker) view.findViewById(R.id.launchpadMissedCounter);
         launchpadLowGoalCounter = (NumberPicker) view.findViewById(R.id.launchpadLowGoalCounter);
-        launchpadHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotHighGoalCounter);
+        launchpadHighGoalCounter = (NumberPicker) view.findViewById(R.id.launchpadHighGoalCounter);
         otherMissedCounter = (NumberPicker) view.findViewById(R.id.otherMissedCounter);
         otherLowGoalCounter = (NumberPicker) view.findViewById(R.id.otherLowGoalCounter);
-        otherHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotLowGoalCounter);
+        otherHighGoalCounter = (NumberPicker) view.findViewById(R.id.otherHighGoalCounter);
         foulsCounter = (NumberPicker) view.findViewById(R.id.foulsCounter);
         techFoulsCounter = (NumberPicker) view.findViewById(R.id.techFoulsCounter);
     }
