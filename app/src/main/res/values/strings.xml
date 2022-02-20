@@ -74,6 +74,30 @@
         <item>Blue 2</item>
         <item>Blue 3</item>
     </string-array>
+
+    <string-array name="play_styles">
+        <item>Offensive</item>
+        <item>Defensive</item>
+        <item>Both</item>
+        <item>None</item>       
+    </string-array>
+
+    
+    <string-array name="outcomes">
+        <item>Win</item>
+        <item>Loss</item>
+        <item>Tie</item>        
+    </string-array>
+
+    <string-array name="hang_styles">
+        <item>None</item>
+        <item>Attempted</item>
+        <item>Low</item>
+        <item>Middle</item>
+        <item>High</item>
+        <item>Traversal</item>       
+    </string-array>
+
     <string-array name="save_times">
         <item>2 minutes</item>
         <item>5 minutes</item>

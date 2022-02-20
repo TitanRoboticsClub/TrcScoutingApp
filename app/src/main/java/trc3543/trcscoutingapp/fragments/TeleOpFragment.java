@@ -33,13 +33,13 @@ public class TeleOpFragment extends AbstractPageFragment
         playStyleSpinner = (Spinner) view.findViewById(R.id.playStyleSpinner);
         terminalMissedCounter = (NumberPicker) view.findViewById(R.id.terminalMissedCounter);
         terminalLowGoalCounter = (NumberPicker) view.findViewById(R.id.terminalLowGoalCounter);
-        terminalHighGoalCounter = (NumberPicker) view.findViewById(R.id.terminalHighGoalCounter);
+        terminalHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoHumanLowGoalCounter);
         launchpadMissedCounter = (NumberPicker) view.findViewById(R.id.launchpadMissedCounter);
         launchpadLowGoalCounter = (NumberPicker) view.findViewById(R.id.launchpadLowGoalCounter);
-        launchpadHighGoalCounter = (NumberPicker) view.findViewById(R.id.launchpadHighGoalCounter);
+        launchpadHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotHighGoalCounter);
         otherMissedCounter = (NumberPicker) view.findViewById(R.id.otherMissedCounter);
         otherLowGoalCounter = (NumberPicker) view.findViewById(R.id.otherLowGoalCounter);
-        otherHighGoalCounter = (NumberPicker) view.findViewById(R.id.otherHighGoalCounter);
+        otherHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotLowGoalCounter);
         foulsCounter = (NumberPicker) view.findViewById(R.id.foulsCounter);
         techFoulsCounter = (NumberPicker) view.findViewById(R.id.techFoulsCounter);
     }
