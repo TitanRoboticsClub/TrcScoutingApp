@@ -24,6 +24,8 @@ public class AutonomousFragment extends AbstractPageFragment
     private CheckBox quintetCB;
     private NumberPicker autoRobotLowGoalCounter;
     private NumberPicker autoRobotHighGoalCounter;
+    private NumberPicker autoHumanLowGoalCounter;
+    private NumberPicker autoHumanHighGoalCounter;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
@@ -37,6 +39,8 @@ public class AutonomousFragment extends AbstractPageFragment
         quintetCB = (CheckBox) view.findViewById(R.id.quintetCB);
         autoRobotLowGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotLowGoalCounter);
         autoRobotHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoRobotHighGoalCounter);
+        autoHumanLowGoalCounter = (NumberPicker) view.findViewById(R.id.autoHumanLowGoalCounter);
+        autoHumanHighGoalCounter = (NumberPicker) view.findViewById(R.id.autoHumanHighGoalCounter);
     }
 
     @Override
@@ -66,6 +70,12 @@ public class AutonomousFragment extends AbstractPageFragment
         if (fieldData.has("autoRobotHighGoal")) {
             UIUtils.setNumberPickerVal(autoRobotHighGoalCounter, fieldData.getInt("autoRobotHighGoal"));
         }
+        if (fieldData.has("autoHumanLowGoal")) {
+            UIUtils.setNumberPickerVal(autoHumanLowGoalCounter, fieldData.getInt("autoHumanLowGoal"));
+        }
+        if (fieldData.has("autoHumanHighGoal")) {
+            UIUtils.setNumberPickerVal(autoHumanHighGoalCounter, fieldData.getInt("autoHumanHighGoal"));
+        }
     }
 
     @Override
@@ -92,6 +102,8 @@ public class AutonomousFragment extends AbstractPageFragment
             data.put("quintet", quintetCB.isChecked());
             data.put("autoRobotLowGoal", autoRobotLowGoalCounter.getValue());
             data.put("autoRobotHighGoal", autoRobotHighGoalCounter.getValue());
+            data.put("autoHumanLowGoal", autoHumanLowGoalCounter.getValue());
+            data.put("autoHumanHighGoal", autoHumanHighGoalCounter.getValue());
             return data;
         }
         catch (Exception e)
