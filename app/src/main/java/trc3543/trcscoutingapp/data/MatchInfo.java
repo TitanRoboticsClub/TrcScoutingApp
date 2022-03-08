@@ -45,10 +45,10 @@ public class MatchInfo implements Serializable
     public Integer autoRobotHighGoal;
 
     @SerializedName("autoHumanLowGoal")
-    public Boolean autoHumanLowGoal;
+    public Integer autoHumanLowGoal;
 
     @SerializedName("autoHumanHighGoal")
-    public Boolean autoHumanHighGoal;
+    public Integer autoHumanHighGoal;
 
     @SerializedName("teleopPlaystyle")
     public String teleopPlaystyle;
