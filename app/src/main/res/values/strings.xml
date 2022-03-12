@@ -60,6 +60,7 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="game_types">
+        <item>[Select match type...]</item>
         <item>Qualification</item>
         <item>Quarterfinal</item>
         <item>Semifinal</item>
@@ -67,6 +68,7 @@
     </string-array>
 
     <string-array name="spectating_types">
+        <item>[Select robot...]</item>
         <item>Red 1</item>
         <item>Red 2</item>
         <item>Red 3</item>
@@ -76,6 +78,7 @@
     </string-array>
 
     <string-array name="play_styles">
+        <item>[Select play style...]</item>
         <item>Offensive</item>
         <item>Defensive</item>
         <item>Both</item>
@@ -84,12 +87,14 @@
 
     
     <string-array name="outcomes">
+        <item>[Select outcome...]</item>
         <item>Win</item>
         <item>Loss</item>
         <item>Tie</item>        
     </string-array>
 
     <string-array name="hang_styles">
+        <item>[Select hang style...]</item>
         <item>None</item>
         <item>Attempted</item>
         <item>Low</item>

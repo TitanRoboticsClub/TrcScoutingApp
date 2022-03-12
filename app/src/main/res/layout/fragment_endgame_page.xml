@@ -22,41 +22,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/hangSpinner" />
 
-        <TextView
-            android:id="@+id/lowerCellsText10"
-            android:layout_width="80dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="288dp"
-            android:gravity="center"
-            android:text="Outcome"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.277"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/hangSpinner" />
-
         <Spinner
             android:id="@+id/finalLWTSpinner"
-            android:layout_width="100dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="184dp"
-            android:layout_marginTop="300dp"
+            android:layout_width="209dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="252dp"
             android:entries="@array/outcomes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/generatorSwitchText" />
 
         <TextView
-            android:id="@+id/lowerCellsText11"
+            android:id="@+id/lowerCellsText10"
             android:layout_width="80dp"
             android:layout_height="32dp"
-            android:layout_marginTop="336dp"
+            android:layout_marginTop="240dp"
             android:gravity="center"
-            android:text="Score"
+            android:text="Outcome"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintHorizontal_bias="0.169"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/hangSpinner" />
 
@@ -123,7 +109,7 @@
             android:text="Broke Down"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.568"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/generatorSwitchText" />
 
@@ -135,7 +121,7 @@
             android:text=" "
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.266"
+            app:layout_constraintHorizontal_bias="0.32"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/blockedHangCB" />
 
@@ -147,7 +133,7 @@
             android:text="Yellow Card"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/blockedHangCB" />
 
@@ -155,27 +141,27 @@
             android:id="@+id/cargoBonusCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
             android:text="Cargo Bonus"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/yellowCard1CB" />
+            app:layout_constraintTop_toBottomOf="@id/yellowCard2CB" />
 
         <CheckBox
             android:id="@+id/hangBonusCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="56dp"
             android:text="Hang Bonus"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/yellowCard1CB" />
+            app:layout_constraintTop_toBottomOf="@id/yellowCard2CB" />
 
         <CheckBox
             android:id="@+id/blockedHangCB"
@@ -185,6 +171,7 @@
             android:layout_marginEnd="16dp"
             android:text="Blocked Hang"
             android:textSize="24sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
@@ -206,14 +193,28 @@
 
         <EditText
             android:id="@+id/finalAllianceScoreInt"
-            android:layout_width="124dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="184dp"
-            android:layout_marginTop="348dp"
+            android:layout_width="131dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="304dp"
             android:ems="10"
             android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/generatorSwitchText" />
+
+        <TextView
+            android:id="@+id/lowerCellsText11"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="288dp"
+            android:gravity="center"
+            android:text="Score"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hangSpinner" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
