@@ -139,7 +139,7 @@ public class IOUtils extends AppCompatActivity
                 log.createNewFile();
             }
             PrintWriter pw = new PrintWriter(new FileWriter(log, true));
-            pw.println("Log by: " + appSettings.firstName + " " + appSettings.lastName + ", written on " + getDateAsString());
+            // pw.println("# Log by: " + appSettings.firstName + " " + appSettings.lastName + ", written on " + getDateAsString());
             pw.println(CSV_HEADER);
             for(MatchInfo match : matchList)
             {
