@@ -1,0 +1,95 @@
+Match metadata:
+Team (str)
+Match (int)
+Alliance (red/blue)
+Match type (str)
+Scouter (str)
+
+
+field add matchNumber int
+field add teamNumber int
+field add alliance str
+field add matchType str
+
+field flag add matchNumber match_num
+field flag add matchNumber must_be_filled
+field flag add teamNumber team_num
+field flag add teamNumber must_be_filled
+field flag add alliance alliance_type
+field flag add matchType match_type
+
+
+
+Autonomous:
+Checks:
+Taxied, Quintet (5 balls), Robot Breakdown
+Counters;
+Robot Low Goal 
+Human Low Goal
+Robot High Goal
+Human High Goal
+
+field add taxied bool
+field add quintet bool
+field add breakdown bool
+field add autoRobotLowGoal int
+field add autoRobotHighGoal int
+field add autoHumanLowGoal bool
+field add autoHumanHighGoal bool
+
+
+Teleop:
+Playstyle (offense, defense, both)
+Terminal/Feeder Missed
+Terminal/Feeder Low Goal
+Terminal/Feeder High Goal
+
+Launchpad Missed
+Launchpad Low Goal
+Launcpad High Goal
+
+Other Missed
+Other LowGoal
+Other High Goal
+
+Foul (str)
+Tech Foul (str)
+
+
+
+field add teleopPlaystyle str
+field add terminalMissed int
+field add terminalLowGoal int
+field add terminalHighGoal int
+field add launchpadMissed int
+field add launchpadLowGoal int
+field add launchpadHighGoal int
+field add otherMissed int
+field add otherLowGoal int
+field add otherHighGoal int
+field add fouls int
+field add techFouls int
+
+
+EndGame
+Hang: None, Attempted, Low, Middle, High, Traveral
+Blocked Hang (check)
+
+Yellow card [two checks]
+Red card [check]
+Final Alliance Score (int) W/L/T
+Cargo Bonus (20 balls total/18 + quintet) (check)
+Hang Bonus (check)
+Notes (text)
+
+field add hang str
+field add blockedHang bool
+field add yellowCard1 bool
+field add yellowCard2 bool
+field add finalAllianceScore int
+field add finalWLT str
+field add cargoBonus bool
+field add hangBonus bool
+field add notes str
+
+
