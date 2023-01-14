@@ -11,7 +11,7 @@ public class AppInfo
     public static final String SETTINGS_FILENAME = "app_settings.json";
     public static final String CSV_HEADER = "matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,autonomousRobotLowGoal,autonomousRobotHighGoal,autonomousHumanLowGoal,autonomousHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWinLossTie,cargoBonus,hangBonus,notes";
     public static final String VERSION_NUMBER = "1.4.0-frc";
-    public static final int YEAR_NUMBER = 2022;
+    public static final int YEAR_NUMBER = 2023;
 
     //
     // SetMatchInfo and child Fragment settings.

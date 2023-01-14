@@ -14,6 +14,47 @@
         tools:layout_editor_absoluteY="-21dp">
 
         <TextView
+            android:id="@+id/innerCellsText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="16dp"
+            android:text="Links"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/outerCellsText"
+            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/otherMissedCounter"
+            android:layout_width="40dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/otherMissedCounter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="216dp"
+                android:layout_marginTop="20dp"
+                app:custom_layout="@layout/custom_number_picker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
+                app:max="50"
+                app:min="0"
+                app:unit="1"
+                app:value="0" />
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <TextView
             android:id="@+id/teleopPowerPortsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,22 +101,37 @@
             android:id="@+id/otherMissedCounter"
             android:layout_width="40dp"
             android:layout_height="129dp"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="284dp"
+            android:layout_marginTop="28dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0" />
+            app:value="0">
+
+            <com.travijuu.numberpicker.library.NumberPicker
+                android:id="@+id/otherMissedCounter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="216dp"
+                android:layout_marginTop="20dp"
+                app:custom_layout="@layout/custom_number_picker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
+                app:max="50"
+                app:min="0"
+                app:unit="1"
+                app:value="0" />
+        </com.travijuu.numberpicker.library.NumberPicker>
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/otherHighGoalCounter"
             android:layout_width="40dp"
             android:layout_height="129dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
@@ -88,8 +144,8 @@
             android:id="@+id/otherLowGoalCounter"
             android:layout_width="40dp"
             android:layout_height="129dp"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
@@ -97,7 +153,6 @@
             app:min="0"
             app:unit="1"
             app:value="0" />
-
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/foulsCounter"
@@ -145,12 +200,12 @@
             android:layout_width="57dp"
             android:layout_height="23dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="Low"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
+            app:layout_constraintHorizontal_bias="0.031"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
 
@@ -158,9 +213,9 @@
             android:id="@+id/innerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:text="Missed"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:text="High"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/outerCellsText"
@@ -185,8 +240,8 @@
             android:layout_width="61dp"
             android:layout_height="25dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:text="High"
+            android:layout_marginTop="16dp"
+            android:text="Middle"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText"
