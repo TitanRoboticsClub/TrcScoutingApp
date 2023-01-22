@@ -26,7 +26,7 @@
             app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/otherMissedCounter"
+            android:id="@+id/teleopGoalsHighPicker"
             android:layout_width="40dp"
             android:layout_height="129dp"
             android:layout_marginStart="208dp"
@@ -37,22 +37,7 @@
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0">
-
-            <com.travijuu.numberpicker.library.NumberPicker
-                android:id="@+id/otherMissedCounter"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="216dp"
-                android:layout_marginTop="20dp"
-                app:custom_layout="@layout/custom_number_picker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
-                app:max="50"
-                app:min="0"
-                app:unit="1"
-                app:value="0" />
-        </com.travijuu.numberpicker.library.NumberPicker>
+            app:value="0"/>
 
         <TextView
             android:id="@+id/teleopPowerPortsText2"
@@ -80,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.305"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/playStyleSpinner" />
+            app:layout_constraintTop_toTopOf="@+id/teleopPlaystyleSpinner" />
 
         <TextView
             android:id="@+id/lowerCellsText8"
@@ -94,11 +79,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.72"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/playStyleSpinner" />
+            app:layout_constraintTop_toTopOf="@+id/teleopPlaystyleSpinner" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/otherMissedCounter"
+            android:id="@+id/teleopLinksPicker"
             android:layout_width="40dp"
             android:layout_height="129dp"
             android:layout_marginStart="284dp"
@@ -109,25 +94,10 @@
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0">
-
-            <com.travijuu.numberpicker.library.NumberPicker
-                android:id="@+id/otherMissedCounter"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="216dp"
-                android:layout_marginTop="20dp"
-                app:custom_layout="@layout/custom_number_picker"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
-                app:max="50"
-                app:min="0"
-                app:unit="1"
-                app:value="0" />
-        </com.travijuu.numberpicker.library.NumberPicker>
+            app:value="0"/>
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/otherHighGoalCounter"
+            android:id="@+id/teleopGoalsMedPicker"
             android:layout_width="40dp"
             android:layout_height="129dp"
             android:layout_marginStart="124dp"
@@ -141,7 +111,7 @@
             app:value="0" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/autoScoredLowSpinner"
+            android:id="@+id/teleopGoalsLowPicker"
             android:layout_width="40dp"
             android:layout_height="129dp"
             android:layout_marginStart="28dp"
@@ -172,7 +142,7 @@
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/techFoulsCounter"
             android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_height="128dp"
             android:layout_marginStart="232dp"
             android:layout_marginTop="308dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -248,7 +218,7 @@
             app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
 
         <Spinner
-            android:id="@+id/playStyleSpinner"
+            android:id="@+id/teleopPlaystyleSpinner"
             android:layout_width="315dp"
             android:layout_height="32dp"
             android:layout_marginStart="48dp"

@@ -16,6 +16,11 @@ field flag add teamNumber team_num
 field flag add teamNumber must_be_filled
 field flag add alliance alliance_type
 field flag add matchType match_type
+field add teleopGoalsLow int
+field add teleopGoalsMed int
+field add teleopGoalsHigh int
+field add teleopLinks int
+field add teleopPlaystyle str
 field add fouls int
 field add techFouls int
 field add yellowCard1 bool
@@ -33,6 +38,11 @@ csv map 7 autoScoredLow
 csv map 8 autoScoredMed
 csv map 9 autoScoredHigh
 csv map 10 autoEngagedDockedState
+csv map 11 teleopGoalsLow
+csv map 12 teleopGoalsMed
+csv map 13 teleopGoalsHigh
+csv map 14 teleopLinks
+csv map 15 teleopPlaystyle
 csv map 22 fouls
 csv map 23 techFouls
 csv map 26 yellowCard1
@@ -55,6 +65,11 @@ elements add autoScoredMedSpinner numberpicker autoScoredMed
 elements add autoScoredHighSpinner numberpicker autoScoredHigh
 elements add autoEngagedDockedStateSpinner spinner autoEngagedDockedState
 wp set TeleOpFragment
+elements add teleopGoalsLowPicker numberpicker teleopGoalsLow
+elements add teleopGoalsMedPicker numberpicker teleopGoalsMed
+elements add teleopGoalsHighPicker numberpicker teleopGoalsHigh
+elements add teleopLinksPicker numberpicker teleopLinks
+elements add teleopPlaystyleSpinner spinner teleopPlaystyle
 elements add foulsCounter numberpicker fouls
 elements add techFoulsCounter numberpicker techFouls
 wp set EndgameFragment
