@@ -77,6 +77,20 @@
         <item>Blue 3</item>
     </string-array>
 
+    <string-array name="preloadedScoring">
+        <item>Didn\'t score</item>
+        <item>Low</item>
+        <item>Middle</item>
+        <item>High</item>
+    </string-array>
+
+    <string-array name="autoEngagedDockedState">
+        <item>None Docked</item>
+        <item>Alliance Member Docked</item>
+        <item>Docked</item>
+        <item>Docked and Engaged</item>
+    </string-array>
+
     <string-array name="play_styles">
         <item>[Select play style...]</item>
         <item>Offensive</item>
@@ -91,16 +105,6 @@
         <item>Win</item>
         <item>Loss</item>
         <item>Tie</item>        
-    </string-array>
-
-    <string-array name="hang_styles">
-        <item>[Select hang style...]</item>
-        <item>None</item>
-        <item>Attempted</item>
-        <item>Low</item>
-        <item>Middle</item>
-        <item>High</item>
-        <item>Traversal</item>       
     </string-array>
 
     <string-array name="save_times">

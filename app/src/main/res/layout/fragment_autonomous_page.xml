@@ -104,20 +104,137 @@
             app:layout_constraintTop_toBottomOf="@+id/spectatingTeamSpinner" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/leftCommunityCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LeftCommunity"
-            tools:layout_editor_absoluteX="141dp"
-            tools:layout_editor_absoluteY="298dp" />
+            android:layout_marginTop="12dp"
+            android:text="Left Community"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autonomousText" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/preScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="Preloaded Score"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="331dp" />
+            app:layout_constraintTop_toBottomOf="@+id/leftCommunityCB"
+            tools:layout_editor_absoluteX="7dp" />
+
+        <Spinner
+            android:id="@+id/preloadedSpinner"
+            android:layout_width="164dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:entries="@array/preloadedScoring"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preScoreText" />
+
+        <TextView
+            android:id="@+id/autoScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Auto Elements Scored"
+            app:layout_constraintTop_toBottomOf="@+id/preloadedSpinner"
+            tools:layout_editor_absoluteX="7dp" />
+
+        <TextView
+            android:id="@+id/autoScoreLowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Low"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreText"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/autoScoredLowSpinner"
+            android:layout_width="40dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreLowText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <TextView
+            android:id="@+id/autoScoreMediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:text="Medium"
+            app:layout_constraintStart_toEndOf="@+id/autoScoreLowText"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/autoScoredMedSpinner"
+            android:layout_width="40dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintStart_toEndOf="@+id/autoScoredLowSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreMediumText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" >
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/autoScoredHighSpinner"
+            android:layout_width="40dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintStart_toEndOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreHighText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" />
+
+        <TextView
+            android:id="@+id/autoScoreHighText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="High"
+            app:layout_constraintStart_toEndOf="@+id/autoScoreMediumText"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
+
+        <TextView
+            android:id="@+id/engagementStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Charge Station Engagement"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoredMedSpinner" />
+
+        <Spinner
+            android:id="@+id/autoEngagedDockedStateSpinner"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:entries="@array/autoEngagedDockedState"
+            app:layout_constraintTop_toBottomOf="@+id/engagementStatusTextView"
+            tools:layout_editor_absoluteX="1dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

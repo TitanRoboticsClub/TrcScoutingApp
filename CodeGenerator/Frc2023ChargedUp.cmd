@@ -1,10 +1,11 @@
 create Frc2023ChargedUp.dat
+y
 field add matchNumber int
 field add teamNumber int
 field add alliance str
 field add matchType str
 field add leftCommunity bool
-field add preloaded int
+field add preloaded str
 field add autoScoredLow int
 field add autoScoredMed int
 field add autoScoredHigh int
@@ -49,10 +50,10 @@ elements add spectatingTeamSpinner spinner alliance
 elements add matchTypeSpinner spinner matchType
 elements add leftCommunityCB checkbox leftCommunity
 elements add preloadedSpinner spinner preloaded
-elements add autoScoredLowSpinner spinner autoScoredLow
-elements add autoScoredMedSpinner spinner autoScoredMed
-elements add autoScoredHighSpinner spinner autoScoredHigh
-elements add autoEngagedDockedStateSpinner spinner 
+elements add autoScoredLowSpinner numberpicker autoScoredLow
+elements add autoScoredMedSpinner numberpicker autoScoredMed
+elements add autoScoredHighSpinner numberpicker autoScoredHigh
+elements add autoEngagedDockedStateSpinner spinner autoEngagedDockedState
 wp set TeleOpFragment
 elements add foulsCounter numberpicker fouls
 elements add techFoulsCounter numberpicker techFouls

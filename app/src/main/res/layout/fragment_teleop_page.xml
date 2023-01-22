@@ -141,7 +141,7 @@
             app:value="0" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/otherLowGoalCounter"
+            android:id="@+id/autoScoredLowSpinner"
             android:layout_width="40dp"
             android:layout_height="129dp"
             android:layout_marginStart="28dp"

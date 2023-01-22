@@ -33,7 +33,7 @@ public class MatchInfo implements Serializable
     public Boolean leftCommunity;
 
     @SerializedName("preloaded")
-    public Integer preloaded;
+    public String preloaded;
 
     @SerializedName("autoScoredLow")
     public Integer autoScoredLow;
