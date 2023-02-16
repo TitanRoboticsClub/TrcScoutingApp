@@ -21,6 +21,11 @@ public class AutonomousFragment extends AbstractPageFragment
     private Spinner spectatingTeamSpinner;
     private Spinner matchTypeSpinner;
     private CheckBox leftCommunityCB;
+    private Spinner preloadedSpinner;
+    private NumberPicker autoScoredLowSpinner;
+    private NumberPicker autoScoredMedSpinner;
+    private NumberPicker autoScoredHighSpinner;
+    private Spinner autoEngagedDockedStateSpinner;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
@@ -31,6 +36,11 @@ public class AutonomousFragment extends AbstractPageFragment
         spectatingTeamSpinner = (Spinner) view.findViewById(R.id.spectatingTeamSpinner);
         matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
         leftCommunityCB = (CheckBox) view.findViewById(R.id.leftCommunityCB);
+        preloadedSpinner = (Spinner) view.findViewById(R.id.preloadedSpinner);
+        autoScoredLowSpinner = (NumberPicker) view.findViewById(R.id.autoScoredLowSpinner);
+        autoScoredMedSpinner = (NumberPicker) view.findViewById(R.id.autoScoredMedSpinner);
+        autoScoredHighSpinner = (NumberPicker) view.findViewById(R.id.autoScoredHighSpinner);
+        autoEngagedDockedStateSpinner = (Spinner) view.findViewById(R.id.autoEngagedDockedStateSpinner);
     }
 
     @Override
@@ -50,6 +60,21 @@ public class AutonomousFragment extends AbstractPageFragment
         }
         if (fieldData.has("leftCommunity")) {
             UIUtils.setCheckbox(leftCommunityCB, fieldData.getBoolean("leftCommunity"));
+        }
+        if (fieldData.has("preloaded")) {
+            UIUtils.setSpinnerByTextValue(preloadedSpinner, fieldData.getString("preloaded"));
+        }
+        if (fieldData.has("autoScoredLow")) {
+            UIUtils.setNumberPickerVal(autoScoredLowSpinner, fieldData.getInt("autoScoredLow"));
+        }
+        if (fieldData.has("autoScoredMed")) {
+            UIUtils.setNumberPickerVal(autoScoredMedSpinner, fieldData.getInt("autoScoredMed"));
+        }
+        if (fieldData.has("autoScoredHigh")) {
+            UIUtils.setNumberPickerVal(autoScoredHighSpinner, fieldData.getInt("autoScoredHigh"));
+        }
+        if (fieldData.has("autoEngagedDockedState")) {
+            UIUtils.setSpinnerByTextValue(autoEngagedDockedStateSpinner, fieldData.getString("autoEngagedDockedState"));
         }
     }
 
@@ -74,6 +99,11 @@ public class AutonomousFragment extends AbstractPageFragment
             data.put("alliance", spectatingTeamSpinner.getSelectedItem().toString());
             data.put("matchType", matchTypeSpinner.getSelectedItem().toString());
             data.put("leftCommunity", leftCommunityCB.isChecked());
+            data.put("preloaded", preloadedSpinner.getSelectedItem().toString());
+            data.put("autoScoredLow", autoScoredLowSpinner.getValue());
+            data.put("autoScoredMed", autoScoredMedSpinner.getValue());
+            data.put("autoScoredHigh", autoScoredHighSpinner.getValue());
+            data.put("autoEngagedDockedState", autoEngagedDockedStateSpinner.getSelectedItem().toString());
             return data;
         }
         catch (Exception e)

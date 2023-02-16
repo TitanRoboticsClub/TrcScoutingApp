@@ -99,7 +99,15 @@
         <item>None</item>       
     </string-array>
 
-    
+
+    <string-array name="robotStates">
+        <item>No points</item>
+        <item>Parked</item>
+        <item>Docked</item>
+        <item>Engaged</item>
+    </string-array>
+
+
     <string-array name="outcomes">
         <item>[Select outcome...]</item>
         <item>Win</item>

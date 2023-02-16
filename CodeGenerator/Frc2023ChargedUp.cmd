@@ -23,6 +23,11 @@ field add teleopLinks int
 field add teleopPlaystyle str
 field add fouls int
 field add techFouls int
+field add endgameRobotState str
+field add endgameSustainabilityBonus bool
+field add endgameCoopertitionBonus bool
+field add endgameActivationBonus bool
+field add robotBrokeDown bool
 field add yellowCard1 bool
 field add yellowCard2 bool
 field add finalAllianceScore int
@@ -45,11 +50,16 @@ csv map 14 teleopLinks
 csv map 15 teleopPlaystyle
 csv map 22 fouls
 csv map 23 techFouls
-csv map 26 yellowCard1
-csv map 27 yellowCard2
-csv map 28 finalAllianceScore
-csv map 29 finalWLT
-csv map 32 notes
+csv map 24 robotBrokeDown
+csv map 25 endgameRobotState
+csv map 26 endgameSustainabilityBonus
+csv map 27 endgameCoopertitionBonus
+csv map 28 endgameActivationBonus
+csv map 29 yellowCard1
+csv map 30 yellowCard2
+csv map 31 finalAllianceScore
+csv map 32 finalWLT
+csv map 33 notes
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
 page add Endgame EndgameFragment fragment_endgame_page 3
@@ -73,10 +83,17 @@ elements add teleopPlaystyleSpinner spinner teleopPlaystyle
 elements add foulsCounter numberpicker fouls
 elements add techFoulsCounter numberpicker techFouls
 wp set EndgameFragment
+elements add robotBrokeDownCB checkbox robotBrokeDown
+elements add endgameRobotStateSpinner spinner endgameRobotState
+elements add endgameSustainabilityBonusCB checkbox endgameSustainabilityBonus
+elements add endgameCoopertitionBonusCB checkbox endgameCoopertitionBonus
+elements add endgameActivationBonusCB checkbox endgameActivationBonus
+elements add yellowCard1CB checkbox yellowCard1
+elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "matchNumber,teamNumber,matchType,alliance,taxied,quintet,breakdown,autonomousRobotLowGoal,autonomousRobotHighGoal,autonomousHumanLowGoal,autonomousHumanHighGoal,teleopPlaystyle,terminalMissed,terminalLowGoal,terminalHighGoal,launchpadMissed,launchpadLowGoal,launchpadHighGoal,otherMissed,otherLowGoal,otherHighGoal,fouls,techFouls,hang,blockedHang,yellowCard1,yellowCard2,finalAllianceScore,finalWinLossTie,cargoBonus,hangBonus,notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Community,Preloaded,Auto Scored Low,Auto Scored Med,Auto Scored High,Auto Engaged Docked State,Teleop Goals Low,Teleop Goals Med,Teleop Goals High,Teleop Links,Teleop Playstyle,Fouls,Tech Fouls,Robot Broke Down,Endgame Parked,Endgame Docked,Endgame Engaged,Endgame Sustainability Bonus,Endgame Coopertition Bonus,Endgame Activation Bonus,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2023
 generatecode
 

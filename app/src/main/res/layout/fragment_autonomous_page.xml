@@ -23,10 +23,13 @@
             android:ems="10"
             android:hint="Match #"
             android:inputType="numberSigned"
+            android:minHeight="48dp"
+            android:textColorHint="#546E7A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/teamNum"
@@ -38,15 +41,17 @@
             android:ems="10"
             android:hint="Team #"
             android:inputType="numberSigned"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/matchNum" />
+            app:layout_constraintTop_toBottomOf="@+id/matchNum"
+            android:importantForAutofill="no" />
 
         <Spinner
             android:id="@+id/matchTypeSpinner"
             android:layout_width="315dp"
-            android:layout_height="28dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="8dp"
@@ -60,7 +65,7 @@
         <Spinner
             android:id="@+id/spectatingTeamSpinner"
             android:layout_width="315dp"
-            android:layout_height="28dp"
+            android:layout_height="48dp"
             android:layout_marginTop="36dp"
             android:entries="@array/spectating_types"
             app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:minHeight="48dp"
             android:text="Left Community"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +132,7 @@
         <Spinner
             android:id="@+id/preloadedSpinner"
             android:layout_width="164dp"
-            android:layout_height="32dp"
+            android:layout_height="48dp"
             android:layout_marginTop="12dp"
             android:entries="@array/preloadedScoring"
             app:layout_constraintStart_toStartOf="@+id/preScoreText"
@@ -145,7 +151,7 @@
             android:id="@+id/autoScoreLowText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="Low"
             app:layout_constraintStart_toStartOf="@+id/autoScoredLowSpinner"
@@ -235,8 +241,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:entries="@array/autoEngagedDockedState"
-            app:layout_constraintTop_toBottomOf="@+id/engagementStatusTextView"
-            tools:layout_editor_absoluteX="1dp" />
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/engagementStatusTextView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
