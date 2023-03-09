@@ -16,6 +16,8 @@ import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class TeleOpFragment extends AbstractPageFragment
 {
+    private CheckBox teleopScoredConesCB;
+    private CheckBox teleopScoredCubesCB;
     private NumberPicker teleopGoalsLowPicker;
     private NumberPicker teleopGoalsMedPicker;
     private NumberPicker teleopGoalsHighPicker;
@@ -28,6 +30,8 @@ public class TeleOpFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_teleop_page, container, false);
+        teleopScoredConesCB = (CheckBox) view.findViewById(R.id.teleopScoredConesCB);
+        teleopScoredCubesCB = (CheckBox) view.findViewById(R.id.teleopScoredCubesCB);
         teleopGoalsLowPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsLowPicker);
         teleopGoalsMedPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsMedPicker);
         teleopGoalsHighPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsHighPicker);
@@ -40,6 +44,12 @@ public class TeleOpFragment extends AbstractPageFragment
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
+        if (fieldData.has("teleopScoredCones")) {
+            UIUtils.setCheckbox(teleopScoredConesCB, fieldData.getBoolean("teleopScoredCones"));
+        }
+        if (fieldData.has("teleopScoredCubes")) {
+            UIUtils.setCheckbox(teleopScoredCubesCB, fieldData.getBoolean("teleopScoredCubes"));
+        }
         if (fieldData.has("teleopGoalsLow")) {
             UIUtils.setNumberPickerVal(teleopGoalsLowPicker, fieldData.getInt("teleopGoalsLow"));
         }
@@ -69,6 +79,8 @@ public class TeleOpFragment extends AbstractPageFragment
         try
         {
             JSONObject data = new JSONObject();
+            data.put("teleopScoredCones", teleopScoredConesCB.isChecked());
+            data.put("teleopScoredCubes", teleopScoredCubesCB.isChecked());
             data.put("teleopGoalsLow", teleopGoalsLowPicker.getValue());
             data.put("teleopGoalsMed", teleopGoalsMedPicker.getValue());
             data.put("teleopGoalsHigh", teleopGoalsHighPicker.getValue());

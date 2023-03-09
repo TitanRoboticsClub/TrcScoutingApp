@@ -47,6 +47,12 @@ public class MatchInfo implements Serializable
     @SerializedName("autoEngagedDockedState")
     public String autoEngagedDockedState;
 
+    @SerializedName("teleopScoredCones")
+    public Boolean teleopScoredCones;
+
+    @SerializedName("teleopScoredCubes")
+    public Boolean teleopScoredCubes;
+
     @SerializedName("teleopGoalsLow")
     public Integer teleopGoalsLow;
 
@@ -151,7 +157,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftCommunity,preloaded,autoScoredLow,autoScoredMed,autoScoredHigh,autoEngagedDockedState,teleopGoalsLow,teleopGoalsMed,teleopGoalsHigh,teleopLinks,teleopPlaystyle,fouls,techFouls,robotBrokeDown,endgameRobotState,endgameSustainabilityBonus,endgameCoopertitionBonus,endgameActivationBonus,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftCommunity,preloaded,autoScoredLow,autoScoredMed,autoScoredHigh,autoEngagedDockedState,teleopScoredCones,teleopScoredCubes,teleopGoalsLow,teleopGoalsMed,teleopGoalsHigh,teleopLinks,teleopPlaystyle,fouls,techFouls,robotBrokeDown,endgameRobotState,endgameSustainabilityBonus,endgameCoopertitionBonus,endgameActivationBonus,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

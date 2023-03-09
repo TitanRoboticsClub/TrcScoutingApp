@@ -13,17 +13,40 @@
         tools:layout_editor_absoluteX="7dp"
         tools:layout_editor_absoluteY="-21dp">
 
+        <CheckBox
+            android:id="@+id/teleopScoredCubesCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:text="Scored Cubes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.835"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+
+        <CheckBox
+            android:id="@+id/teleopScoredConesCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            android:text="Scored Cones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+
         <TextView
             android:id="@+id/innerCellsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
             android:text="Links"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/innerCellsText"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsHighPicker"
@@ -43,7 +66,7 @@
             android:id="@+id/teleopPowerPortsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="252dp"
+            android:layout_marginTop="12dp"
             android:text="Play Style"
             android:textColor="@android:color/black"
             android:textSize="24sp"
@@ -51,7 +74,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopGoalsLowPicker" />
 
         <TextView
             android:id="@+id/lowerCellsText7"
@@ -170,24 +193,22 @@
             android:layout_width="57dp"
             android:layout_height="23dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
             android:text="Low"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
 
         <TextView
             android:id="@+id/innerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="20dp"
             android:text="High"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/outerCellsText"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
 
         <TextView
             android:id="@+id/teleopPowerPortsText"
@@ -208,12 +229,11 @@
             android:layout_width="61dp"
             android:layout_height="25dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
             android:text="Middle"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
 
 
         <Spinner
@@ -221,10 +241,10 @@
             android:layout_width="315dp"
             android:layout_height="48dp"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="252dp"
+            android:layout_marginTop="12dp"
             android:entries="@array/play_styles"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText2" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/terminalMissedCounter"
