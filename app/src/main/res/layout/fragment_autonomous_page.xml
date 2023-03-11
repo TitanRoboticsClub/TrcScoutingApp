@@ -18,58 +18,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="Match #"
+            android:importantForAutofill="no"
             android:inputType="numberSigned"
             android:minHeight="48dp"
             android:textColorHint="#546E7A"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:importantForAutofill="no" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/teamNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="Team #"
+            android:importantForAutofill="no"
             android:inputType="numberSigned"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/matchNum"
-            android:importantForAutofill="no" />
+            app:layout_constraintTop_toBottomOf="@+id/matchNum" />
 
         <Spinner
             android:id="@+id/matchTypeSpinner"
             android:layout_width="315dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="8dp"
             android:entries="@array/game_types"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/teamNum" />
+
 
         <Spinner
             android:id="@+id/spectatingTeamSpinner"
             android:layout_width="315dp"
             android:layout_height="48dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="40dp"
             android:entries="@array/spectating_types"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/matchTypeSpinner" />
 
@@ -77,6 +76,7 @@
             android:id="@+id/matchTypeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
             android:layout_marginBottom="8dp"
             android:text="Match Type"
             android:textColor="#000000"
@@ -85,11 +85,11 @@
             app:layout_constraintBottom_toTopOf="@+id/matchTypeSpinner"
             app:layout_constraintStart_toStartOf="@+id/matchTypeSpinner" />
 
-
         <TextView
             android:id="@+id/spectatingTeamText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
             android:layout_marginBottom="4dp"
             android:text="Spectating Team"
             android:textColor="#000000"
@@ -127,8 +127,8 @@
             android:id="@+id/preScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="324dp"
+            android:layout_marginTop="16dp"
             android:text="Preloaded Score"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -148,12 +148,12 @@
             android:id="@+id/autoScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="24dp"
             android:text="Auto Elements Scored"
             android:textColor="#000000"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/preloadedSpinner"
+            app:layout_constraintStart_toStartOf="@+id/spectatingTeamSpinner"
             app:layout_constraintTop_toBottomOf="@+id/preloadedSpinner" />
 
         <TextView
@@ -174,6 +174,7 @@
             android:layout_marginTop="16dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toStartOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintHorizontal_bias="0.66"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoScoreLowText"
             app:max="50"
@@ -187,7 +188,7 @@
             android:id="@+id/autoScoreMediumText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="128dp"
             android:layout_marginTop="20dp"
             android:text="Medium"
             android:textSize="20sp"
@@ -230,7 +231,7 @@
             android:id="@+id/autoScoreHighText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
+            android:layout_marginStart="128dp"
             android:layout_marginTop="20dp"
             android:text="High"
             android:textSize="20sp"
@@ -241,7 +242,7 @@
             android:id="@+id/engagementStatusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="40dp"
             android:text="Charge Station Engagement"
             android:textColor="#000000"
             android:textSize="20sp"
