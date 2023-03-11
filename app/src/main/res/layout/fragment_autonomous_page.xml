@@ -79,7 +79,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Match Type"
-            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/matchTypeSpinner"
             app:layout_constraintStart_toStartOf="@+id/matchTypeSpinner" />
@@ -91,7 +92,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Spectating Team"
-            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/spectatingTeamSpinner"
             app:layout_constraintStart_toStartOf="@+id/spectatingTeamSpinner" />
 
@@ -103,7 +105,8 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:text="Autonomous Period"
-            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spectatingTeamSpinner" />
@@ -115,6 +118,7 @@
             android:layout_marginTop="12dp"
             android:minHeight="48dp"
             android:text="Left Community"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autonomousText" />
@@ -126,6 +130,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Preloaded Score"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/leftCommunityCB" />
 
@@ -142,8 +148,11 @@
             android:id="@+id/autoScoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="8dp"
             android:text="Auto Elements Scored"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/preloadedSpinner"
             app:layout_constraintTop_toBottomOf="@+id/preloadedSpinner" />
 
@@ -151,17 +160,18 @@
             android:id="@+id/autoScoreLowText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:text="Low"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/autoScoredLowSpinner"
             app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/autoScoredLowSpinner"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="16dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toStartOf="@+id/autoScoredMedSpinner"
             app:layout_constraintStart_toStartOf="parent"
@@ -177,17 +187,18 @@
             android:id="@+id/autoScoreMediumText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
+            android:layout_marginStart="72dp"
             android:layout_marginTop="20dp"
             android:text="Medium"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/autoScoreLowText"
             app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/autoScoredMedSpinner"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="16dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -201,10 +212,10 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/autoScoredHighSpinner"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.284"
@@ -219,9 +230,10 @@
             android:id="@+id/autoScoreHighText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
+            android:layout_marginStart="68dp"
             android:layout_marginTop="20dp"
             android:text="High"
+            android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/autoScoreMediumText"
             app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
 
@@ -231,6 +243,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Charge Station Engagement"
+            android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoScoredMedSpinner" />
