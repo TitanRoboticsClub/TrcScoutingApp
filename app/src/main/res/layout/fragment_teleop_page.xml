@@ -50,8 +50,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsHighPicker"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -107,8 +107,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopLinksPicker"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -121,8 +121,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsMedPicker"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -136,8 +136,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsLowPicker"
-            android:layout_width="40dp"
-            android:layout_height="129dp"
+            android:layout_width="80dp"
+            android:layout_height="240dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +151,7 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/foulsCounter"
-            android:layout_width="40dp"
+            android:layout_width="80dp"
             android:layout_height="129dp"
             android:layout_marginTop="8dp"
             app:custom_layout="@layout/custom_number_picker"
