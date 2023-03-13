@@ -9,6 +9,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="297dp"
+            android:layout_height="64dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="476dp"
+            tools:layout_editor_absoluteY="353dp"
+            tools:text=" (5+ links, or 4+ if have Co-op bonus)" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="297dp"
+            android:layout_height="64dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="476dp"
+            tools:layout_editor_absoluteY="435dp"
+            tools:text="  (26+ Charge Station points)" />
+
         <Spinner
             android:id="@+id/endgameRobotStateSpinner"
             android:layout_width="400dp"
@@ -17,6 +39,7 @@
             android:layout_marginTop="4dp"
             android:entries="@array/robotStates"
             android:scaleX="1"
+            android:theme="@style/customSpinnerItemStyle"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText2"
             app:layout_constraintTop_toBottomOf="@+id/robotBrokeDownCB" />
 
@@ -27,8 +50,8 @@
             android:layout_marginTop="7dp"
             android:gravity="center"
             android:text="Final State"
-            android:textColor="@android:color/black"
-            android:textSize="50sp"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="48sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.136"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +63,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:minHeight="48dp"
-            android:text="  Coopertition Bonus (3+ pieces per Co-op Grid)"
-            android:textColor="@android:color/black"
+            android:text="  Coopertition Bonus"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
-            android:text="  Activation Bonus (26+ Charge Station points)"
-            android:textColor="@android:color/black"
+            android:text="  Activation Bonus"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +103,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="20dp"
             android:entries="@array/outcomes"
+            android:theme="@style/customSpinnerItemStyle"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText10"
             app:layout_constraintTop_toBottomOf="@+id/yellowCard2CB" />
 
@@ -91,6 +115,7 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="number"
+            android:textSize="40sp"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText11"
             app:layout_constraintTop_toBottomOf="@+id/finalLWTSpinner" />
 
@@ -122,13 +147,14 @@
 
         <EditText
             android:id="@+id/notesET"
-            android:layout_width="700dp"
-            android:layout_height="100dp"
+            android:layout_width="692dp"
+            android:layout_height="118dp"
             android:layout_marginTop="24dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="Notes (optional)..."
             android:inputType="textMultiLine"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
@@ -141,8 +167,8 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Outcome"
-            android:textColor="@android:color/black"
-            android:textSize="50sp"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.13"
             app:layout_constraintStart_toStartOf="parent"
@@ -155,8 +181,8 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Score"
-            android:textColor="@android:color/black"
-            android:textSize="50sp"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
@@ -168,8 +194,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:minHeight="48dp"
-            android:text="  Sustainability Bonus (5+ links, or 4+ if have Co-op bonus)"
-            android:textColor="@android:color/black"
+            android:text="  Sustainability Bonus"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
@@ -182,6 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Endgame Period"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="70sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
@@ -213,6 +240,17 @@
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/robotBrokeDownCB" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="297dp"
+            android:layout_height="64dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="487dp"
+            tools:layout_editor_absoluteY="273dp"
+            tools:text=" (5+ links, or 4+ if have Co-op bonus)" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

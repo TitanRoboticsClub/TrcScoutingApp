@@ -62,8 +62,8 @@
     <string-array name="game_types">
         <item>[Select match type...]</item>
         <item>Qualification</item>
-        <item>Quarterfinal</item>
-        <item>Semifinal</item>
+        <!-- <item>Quarterfinal</item> -->
+        <item>Brackets</item>
         <item>Final</item>
     </string-array>
 

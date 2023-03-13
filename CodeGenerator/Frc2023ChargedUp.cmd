@@ -67,6 +67,7 @@ csv map 29 notes
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
 page add Endgame EndgameFragment fragment_endgame_page 3
+page add Help HelpFragment fragment_help_page 4
 wp set AutonomousFragment
 elements add matchNum edittext matchNumber
 elements add teamNum edittext teamNumber

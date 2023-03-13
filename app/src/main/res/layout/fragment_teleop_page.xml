@@ -43,17 +43,17 @@
             android:id="@+id/innerCellsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="64dp"
             android:text="Links"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36dp"
             app:layout_constraintStart_toEndOf="@+id/innerCellsText"
             app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsHighPicker"
-            android:layout_width="80dp"
-            android:layout_height="240dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
 
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="Play Style"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="48dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,35 +83,34 @@
             android:id="@+id/lowerCellsText7"
             android:layout_width="114dp"
             android:layout_height="64dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Fouls"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.305"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/teleopPlaystyleSpinner" />
+            app:layout_constraintTop_toBottomOf="@+id/teleopPlaystyleSpinner" />
 
         <TextView
             android:id="@+id/lowerCellsText8"
             android:layout_width="232dp"
             android:layout_height="60dp"
-            android:layout_marginTop="60dp"
             android:gravity="center"
             android:text="Tech Fouls"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.72"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/teleopPlaystyleSpinner" />
+            app:layout_constraintTop_toTopOf="@+id/lowerCellsText7" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopLinksPicker"
-            android:layout_width="80dp"
-            android:layout_height="240dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -124,8 +123,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsMedPicker"
-            android:layout_width="80dp"
-            android:layout_height="240dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -139,8 +138,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopGoalsLowPicker"
-            android:layout_width="80dp"
-            android:layout_height="240dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
 
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -155,8 +154,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/foulsCounter"
-            android:layout_width="80dp"
-            android:layout_height="129dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
 
             android:layout_marginTop="8dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -171,8 +170,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/techFoulsCounter"
-            android:layout_width="80dp"
-            android:layout_height="280dp"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
             android:layout_marginTop="8dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Low"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.104"
@@ -212,9 +211,9 @@
             android:id="@+id/innerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
+            android:layout_marginStart="72dp"
             android:text="High"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36sp"
             app:layout_constraintStart_toEndOf="@+id/outerCellsText"
             app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
@@ -225,7 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Goals"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="48dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -233,17 +232,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
+
         <TextView
             android:id="@+id/outerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="72dp"
             android:text="Middle"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_light"
             android:textSize="36sp"
             app:layout_constraintStart_toEndOf="@+id/lowerCellsText"
             app:layout_constraintTop_toBottomOf="@+id/teleopScoredConesCB" />
-
 
         <Spinner
             android:id="@+id/teleopPlaystyleSpinner"
@@ -251,6 +250,7 @@
             android:layout_height="76dp"
             android:layout_marginTop="12dp"
             android:entries="@array/play_styles"
+            android:theme="@style/customSpinnerItemStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText2" />
