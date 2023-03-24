@@ -13,30 +13,30 @@
             android:id="@+id/textView2"
             android:layout_width="297dp"
             android:layout_height="64dp"
-            android:text="TextView"
+            android:text="(3+ game pieces on both coop boards)"
             android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="476dp"
-            tools:layout_editor_absoluteY="353dp"
-            tools:text=" (5+ links, or 4+ if have Co-op bonus)" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/endgameCoopertitionBonusCB" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="297dp"
             android:layout_height="64dp"
-            android:text="TextView"
+            android:text="  (26+ Charge Station points)"
             android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="476dp"
-            tools:layout_editor_absoluteY="435dp"
-            tools:text="  (26+ Charge Station points)" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/endgameActivationBonusCB" />
 
         <Spinner
             android:id="@+id/endgameRobotStateSpinner"
             android:layout_width="400dp"
             android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="24dp"
             android:entries="@array/robotStates"
             android:scaleX="1"
             android:theme="@style/customSpinnerItemStyle"
@@ -47,13 +47,13 @@
             android:id="@+id/lowerCellsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
             android:gravity="center"
-            android:text="Final State"
+            android:text="Charge Station"
             android:textColor="@color/colorPrimary"
-            android:textSize="48sp"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@+id/endgameRobotStateSpinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/endgameRobotStateSpinner" />
 
@@ -121,13 +121,16 @@
 
         <CheckBox
             android:id="@+id/yellowCard2CB"
-            android:layout_width="310dp"
-            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
             android:text="  Yellow Card"
-            android:textSize="40sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/endgameActivationBonusCB" />
 
@@ -135,13 +138,14 @@
             android:id="@+id/yellowCard1CB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:minWidth="48dp"
             android:minHeight="48dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
             android:text=" "
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.242"
+            app:layout_constraintHorizontal_bias="0.32"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/yellowCard2CB" />
 
@@ -170,7 +174,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintHorizontal_bias="0.21"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/finalLWTSpinner" />
 
@@ -184,7 +188,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.171"
+            app:layout_constraintHorizontal_bias="0.31"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/finalAllianceScoreInt" />
 
@@ -208,8 +212,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Endgame Period"
-            android:textColor="@color/colorPrimary"
-            android:textSize="70sp"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -219,11 +222,12 @@
             android:id="@+id/robotBrokeDownCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
             android:text="  Broke Down"
-            android:textSize="40sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.431"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/endgameText" />
 
@@ -245,12 +249,13 @@
             android:id="@+id/textView"
             android:layout_width="297dp"
             android:layout_height="64dp"
-            android:text="TextView"
+            android:text=" (5+ links, or 4+ if have Co-op bonus)"
             android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="487dp"
-            tools:layout_editor_absoluteY="273dp"
-            tools:text=" (5+ links, or 4+ if have Co-op bonus)" />
+            app:layout_constraintBottom_toTopOf="@+id/endgameCoopertitionBonusCB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/endgameSustainabilityBonusCB" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

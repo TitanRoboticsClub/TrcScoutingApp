@@ -21,6 +21,7 @@ public class TeleOpFragment extends AbstractPageFragment
     private NumberPicker teleopGoalsLowPicker;
     private NumberPicker teleopGoalsMedPicker;
     private NumberPicker teleopGoalsHighPicker;
+    private NumberPicker teleopMissedAttemptsPicker;
     private NumberPicker teleopLinksPicker;
     private Spinner teleopPlaystyleSpinner;
     private NumberPicker foulsCounter;
@@ -35,6 +36,7 @@ public class TeleOpFragment extends AbstractPageFragment
         teleopGoalsLowPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsLowPicker);
         teleopGoalsMedPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsMedPicker);
         teleopGoalsHighPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsHighPicker);
+        teleopMissedAttemptsPicker = (NumberPicker) view.findViewById(R.id.teleopMissedAttemptsPicker);
         teleopLinksPicker = (NumberPicker) view.findViewById(R.id.teleopLinksPicker);
         teleopPlaystyleSpinner = (Spinner) view.findViewById(R.id.teleopPlaystyleSpinner);
         foulsCounter = (NumberPicker) view.findViewById(R.id.foulsCounter);
@@ -58,6 +60,9 @@ public class TeleOpFragment extends AbstractPageFragment
         }
         if (fieldData.has("teleopGoalsHigh")) {
             UIUtils.setNumberPickerVal(teleopGoalsHighPicker, fieldData.getInt("teleopGoalsHigh"));
+        }
+        if (fieldData.has("teleopMissedAttempts")) {
+            UIUtils.setNumberPickerVal(teleopMissedAttemptsPicker, fieldData.getInt("teleopMissedAttempts"));
         }
         if (fieldData.has("teleopLinks")) {
             UIUtils.setNumberPickerVal(teleopLinksPicker, fieldData.getInt("teleopLinks"));
@@ -84,6 +89,7 @@ public class TeleOpFragment extends AbstractPageFragment
             data.put("teleopGoalsLow", teleopGoalsLowPicker.getValue());
             data.put("teleopGoalsMed", teleopGoalsMedPicker.getValue());
             data.put("teleopGoalsHigh", teleopGoalsHighPicker.getValue());
+            data.put("teleopMissedAttempts", teleopMissedAttemptsPicker.getValue());
             data.put("teleopLinks", teleopLinksPicker.getValue());
             data.put("teleopPlaystyle", teleopPlaystyleSpinner.getSelectedItem().toString());
             data.put("fouls", foulsCounter.getValue());

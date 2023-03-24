@@ -21,6 +21,7 @@ field add teleopScoredCubes bool
 field add teleopGoalsLow int
 field add teleopGoalsMed int
 field add teleopGoalsHigh int
+field add teleopMissedAttempts int
 field add teleopLinks int
 field add teleopPlaystyle str
 field add fouls int
@@ -50,20 +51,21 @@ csv map 12 teleopScoredCubes
 csv map 13 teleopGoalsLow
 csv map 14 teleopGoalsMed
 csv map 15 teleopGoalsHigh
-csv map 16 teleopLinks
-csv map 17 teleopPlaystyle
-csv map 18 fouls
-csv map 19 techFouls
-csv map 20 robotBrokeDown
-csv map 21 endgameRobotState
-csv map 22 endgameSustainabilityBonus
-csv map 23 endgameCoopertitionBonus
-csv map 24 endgameActivationBonus
-csv map 25 yellowCard1
-csv map 26 yellowCard2
-csv map 27 finalAllianceScore
-csv map 28 finalWLT
-csv map 29 notes
+csv map 16 teleopMissedAttempts
+csv map 17 teleopLinks
+csv map 18 teleopPlaystyle
+csv map 19 fouls
+csv map 20 techFouls
+csv map 21 robotBrokeDown
+csv map 22 endgameRobotState
+csv map 23 endgameSustainabilityBonus
+csv map 24 endgameCoopertitionBonus
+csv map 25 endgameActivationBonus
+csv map 26 yellowCard1
+csv map 27 yellowCard2
+csv map 28 finalAllianceScore
+csv map 29 finalWLT
+csv map 30 notes
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
 page add Endgame EndgameFragment fragment_endgame_page 3
@@ -85,6 +87,7 @@ elements add teleopScoredCubesCB checkbox teleopScoredCubes
 elements add teleopGoalsLowPicker numberpicker teleopGoalsLow
 elements add teleopGoalsMedPicker numberpicker teleopGoalsMed
 elements add teleopGoalsHighPicker numberpicker teleopGoalsHigh
+elements add teleopMissedAttemptsPicker numberpicker teleopMissedAttempts
 elements add teleopLinksPicker numberpicker teleopLinks
 elements add teleopPlaystyleSpinner spinner teleopPlaystyle
 elements add foulsCounter numberpicker fouls
@@ -100,7 +103,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Community,Preloaded,Auto Scored Low,Auto Scored Med,Auto Scored High,Auto Engaged Docked State,Teleop Scored Cones,Teleop Scored Cubes,Teleop Goals Low,Teleop Goals Med,Teleop Goals High,Teleop Links,Teleop Playstyle,Fouls,Tech Fouls,Robot Broke Down,Endgame Parked,Endgame Docked,Endgame Engaged,Endgame Sustainability Bonus,Endgame Coopertition Bonus,Endgame Activation Bonus,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Community,Preloaded,Auto Scored Low,Auto Scored Med,Auto Scored High,Auto Engaged Docked State,Teleop Scored Cones,Teleop Scored Cubes,Teleop Goals Low,Teleop Goals Med,Teleop Goals High,Teleop Missed Attempts,Teleop Links,Teleop Playstyle,Fouls,Tech Fouls,Robot Broke Down,Endgame Parked,Endgame Docked,Endgame Engaged,Endgame Sustainability Bonus,Endgame Coopertition Bonus,Endgame Activation Bonus,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2023
 generatecode
 
