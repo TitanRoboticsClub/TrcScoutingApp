@@ -103,7 +103,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Community,Preloaded,Auto Scored Low,Auto Scored Med,Auto Scored High,Auto Engaged Docked State,Teleop Scored Cones,Teleop Scored Cubes,Teleop Goals Low,Teleop Goals Med,Teleop Goals High,Teleop Missed Attempts,Teleop Links,Teleop Playstyle,Fouls,Tech Fouls,Robot Broke Down,Endgame Parked,Endgame Docked,Endgame Engaged,Endgame Sustainability Bonus,Endgame Coopertition Bonus,Endgame Activation Bonus,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Community,Preloaded,Auto Scored Low,Auto Scored Med,Auto Scored High,Auto Engaged Docked State,Teleop Scored Cones,Teleop Scored Cubes,Teleop Goals Low,Teleop Goals Med,Teleop Goals High,Teleop Missed Attempts,Teleop Links,Teleop Playstyle,Fouls,Tech Fouls,Robot Broke Down,Endgame Robot State,Endgame Sustainability Bonus,Endgame Coopertition Bonus,Endgame Activation Bonus,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2023
 generatecode
 
