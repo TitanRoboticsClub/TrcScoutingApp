@@ -1,0 +1,37 @@
+Autonomous
+
+Left starting zone [checkbox]
+Picked up notes [counter]
+Scored notes - speaker [counter]
+Scored notes - amp [counter]
+
+Teleop
+Provided human player - [checkbox]
+Picked up notes [counter]
+Scored notes - speaker unamplified [counter]
+Scored notes - speaker amplified [counter]
+Scored notes - amp [counter]
+
+Endgame
+Final state [None, Parked, Onstage]
+Trap point - [checkbox]
+Coopertition point [checkbox]
+Harmonized [checkbox]
+High note [checkbox]  
+Melody [checkbox]
+Ensemble [checkbox]
+Won/Loss/Tied
+final score
+
+Fouls [counter]
+Tech fouls [counter]
+yellowCard1
+yellowCard2
+disabled
+disqualified
+
+
+
+
+
+
