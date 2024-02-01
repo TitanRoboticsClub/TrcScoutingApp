@@ -20,12 +20,12 @@ public class AutonomousFragment extends AbstractPageFragment
     private EditText teamNum;
     private Spinner spectatingTeamSpinner;
     private Spinner matchTypeSpinner;
-    private CheckBox leftCommunityCB;
+    private CheckBox leftStartingZoneCB;
     private Spinner preloadedSpinner;
-    private NumberPicker autoScoredLowSpinner;
-    private NumberPicker autoScoredMedSpinner;
-    private NumberPicker autoScoredHighSpinner;
-    private Spinner autoEngagedDockedStateSpinner;
+    private NumberPicker pickedHomeZoneNotesCounter;
+    private NumberPicker pickedMiddleZoneNotesCounter;
+    private NumberPicker scoredSpeakerNotesCounter;
+    private NumberPicker scoredAmpNotesCounter;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
@@ -35,12 +35,12 @@ public class AutonomousFragment extends AbstractPageFragment
         teamNum = (EditText) view.findViewById(R.id.teamNum);
         spectatingTeamSpinner = (Spinner) view.findViewById(R.id.spectatingTeamSpinner);
         matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
-        leftCommunityCB = (CheckBox) view.findViewById(R.id.leftCommunityCB);
+        leftStartingZoneCB = (CheckBox) view.findViewById(R.id.leftStartingZoneCB);
         preloadedSpinner = (Spinner) view.findViewById(R.id.preloadedSpinner);
-        autoScoredLowSpinner = (NumberPicker) view.findViewById(R.id.autoScoredLowSpinner);
-        autoScoredMedSpinner = (NumberPicker) view.findViewById(R.id.autoScoredMedSpinner);
-        autoScoredHighSpinner = (NumberPicker) view.findViewById(R.id.autoScoredHighSpinner);
-        autoEngagedDockedStateSpinner = (Spinner) view.findViewById(R.id.autoEngagedDockedStateSpinner);
+        pickedHomeZoneNotesCounter = (NumberPicker) view.findViewById(R.id.pickedHomeZoneNotesCounter);
+        pickedMiddleZoneNotesCounter = (NumberPicker) view.findViewById(R.id.pickedMiddleZoneNotesCounter);
+        scoredSpeakerNotesCounter = (NumberPicker) view.findViewById(R.id.scoredSpeakerNotesCounter);
+        scoredAmpNotesCounter = (NumberPicker) view.findViewById(R.id.scoredAmpNotesCounter);
     }
 
     @Override
@@ -58,23 +58,23 @@ public class AutonomousFragment extends AbstractPageFragment
         if (fieldData.has("matchType")) {
             UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchType"));
         }
-        if (fieldData.has("leftCommunity")) {
-            UIUtils.setCheckbox(leftCommunityCB, fieldData.getBoolean("leftCommunity"));
+        if (fieldData.has("leftStartingZone")) {
+            UIUtils.setCheckbox(leftStartingZoneCB, fieldData.getBoolean("leftStartingZone"));
         }
         if (fieldData.has("preloaded")) {
             UIUtils.setSpinnerByTextValue(preloadedSpinner, fieldData.getString("preloaded"));
         }
-        if (fieldData.has("autoScoredLow")) {
-            UIUtils.setNumberPickerVal(autoScoredLowSpinner, fieldData.getInt("autoScoredLow"));
+        if (fieldData.has("pickedHomeZoneNotes")) {
+            UIUtils.setNumberPickerVal(pickedHomeZoneNotesCounter, fieldData.getInt("pickedHomeZoneNotes"));
         }
-        if (fieldData.has("autoScoredMed")) {
-            UIUtils.setNumberPickerVal(autoScoredMedSpinner, fieldData.getInt("autoScoredMed"));
+        if (fieldData.has("pickedMiddleZoneNotes")) {
+            UIUtils.setNumberPickerVal(pickedMiddleZoneNotesCounter, fieldData.getInt("pickedMiddleZoneNotes"));
         }
-        if (fieldData.has("autoScoredHigh")) {
-            UIUtils.setNumberPickerVal(autoScoredHighSpinner, fieldData.getInt("autoScoredHigh"));
+        if (fieldData.has("scoredSpeakerNotes")) {
+            UIUtils.setNumberPickerVal(scoredSpeakerNotesCounter, fieldData.getInt("scoredSpeakerNotes"));
         }
-        if (fieldData.has("autoEngagedDockedState")) {
-            UIUtils.setSpinnerByTextValue(autoEngagedDockedStateSpinner, fieldData.getString("autoEngagedDockedState"));
+        if (fieldData.has("scoredAmpNotes")) {
+            UIUtils.setNumberPickerVal(scoredAmpNotesCounter, fieldData.getInt("scoredAmpNotes"));
         }
     }
 
@@ -98,12 +98,12 @@ public class AutonomousFragment extends AbstractPageFragment
             }
             data.put("alliance", spectatingTeamSpinner.getSelectedItem().toString());
             data.put("matchType", matchTypeSpinner.getSelectedItem().toString());
-            data.put("leftCommunity", leftCommunityCB.isChecked());
+            data.put("leftStartingZone", leftStartingZoneCB.isChecked());
             data.put("preloaded", preloadedSpinner.getSelectedItem().toString());
-            data.put("autoScoredLow", autoScoredLowSpinner.getValue());
-            data.put("autoScoredMed", autoScoredMedSpinner.getValue());
-            data.put("autoScoredHigh", autoScoredHighSpinner.getValue());
-            data.put("autoEngagedDockedState", autoEngagedDockedStateSpinner.getSelectedItem().toString());
+            data.put("pickedHomeZoneNotes", pickedHomeZoneNotesCounter.getValue());
+            data.put("pickedMiddleZoneNotes", pickedMiddleZoneNotesCounter.getValue());
+            data.put("scoredSpeakerNotes", scoredSpeakerNotesCounter.getValue());
+            data.put("scoredAmpNotes", scoredAmpNotesCounter.getValue());
             return data;
         }
         catch (Exception e)

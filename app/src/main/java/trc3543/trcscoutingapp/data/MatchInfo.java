@@ -29,44 +29,47 @@ public class MatchInfo implements Serializable
     @SerializedName("matchType")
     public String matchType;
 
-    @SerializedName("leftCommunity")
-    public Boolean leftCommunity;
+    @SerializedName("leftStartingZone")
+    public Boolean leftStartingZone;
 
     @SerializedName("preloaded")
     public String preloaded;
 
-    @SerializedName("autoScoredLow")
-    public Integer autoScoredLow;
+    @SerializedName("pickedHomeZoneNotes")
+    public Integer pickedHomeZoneNotes;
 
-    @SerializedName("autoScoredMed")
-    public Integer autoScoredMed;
+    @SerializedName("pickedMiddleZoneNotes")
+    public Integer pickedMiddleZoneNotes;
 
-    @SerializedName("autoScoredHigh")
-    public Integer autoScoredHigh;
+    @SerializedName("scoredSpeakerNotes")
+    public Integer scoredSpeakerNotes;
 
-    @SerializedName("autoEngagedDockedState")
-    public String autoEngagedDockedState;
+    @SerializedName("scoredAmpNotes")
+    public Integer scoredAmpNotes;
 
-    @SerializedName("teleopScoredCones")
-    public Boolean teleopScoredCones;
+    @SerializedName("providedHumanPlayer")
+    public Boolean providedHumanPlayer;
 
-    @SerializedName("teleopScoredCubes")
-    public Boolean teleopScoredCubes;
+    @SerializedName("amplifiedCount")
+    public Integer amplifiedCount;
 
-    @SerializedName("teleopGoalsLow")
-    public Integer teleopGoalsLow;
+    @SerializedName("pickedNotesFromFloor")
+    public Integer pickedNotesFromFloor;
 
-    @SerializedName("teleopGoalsMed")
-    public Integer teleopGoalsMed;
+    @SerializedName("pickedNotesFromWall")
+    public Integer pickedNotesFromWall;
 
-    @SerializedName("teleopGoalsHigh")
-    public Integer teleopGoalsHigh;
+    @SerializedName("scoredNotesSpeakerUnamplified")
+    public Integer scoredNotesSpeakerUnamplified;
 
-    @SerializedName("teleopMissedAttempts")
-    public Integer teleopMissedAttempts;
+    @SerializedName("scoredNotesSpeakerAmplified")
+    public Integer scoredNotesSpeakerAmplified;
 
-    @SerializedName("teleopLinks")
-    public Integer teleopLinks;
+    @SerializedName("scoredNotesAmplifier")
+    public Integer scoredNotesAmplifier;
+
+    @SerializedName("coopertitionPoint")
+    public Boolean coopertitionPoint;
 
     @SerializedName("teleopPlaystyle")
     public String teleopPlaystyle;
@@ -77,17 +80,23 @@ public class MatchInfo implements Serializable
     @SerializedName("techFouls")
     public Integer techFouls;
 
-    @SerializedName("endgameRobotState")
-    public String endgameRobotState;
+    @SerializedName("finalState")
+    public String finalState;
 
-    @SerializedName("endgameSustainabilityBonus")
-    public Boolean endgameSustainabilityBonus;
+    @SerializedName("trapPoint")
+    public Boolean trapPoint;
 
-    @SerializedName("endgameCoopertitionBonus")
-    public Boolean endgameCoopertitionBonus;
+    @SerializedName("harmonized")
+    public Boolean harmonized;
 
-    @SerializedName("endgameActivationBonus")
-    public Boolean endgameActivationBonus;
+    @SerializedName("highNote")
+    public Boolean highNote;
+
+    @SerializedName("melody")
+    public Boolean melody;
+
+    @SerializedName("ensemble")
+    public Boolean ensemble;
 
     @SerializedName("robotBrokeDown")
     public Boolean robotBrokeDown;
@@ -160,7 +169,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftCommunity,preloaded,autoScoredLow,autoScoredMed,autoScoredHigh,autoEngagedDockedState,teleopScoredCones,teleopScoredCubes,teleopGoalsLow,teleopGoalsMed,teleopGoalsHigh,teleopMissedAttempts,teleopLinks,teleopPlaystyle,fouls,techFouls,robotBrokeDown,endgameRobotState,endgameSustainabilityBonus,endgameCoopertitionBonus,endgameActivationBonus,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,preloaded,pickedHomeZoneNotes,pickedMiddleZoneNotes,scoredSpeakerNotes,scoredAmpNotes,providedHumanPlayer,amplifiedCount,pickedNotesFromFloor,pickedNotesFromWall,scoredNotesSpeakerUnamplified,scoredNotesSpeakerAmplified,scoredNotesAmplifier,coopertitionPoint,teleopPlaystyle,fouls,techFouls,finalState,trapPoint,harmonized,highNote,melody,ensemble,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

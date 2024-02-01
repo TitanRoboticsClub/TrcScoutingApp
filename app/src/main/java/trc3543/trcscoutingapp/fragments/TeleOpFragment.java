@@ -16,13 +16,14 @@ import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class TeleOpFragment extends AbstractPageFragment
 {
-    private CheckBox teleopScoredConesCB;
-    private CheckBox teleopScoredCubesCB;
-    private NumberPicker teleopGoalsLowPicker;
-    private NumberPicker teleopGoalsMedPicker;
-    private NumberPicker teleopGoalsHighPicker;
-    private NumberPicker teleopMissedAttemptsPicker;
-    private NumberPicker teleopLinksPicker;
+    private CheckBox providedHumanPlayerCB;
+    private NumberPicker amplifiedCountCounter;
+    private NumberPicker pickedNotesFromFloorCounter;
+    private NumberPicker pickedNotesFromWallCounter;
+    private NumberPicker scoredNotesSpeakerUnamplifiedCounter;
+    private NumberPicker scoredNotesSpeakerAmplifiedCounter;
+    private NumberPicker scoredNotesAmplifierCounter;
+    private CheckBox coopertitionPointCB;
     private Spinner teleopPlaystyleSpinner;
     private NumberPicker foulsCounter;
     private NumberPicker techFoulsCounter;
@@ -31,13 +32,14 @@ public class TeleOpFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_teleop_page, container, false);
-        teleopScoredConesCB = (CheckBox) view.findViewById(R.id.teleopScoredConesCB);
-        teleopScoredCubesCB = (CheckBox) view.findViewById(R.id.teleopScoredCubesCB);
-        teleopGoalsLowPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsLowPicker);
-        teleopGoalsMedPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsMedPicker);
-        teleopGoalsHighPicker = (NumberPicker) view.findViewById(R.id.teleopGoalsHighPicker);
-        teleopMissedAttemptsPicker = (NumberPicker) view.findViewById(R.id.teleopMissedAttemptsPicker);
-        teleopLinksPicker = (NumberPicker) view.findViewById(R.id.teleopLinksPicker);
+        providedHumanPlayerCB = (CheckBox) view.findViewById(R.id.providedHumanPlayerCB);
+        amplifiedCountCounter = (NumberPicker) view.findViewById(R.id.amplifiedCountCounter);
+        pickedNotesFromFloorCounter = (NumberPicker) view.findViewById(R.id.pickedNotesFromFloorCounter);
+        pickedNotesFromWallCounter = (NumberPicker) view.findViewById(R.id.pickedNotesFromWallCounter);
+        scoredNotesSpeakerUnamplifiedCounter = (NumberPicker) view.findViewById(R.id.scoredNotesSpeakerUnamplifiedCounter);
+        scoredNotesSpeakerAmplifiedCounter = (NumberPicker) view.findViewById(R.id.scoredNotesSpeakerAmplifiedCounter);
+        scoredNotesAmplifierCounter = (NumberPicker) view.findViewById(R.id.scoredNotesAmplifierCounter);
+        coopertitionPointCB = (CheckBox) view.findViewById(R.id.coopertitionPointCB);
         teleopPlaystyleSpinner = (Spinner) view.findViewById(R.id.teleopPlaystyleSpinner);
         foulsCounter = (NumberPicker) view.findViewById(R.id.foulsCounter);
         techFoulsCounter = (NumberPicker) view.findViewById(R.id.techFoulsCounter);
@@ -46,26 +48,29 @@ public class TeleOpFragment extends AbstractPageFragment
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("teleopScoredCones")) {
-            UIUtils.setCheckbox(teleopScoredConesCB, fieldData.getBoolean("teleopScoredCones"));
+        if (fieldData.has("providedHumanPlayer")) {
+            UIUtils.setCheckbox(providedHumanPlayerCB, fieldData.getBoolean("providedHumanPlayer"));
         }
-        if (fieldData.has("teleopScoredCubes")) {
-            UIUtils.setCheckbox(teleopScoredCubesCB, fieldData.getBoolean("teleopScoredCubes"));
+        if (fieldData.has("amplifiedCount")) {
+            UIUtils.setNumberPickerVal(amplifiedCountCounter, fieldData.getInt("amplifiedCount"));
         }
-        if (fieldData.has("teleopGoalsLow")) {
-            UIUtils.setNumberPickerVal(teleopGoalsLowPicker, fieldData.getInt("teleopGoalsLow"));
+        if (fieldData.has("pickedNotesFromFloor")) {
+            UIUtils.setNumberPickerVal(pickedNotesFromFloorCounter, fieldData.getInt("pickedNotesFromFloor"));
         }
-        if (fieldData.has("teleopGoalsMed")) {
-            UIUtils.setNumberPickerVal(teleopGoalsMedPicker, fieldData.getInt("teleopGoalsMed"));
+        if (fieldData.has("pickedNotesFromWall")) {
+            UIUtils.setNumberPickerVal(pickedNotesFromWallCounter, fieldData.getInt("pickedNotesFromWall"));
         }
-        if (fieldData.has("teleopGoalsHigh")) {
-            UIUtils.setNumberPickerVal(teleopGoalsHighPicker, fieldData.getInt("teleopGoalsHigh"));
+        if (fieldData.has("scoredNotesSpeakerUnamplified")) {
+            UIUtils.setNumberPickerVal(scoredNotesSpeakerUnamplifiedCounter, fieldData.getInt("scoredNotesSpeakerUnamplified"));
         }
-        if (fieldData.has("teleopMissedAttempts")) {
-            UIUtils.setNumberPickerVal(teleopMissedAttemptsPicker, fieldData.getInt("teleopMissedAttempts"));
+        if (fieldData.has("scoredNotesSpeakerAmplified")) {
+            UIUtils.setNumberPickerVal(scoredNotesSpeakerAmplifiedCounter, fieldData.getInt("scoredNotesSpeakerAmplified"));
         }
-        if (fieldData.has("teleopLinks")) {
-            UIUtils.setNumberPickerVal(teleopLinksPicker, fieldData.getInt("teleopLinks"));
+        if (fieldData.has("scoredNotesAmplifier")) {
+            UIUtils.setNumberPickerVal(scoredNotesAmplifierCounter, fieldData.getInt("scoredNotesAmplifier"));
+        }
+        if (fieldData.has("coopertitionPoint")) {
+            UIUtils.setCheckbox(coopertitionPointCB, fieldData.getBoolean("coopertitionPoint"));
         }
         if (fieldData.has("teleopPlaystyle")) {
             UIUtils.setSpinnerByTextValue(teleopPlaystyleSpinner, fieldData.getString("teleopPlaystyle"));
@@ -84,13 +89,14 @@ public class TeleOpFragment extends AbstractPageFragment
         try
         {
             JSONObject data = new JSONObject();
-            data.put("teleopScoredCones", teleopScoredConesCB.isChecked());
-            data.put("teleopScoredCubes", teleopScoredCubesCB.isChecked());
-            data.put("teleopGoalsLow", teleopGoalsLowPicker.getValue());
-            data.put("teleopGoalsMed", teleopGoalsMedPicker.getValue());
-            data.put("teleopGoalsHigh", teleopGoalsHighPicker.getValue());
-            data.put("teleopMissedAttempts", teleopMissedAttemptsPicker.getValue());
-            data.put("teleopLinks", teleopLinksPicker.getValue());
+            data.put("providedHumanPlayer", providedHumanPlayerCB.isChecked());
+            data.put("amplifiedCount", amplifiedCountCounter.getValue());
+            data.put("pickedNotesFromFloor", pickedNotesFromFloorCounter.getValue());
+            data.put("pickedNotesFromWall", pickedNotesFromWallCounter.getValue());
+            data.put("scoredNotesSpeakerUnamplified", scoredNotesSpeakerUnamplifiedCounter.getValue());
+            data.put("scoredNotesSpeakerAmplified", scoredNotesSpeakerAmplifiedCounter.getValue());
+            data.put("scoredNotesAmplifier", scoredNotesAmplifierCounter.getValue());
+            data.put("coopertitionPoint", coopertitionPointCB.isChecked());
             data.put("teleopPlaystyle", teleopPlaystyleSpinner.getSelectedItem().toString());
             data.put("fouls", foulsCounter.getValue());
             data.put("techFouls", techFoulsCounter.getValue());
