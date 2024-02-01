@@ -1,0 +1,51 @@
+
+3 day build strategy guide: https://www.youtube.com/watch?v=J3KsI1ykFsQ
+
+FTC 2021
+FRC 2013
+
+
+Autonomous
+
+Left starting zone [checkbox]
+Picked up home zone notes [counter]
+Picked up middle zone notes [counter]
+
+Scored notes - speaker [counter]
+Scored notes - amp [counter]
+
+[Potentially also human player notes? Check rules]
+
+Teleop
+Provided human player - [checkbox]
+Picked up notes from floor [counter]
+Picked up notes from wall [counter]
+Scored notes - speaker unamplified [counter]
+Scored notes - speaker amplified [counter]
+Scored notes - amp [counter]
+
+Coopertition point [checkbox]
+
+Endgame
+Final state [None, Parked, Onstage]
+Trap point - [checkbox]
+
+Harmonized [checkbox]
+High note [checkbox]  
+Melody [checkbox]
+Ensemble [checkbox]
+Won/Loss/Tied
+final score
+
+Fouls [counter]
+Tech fouls [counter]
+yellowCard1
+yellowCard2
+disabled
+disqualified
+
+
+
+
+
+
