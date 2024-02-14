@@ -20,6 +20,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="600dp"
             android:ems="10"
             android:hint="Match #"
             android:importantForAutofill="no"
@@ -27,6 +28,7 @@
             android:minHeight="48dp"
             android:textColorHint="@color/colorPrimaryDark"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.123"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,14 +123,14 @@
             app:layout_constraintTop_toBottomOf="@+id/spectatingTeamSpinner" />
 
         <CheckBox
-            android:id="@+id/leftCommunityCB"
+            android:id="@+id/leftStartingZoneCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:minHeight="48dp"
             android:scaleX="1.5"
             android:scaleY="1.5"
-            android:text="Left Community"
+            android:text="Left Starting Zone"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +146,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="34sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/leftCommunityCB" />
+            app:layout_constraintTop_toBottomOf="@+id/leftStartingZoneCB" />
 
         <Spinner
             android:id="@+id/preloadedSpinner"
@@ -170,90 +172,6 @@
             app:layout_constraintTop_toBottomOf="@+id/preloadedSpinner" />
 
         <TextView
-            android:id="@+id/autoScoreLowText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Low"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/autoScoredLowSpinner"
-            app:layout_constraintStart_toStartOf="@+id/autoScoredLowSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
-
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/autoScoredLowSpinner"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="16dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toStartOf="@+id/autoScoredMedSpinner"
-            app:layout_constraintHorizontal_bias="0.66"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreLowText"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0">
-
-        </com.travijuu.numberpicker.library.NumberPicker>
-
-        <TextView
-            android:id="@+id/autoScoreMediumText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Medium"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/autoScoredMedSpinner"
-            app:layout_constraintStart_toStartOf="@+id/autoScoredMedSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
-
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/autoScoredMedSpinner"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="16dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreMediumText"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0">
-
-        </com.travijuu.numberpicker.library.NumberPicker>
-
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/autoScoredHighSpinner"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="16dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.284"
-            app:layout_constraintStart_toEndOf="@+id/autoScoredMedSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreHighText"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0" />
-
-        <TextView
-            android:id="@+id/autoScoreHighText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="High"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/autoScoredHighSpinner"
-            app:layout_constraintStart_toStartOf="@+id/autoScoredHighSpinner"
-            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
-
-        <TextView
             android:id="@+id/engagementStatusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -276,6 +194,132 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/engagementStatusTextView" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/pickedHomeZoneNotesCounter"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="600dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintStart_toEndOf="@+id/pickedMiddleZoneNotesCounter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/autoScoredHighSpinner"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="68dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.29"
+            app:layout_constraintStart_toEndOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreHighText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" />
+
+        <TextView
+            android:id="@+id/autoScoreMediumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Medium"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
+
+        <TextView
+            android:id="@+id/autoScoreLowText"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="60dp"
+            android:text="Picked Home Zone Notes"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="683dp"
+            tools:visibility="visible" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/pickedMiddleZoneNotesCounter"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toStartOf="@+id/autoScoredMedSpinner"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0"
+            tools:layout_editor_absoluteY="754dp">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/autoScoredMedSpinner"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreMediumText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+            <TextView
+                android:id="@+id/autoScoreLowText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="124dp"
+                android:text="Low"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <TextView
+            android:id="@+id/autoScoreLowText"
+            android:layout_width="128dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="240dp"
+            android:text="Low"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="697dp" />
+
+        <TextView
+            android:id="@+id/autoScoreHighText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="High"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/autoScoredHighSpinner"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/autoScoredHighSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/autoScoreText" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
