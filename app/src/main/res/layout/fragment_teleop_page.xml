@@ -26,7 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
         <CheckBox
             android:id="@+id/providedHumanPlayerCB"
@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleopPowerPortsText" />
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
         <TextView
             android:id="@+id/innerCellsText2"
@@ -274,20 +274,6 @@
             app:layout_constraintEnd_toEndOf="@+id/scoredNotesAmplifierCounter"
             app:layout_constraintStart_toStartOf="@+id/scoredNotesAmplifierCounter"
             app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerCB" />
-
-        <TextView
-            android:id="@+id/teleopPowerPortsText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Goals"
-            android:textColor="@color/colorPrimary"
-            android:textSize="48dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
 
         <TextView
