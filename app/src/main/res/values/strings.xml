@@ -78,10 +78,8 @@
     </string-array>
 
     <string-array name="preloadedScoring">
-        <item>Didn\'t score</item>
-        <item>Low</item>
-        <item>Middle</item>
-        <item>High</item>
+        <item>No Preload</item>
+        <item>Preloaded Note</item>
     </string-array>
 
     <string-array name="autoEngagedDockedState">
