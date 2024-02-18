@@ -103,8 +103,7 @@
     <string-array name="robotStates">
         <item>No points</item>
         <item>Parked</item>
-        <item>Docked</item>
-        <item>Engaged</item>
+        <item>On Stage</item>
     </string-array>
 
 
