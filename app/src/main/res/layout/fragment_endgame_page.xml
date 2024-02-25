@@ -11,9 +11,9 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="297dp"
+            android:layout_width="400dp"
             android:layout_height="64dp"
-            android:text="[TODO details]"
+            android:text="This robot and another shared a chain"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
@@ -22,9 +22,9 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="297dp"
+            android:layout_width="400dp"
             android:layout_height="64dp"
-            android:text="  [TODO details]"
+            android:text="This robot's human player scored a high note"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
@@ -33,9 +33,9 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="297dp"
+            android:layout_width="400dp"
             android:layout_height="64dp"
-            android:text="  [TODO details]"
+            android:text="At least 18 (15 if coopertition bonus) Amp and Speaker notes"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
@@ -44,9 +44,9 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="297dp"
+            android:layout_width="400dp"
             android:layout_height="64dp"
-            android:text="  [TODO details]"
+            android:text="At least 10 Stage points and at least two OnStage robots"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
@@ -295,9 +295,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="297dp"
+            android:layout_width="400dp"
             android:layout_height="64dp"
-            android:text="[TODO details]"
+            android:text="This robot scored the trap point"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
