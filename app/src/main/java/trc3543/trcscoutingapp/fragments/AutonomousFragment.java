@@ -22,10 +22,11 @@ public class AutonomousFragment extends AbstractPageFragment
     private Spinner matchTypeSpinner;
     private CheckBox leftStartingZoneCB;
     private Spinner preloadedSpinner;
-    private NumberPicker pickedHomeZoneNotesCounter;
-    private NumberPicker pickedMiddleZoneNotesCounter;
+    private CheckBox pickedHomeZoneNotesCB;
+    private CheckBox pickedMiddleZoneNotesCB;
     private NumberPicker scoredSpeakerNotesCounter;
     private NumberPicker scoredAmpNotesCounter;
+    private NumberPicker autoMissedShotsCounter;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
@@ -37,10 +38,11 @@ public class AutonomousFragment extends AbstractPageFragment
         matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
         leftStartingZoneCB = (CheckBox) view.findViewById(R.id.leftStartingZoneCB);
         preloadedSpinner = (Spinner) view.findViewById(R.id.preloadedSpinner);
-        pickedHomeZoneNotesCounter = (NumberPicker) view.findViewById(R.id.pickedHomeZoneNotesCounter);
-        pickedMiddleZoneNotesCounter = (NumberPicker) view.findViewById(R.id.pickedMiddleZoneNotesCounter);
+        pickedHomeZoneNotesCB = (CheckBox) view.findViewById(R.id.pickedHomeZoneNotesCB);
+        pickedMiddleZoneNotesCB = (CheckBox) view.findViewById(R.id.pickedMiddleZoneNotesCB);
         scoredSpeakerNotesCounter = (NumberPicker) view.findViewById(R.id.scoredSpeakerNotesCounter);
         scoredAmpNotesCounter = (NumberPicker) view.findViewById(R.id.scoredAmpNotesCounter);
+        autoMissedShotsCounter = (NumberPicker) view.findViewById(R.id.autoMissedShotsCounter);
     }
 
     @Override
@@ -65,16 +67,19 @@ public class AutonomousFragment extends AbstractPageFragment
             UIUtils.setSpinnerByTextValue(preloadedSpinner, fieldData.getString("preloaded"));
         }
         if (fieldData.has("pickedHomeZoneNotes")) {
-            UIUtils.setNumberPickerVal(pickedHomeZoneNotesCounter, fieldData.getInt("pickedHomeZoneNotes"));
+            UIUtils.setCheckbox(pickedHomeZoneNotesCB, fieldData.getBoolean("pickedHomeZoneNotes"));
         }
         if (fieldData.has("pickedMiddleZoneNotes")) {
-            UIUtils.setNumberPickerVal(pickedMiddleZoneNotesCounter, fieldData.getInt("pickedMiddleZoneNotes"));
+            UIUtils.setCheckbox(pickedMiddleZoneNotesCB, fieldData.getBoolean("pickedMiddleZoneNotes"));
         }
         if (fieldData.has("scoredSpeakerNotes")) {
             UIUtils.setNumberPickerVal(scoredSpeakerNotesCounter, fieldData.getInt("scoredSpeakerNotes"));
         }
         if (fieldData.has("scoredAmpNotes")) {
             UIUtils.setNumberPickerVal(scoredAmpNotesCounter, fieldData.getInt("scoredAmpNotes"));
+        }
+        if (fieldData.has("autoMissedShots")) {
+            UIUtils.setNumberPickerVal(autoMissedShotsCounter, fieldData.getInt("autoMissedShots"));
         }
     }
 
@@ -100,10 +105,11 @@ public class AutonomousFragment extends AbstractPageFragment
             data.put("matchType", matchTypeSpinner.getSelectedItem().toString());
             data.put("leftStartingZone", leftStartingZoneCB.isChecked());
             data.put("preloaded", preloadedSpinner.getSelectedItem().toString());
-            data.put("pickedHomeZoneNotes", pickedHomeZoneNotesCounter.getValue());
-            data.put("pickedMiddleZoneNotes", pickedMiddleZoneNotesCounter.getValue());
+            data.put("pickedHomeZoneNotes", pickedHomeZoneNotesCB.isChecked());
+            data.put("pickedMiddleZoneNotes", pickedMiddleZoneNotesCB.isChecked());
             data.put("scoredSpeakerNotes", scoredSpeakerNotesCounter.getValue());
             data.put("scoredAmpNotes", scoredAmpNotesCounter.getValue());
+            data.put("autoMissedShots", autoMissedShotsCounter.getValue());
             return data;
         }
         catch (Exception e)

@@ -6,10 +6,11 @@ field add alliance str
 field add matchType str
 field add leftStartingZone bool
 field add preloaded str
-field add pickedHomeZoneNotes int
-field add pickedMiddleZoneNotes int
+field add pickedHomeZoneNotes bool
+field add pickedMiddleZoneNotes bool
 field add scoredSpeakerNotes int
 field add scoredAmpNotes int
+field add autoMissedShots int
 field add providedHumanPlayer bool
 field add amplifiedCount int
 field add pickedNotesFromFloor int
@@ -17,6 +18,7 @@ field add pickedNotesFromWall int
 field add scoredNotesSpeakerUnamplified int
 field add scoredNotesSpeakerAmplified int
 field add scoredNotesAmplifier int
+field add teleopMissedShots int
 field add coopertitionPoint bool
 field add teleopPlaystyle str
 field add fouls int
@@ -49,29 +51,31 @@ csv map 7 pickedHomeZoneNotes
 csv map 8 pickedMiddleZoneNotes
 csv map 9 scoredSpeakerNotes
 csv map 10 scoredAmpNotes
-csv map 11 providedHumanPlayer
-csv map 12 amplifiedCount
-csv map 13 pickedNotesFromFloor
-csv map 14 pickedNotesFromWall
-csv map 15 scoredNotesSpeakerUnamplified
-csv map 16 scoredNotesSpeakerAmplified
-csv map 17 scoredNotesAmplifier
-csv map 18 coopertitionPoint
-csv map 19 teleopPlaystyle
-csv map 20 fouls
-csv map 21 techFouls
-csv map 22 finalState
-csv map 23 trapPoint
-csv map 24 harmonized
-csv map 25 highNote
-csv map 26 melody
-csv map 27 ensemble
-csv map 28 robotBrokeDown
-csv map 29 yellowCard1
-csv map 30 yellowCard2
-csv map 31 finalAllianceScore
-csv map 32 finalWLT
-csv map 33 notes
+csv map 11 autoMissedShots
+csv map 12 providedHumanPlayer
+csv map 13 amplifiedCount
+csv map 14 pickedNotesFromFloor
+csv map 15 pickedNotesFromWall
+csv map 16 scoredNotesSpeakerUnamplified
+csv map 17 scoredNotesSpeakerAmplified
+csv map 18 scoredNotesAmplifier
+csv map 19 teleopMissedShots
+csv map 20 coopertitionPoint
+csv map 21 teleopPlaystyle
+csv map 22 fouls
+csv map 23 techFouls
+csv map 24 finalState
+csv map 25 trapPoint
+csv map 26 harmonized
+csv map 27 highNote
+csv map 28 melody
+csv map 29 ensemble
+csv map 30 robotBrokeDown
+csv map 31 yellowCard1
+csv map 32 yellowCard2
+csv map 33 finalAllianceScore
+csv map 34 finalWLT
+csv map 35 notes
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
 page add Endgame EndgameFragment fragment_endgame_page 3
@@ -83,10 +87,11 @@ elements add spectatingTeamSpinner spinner alliance
 elements add matchTypeSpinner spinner matchType
 elements add leftStartingZoneCB checkbox leftStartingZone
 elements add preloadedSpinner spinner preloaded
-elements add pickedHomeZoneNotesCounter numberpicker pickedHomeZoneNotes
-elements add pickedMiddleZoneNotesCounter numberpicker pickedMiddleZoneNotes
+elements add pickedHomeZoneNotesCB checkbox pickedHomeZoneNotes
+elements add pickedMiddleZoneNotesCB checkbox pickedMiddleZoneNotes
 elements add scoredSpeakerNotesCounter numberpicker scoredSpeakerNotes
 elements add scoredAmpNotesCounter numberpicker scoredAmpNotes
+elements add autoMissedShotsCounter numberpicker autoMissedShots
 wp set TeleOpFragment
 elements add providedHumanPlayerCB checkbox providedHumanPlayer
 elements add amplifiedCountCounter numberpicker amplifiedCount
@@ -95,6 +100,7 @@ elements add pickedNotesFromWallCounter numberpicker pickedNotesFromWall
 elements add scoredNotesSpeakerUnamplifiedCounter numberpicker scoredNotesSpeakerUnamplified
 elements add scoredNotesSpeakerAmplifiedCounter numberpicker scoredNotesSpeakerAmplified
 elements add scoredNotesAmplifierCounter numberpicker scoredNotesAmplifier
+elements add teleopMissedShotsCounter numberpicker teleopMissedShots
 elements add coopertitionPointCB checkbox coopertitionPoint
 elements add teleopPlaystyleSpinner spinner teleopPlaystyle
 elements add foulsCounter numberpicker fouls
@@ -112,7 +118,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Preloaded,Picked Up Home Notes,Picked Up Middle Notes,Auto Speaker Notes,Auto Amp Notes,providedHumanPlayer,Amplified Count,Pickup from Floor,Pickup from Source,Teleop Scored Speaker Unamplified,Teleop Scored Speaker Amplified,Teleop Scored Amplifier,Coopertition Bonus,Teleop Playstyle,Fouls,Tech Fouls,Engame Robot State,Endgame Scored Trap,Harmonized,highNote,Melody,Ensemble,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Preloaded,Picked Up Home Notes,Picked Up Middle Notes,Auto Speaker Notes,Auto Amp Notes,Auto Missed Shots,providedHumanPlayer,Amplified Count,Pickup from Floor,Pickup from Source,Teleop Scored Speaker Unamplified,Teleop Scored Speaker Amplified,Teleop Scored Amplifier,Teleop Missed Shots,Coopertition Bonus,Teleop Playstyle,Fouls,Tech Fouls,Engame Robot State,Endgame Scored Trap,Harmonized,highNote,Melody,Ensemble,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2024
 generatecode
 

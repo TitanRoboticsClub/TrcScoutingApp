@@ -23,6 +23,7 @@ public class TeleOpFragment extends AbstractPageFragment
     private NumberPicker scoredNotesSpeakerUnamplifiedCounter;
     private NumberPicker scoredNotesSpeakerAmplifiedCounter;
     private NumberPicker scoredNotesAmplifierCounter;
+    private NumberPicker teleopMissedShotsCounter;
     private CheckBox coopertitionPointCB;
     private Spinner teleopPlaystyleSpinner;
     private NumberPicker foulsCounter;
@@ -39,6 +40,7 @@ public class TeleOpFragment extends AbstractPageFragment
         scoredNotesSpeakerUnamplifiedCounter = (NumberPicker) view.findViewById(R.id.scoredNotesSpeakerUnamplifiedCounter);
         scoredNotesSpeakerAmplifiedCounter = (NumberPicker) view.findViewById(R.id.scoredNotesSpeakerAmplifiedCounter);
         scoredNotesAmplifierCounter = (NumberPicker) view.findViewById(R.id.scoredNotesAmplifierCounter);
+        teleopMissedShotsCounter = (NumberPicker) view.findViewById(R.id.teleopMissedShotsCounter);
         coopertitionPointCB = (CheckBox) view.findViewById(R.id.coopertitionPointCB);
         teleopPlaystyleSpinner = (Spinner) view.findViewById(R.id.teleopPlaystyleSpinner);
         foulsCounter = (NumberPicker) view.findViewById(R.id.foulsCounter);
@@ -69,6 +71,9 @@ public class TeleOpFragment extends AbstractPageFragment
         if (fieldData.has("scoredNotesAmplifier")) {
             UIUtils.setNumberPickerVal(scoredNotesAmplifierCounter, fieldData.getInt("scoredNotesAmplifier"));
         }
+        if (fieldData.has("teleopMissedShots")) {
+            UIUtils.setNumberPickerVal(teleopMissedShotsCounter, fieldData.getInt("teleopMissedShots"));
+        }
         if (fieldData.has("coopertitionPoint")) {
             UIUtils.setCheckbox(coopertitionPointCB, fieldData.getBoolean("coopertitionPoint"));
         }
@@ -96,6 +101,7 @@ public class TeleOpFragment extends AbstractPageFragment
             data.put("scoredNotesSpeakerUnamplified", scoredNotesSpeakerUnamplifiedCounter.getValue());
             data.put("scoredNotesSpeakerAmplified", scoredNotesSpeakerAmplifiedCounter.getValue());
             data.put("scoredNotesAmplifier", scoredNotesAmplifierCounter.getValue());
+            data.put("teleopMissedShots", teleopMissedShotsCounter.getValue());
             data.put("coopertitionPoint", coopertitionPointCB.isChecked());
             data.put("teleopPlaystyle", teleopPlaystyleSpinner.getSelectedItem().toString());
             data.put("fouls", foulsCounter.getValue());

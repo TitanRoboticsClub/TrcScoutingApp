@@ -36,16 +36,19 @@ public class MatchInfo implements Serializable
     public String preloaded;
 
     @SerializedName("pickedHomeZoneNotes")
-    public Integer pickedHomeZoneNotes;
+    public Boolean pickedHomeZoneNotes;
 
     @SerializedName("pickedMiddleZoneNotes")
-    public Integer pickedMiddleZoneNotes;
+    public Boolean pickedMiddleZoneNotes;
 
     @SerializedName("scoredSpeakerNotes")
     public Integer scoredSpeakerNotes;
 
     @SerializedName("scoredAmpNotes")
     public Integer scoredAmpNotes;
+
+    @SerializedName("autoMissedShots")
+    public Integer autoMissedShots;
 
     @SerializedName("providedHumanPlayer")
     public Boolean providedHumanPlayer;
@@ -67,6 +70,9 @@ public class MatchInfo implements Serializable
 
     @SerializedName("scoredNotesAmplifier")
     public Integer scoredNotesAmplifier;
+
+    @SerializedName("teleopMissedShots")
+    public Integer teleopMissedShots;
 
     @SerializedName("coopertitionPoint")
     public Boolean coopertitionPoint;
@@ -169,7 +175,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,preloaded,pickedHomeZoneNotes,pickedMiddleZoneNotes,scoredSpeakerNotes,scoredAmpNotes,providedHumanPlayer,amplifiedCount,pickedNotesFromFloor,pickedNotesFromWall,scoredNotesSpeakerUnamplified,scoredNotesSpeakerAmplified,scoredNotesAmplifier,coopertitionPoint,teleopPlaystyle,fouls,techFouls,finalState,trapPoint,harmonized,highNote,melody,ensemble,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,preloaded,pickedHomeZoneNotes,pickedMiddleZoneNotes,scoredSpeakerNotes,scoredAmpNotes,autoMissedShots,providedHumanPlayer,amplifiedCount,pickedNotesFromFloor,pickedNotesFromWall,scoredNotesSpeakerUnamplified,scoredNotesSpeakerAmplified,scoredNotesAmplifier,teleopMissedShots,coopertitionPoint,teleopPlaystyle,fouls,techFouls,finalState,trapPoint,harmonized,highNote,melody,ensemble,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

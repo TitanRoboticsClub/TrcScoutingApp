@@ -9,7 +9,7 @@ public class AppInfo
     //
     public static final String DATA_FOLDER_NAME = "TrcScoutingApp";
     public static final String SETTINGS_FILENAME = "app_settings.json";
-    public static final String CSV_HEADER = "matchNumber,teamNumber,matchType,alliance,leftStartingZone,preloaded,pickedHomeZoneNotes,pickedMiddleZoneNotes,scoredSpeakerNotes,scoredAmpNotes,providedHumanPlayer,amplifiedCount,pickedNotesFromFloor,pickedNotesFromWall,scoredNotesSpeakerUnamplified,scoredNotesSpeakerAmplified,scoredNotesAmplifier,coopertitionPoint,teleopPlaystyle,fouls,techFouls,finalState,trapPoint,harmonized,highNote,melody,ensemble,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes";
+    public static final String CSV_HEADER = "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Preloaded,Picked Up Home Notes,Picked Up Middle Notes,Auto Speaker Notes,Auto Amp Notes,Auto Missed Shots,providedHumanPlayer,Amplified Count,Pickup from Floor,Pickup from Source,Teleop Scored Speaker Unamplified,Teleop Scored Speaker Amplified,Teleop Scored Amplifier,Teleop Missed Shots,Coopertition Bonus,Teleop Playstyle,Fouls,Tech Fouls,Engame Robot State,Endgame Scored Trap,Harmonized,highNote,Melody,Ensemble,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes";
     public static final String VERSION_NUMBER = "1.4.0-frc";
     public static final int YEAR_NUMBER = 2024;
 
