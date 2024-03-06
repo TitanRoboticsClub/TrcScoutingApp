@@ -16,7 +16,11 @@ public class GsonUtil
         ArrayList<MatchInfo> toReturn = new ArrayList<MatchInfo>();
         for (int i = 0; i < input.length(); i++)
         {
-            toReturn.add(JSONObjectToMatchInfo(input.getJSONObject(i)));
+            try {
+                toReturn.add(JSONObjectToMatchInfo(input.getJSONObject(i)));
+            } catch (Exception e) {
+                // quietly skip
+            }
         }
         return toReturn;
     }
