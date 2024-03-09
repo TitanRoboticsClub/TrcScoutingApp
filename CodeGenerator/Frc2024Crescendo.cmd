@@ -11,7 +11,7 @@ field add pickedMiddleZoneNotes bool
 field add scoredSpeakerNotes int
 field add scoredAmpNotes int
 field add autoMissedShots int
-field add providedHumanPlayer bool
+field add providedHumanPlayer str
 field add amplifiedCount int
 field add pickedNotesFromFloor int
 field add pickedNotesFromWall int
@@ -93,7 +93,7 @@ elements add scoredSpeakerNotesCounter numberpicker scoredSpeakerNotes
 elements add scoredAmpNotesCounter numberpicker scoredAmpNotes
 elements add autoMissedShotsCounter numberpicker autoMissedShots
 wp set TeleOpFragment
-elements add providedHumanPlayerCB checkbox providedHumanPlayer
+elements add providedHumanPlayerSpinner spinner providedHumanPlayer
 elements add amplifiedCountCounter numberpicker amplifiedCount
 elements add pickedNotesFromFloorCounter numberpicker pickedNotesFromFloor
 elements add pickedNotesFromWallCounter numberpicker pickedNotesFromWall

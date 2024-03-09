@@ -16,7 +16,7 @@ import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class TeleOpFragment extends AbstractPageFragment
 {
-    private CheckBox providedHumanPlayerCB;
+    private Spinner providedHumanPlayerSpinner;
     private NumberPicker amplifiedCountCounter;
     private NumberPicker pickedNotesFromFloorCounter;
     private NumberPicker pickedNotesFromWallCounter;
@@ -33,7 +33,7 @@ public class TeleOpFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_teleop_page, container, false);
-        providedHumanPlayerCB = (CheckBox) view.findViewById(R.id.providedHumanPlayerCB);
+        providedHumanPlayerSpinner = (Spinner) view.findViewById(R.id.providedHumanPlayerSpinner);
         amplifiedCountCounter = (NumberPicker) view.findViewById(R.id.amplifiedCountCounter);
         pickedNotesFromFloorCounter = (NumberPicker) view.findViewById(R.id.pickedNotesFromFloorCounter);
         pickedNotesFromWallCounter = (NumberPicker) view.findViewById(R.id.pickedNotesFromWallCounter);
@@ -51,7 +51,7 @@ public class TeleOpFragment extends AbstractPageFragment
     public void setFields(JSONObject fieldData) throws JSONException
     {
         if (fieldData.has("providedHumanPlayer")) {
-            UIUtils.setCheckbox(providedHumanPlayerCB, fieldData.getBoolean("providedHumanPlayer"));
+            UIUtils.setSpinnerByTextValue(providedHumanPlayerSpinner, fieldData.getString("providedHumanPlayer"));
         }
         if (fieldData.has("amplifiedCount")) {
             UIUtils.setNumberPickerVal(amplifiedCountCounter, fieldData.getInt("amplifiedCount"));
@@ -94,7 +94,7 @@ public class TeleOpFragment extends AbstractPageFragment
         try
         {
             JSONObject data = new JSONObject();
-            data.put("providedHumanPlayer", providedHumanPlayerCB.isChecked());
+            data.put("providedHumanPlayer", providedHumanPlayerSpinner.getSelectedItem().toString());
             data.put("amplifiedCount", amplifiedCountCounter.getValue());
             data.put("pickedNotesFromFloor", pickedNotesFromFloorCounter.getValue());
             data.put("pickedNotesFromWall", pickedNotesFromWallCounter.getValue());

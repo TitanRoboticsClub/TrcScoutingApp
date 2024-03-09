@@ -17,31 +17,27 @@
             android:id="@+id/coopertitionPointCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:minHeight="48dp"
             android:scaleX="1.5"
             android:scaleY="1.5"
             android:text="Coopertition Point"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
+            app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerSpinner" />
 
-        <CheckBox
-            android:id="@+id/providedHumanPlayerCB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:minHeight="48dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            android:text="Human Player"
-            android:textSize="24sp"
+        <Spinner
+            android:id="@+id/providedHumanPlayerSpinner"
+            android:layout_width="315dp"
+            android:layout_height="76dp"
+            android:entries="@array/human_player"
+            android:theme="@style/customSpinnerItemStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/humanPlayerText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
+            app:layout_constraintStart_toEndOf="@+id/humanPlayerText"
+            app:layout_constraintTop_toTopOf="@+id/humanPlayerText" />
 
         <TextView
             android:id="@+id/innerCellsText2"
@@ -104,7 +100,7 @@
             android:id="@+id/teleopPowerPortsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="16dp"
             android:text="Play Style"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
@@ -113,6 +109,21 @@
             app:layout_constraintHorizontal_bias="0.26"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/techFoulsCounter" />
+
+
+        <TextView
+            android:id="@+id/humanPlayerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Human Player"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
         <TextView
             android:id="@+id/lowerCellsText7"
@@ -256,9 +267,11 @@
             android:id="@+id/teleOpText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:text="Teleoperated Period"
+            android:textColor="@color/colorPrimary"
             android:textSize="36dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -268,53 +281,53 @@
             android:id="@+id/lowerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Amplified\n "
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="@+id/amplifiedCountCounter"
             app:layout_constraintStart_toStartOf="@+id/amplifiedCountCounter"
-            app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerCB" />
+            app:layout_constraintTop_toBottomOf="@+id/coopertitionPointCB" />
 
         <TextView
             android:id="@+id/innerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Wall\nPickup"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="@+id/pickedNotesFromWallCounter"
             app:layout_constraintStart_toStartOf="@+id/pickedNotesFromWallCounter"
-            app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerCB" />
+            app:layout_constraintTop_toBottomOf="@+id/coopertitionPointCB" />
 
         <TextView
             android:id="@+id/innerCellsText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Amplifier\nScore"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="@+id/scoredNotesAmplifierCounter"
             app:layout_constraintStart_toStartOf="@+id/scoredNotesAmplifierCounter"
-            app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerCB" />
+            app:layout_constraintTop_toBottomOf="@+id/coopertitionPointCB" />
 
 
         <TextView
             android:id="@+id/outerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Floor\nPickup"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="@+id/pickedNotesFromFloorCounter"
             app:layout_constraintStart_toStartOf="@+id/pickedNotesFromFloorCounter"
-            app:layout_constraintTop_toBottomOf="@+id/providedHumanPlayerCB" />
+            app:layout_constraintTop_toBottomOf="@+id/coopertitionPointCB" />
 
         <Spinner
             android:id="@+id/teleopPlaystyleSpinner"

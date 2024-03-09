@@ -97,6 +97,12 @@
         <item>None</item>       
     </string-array>
 
+    <string-array name="human_player">
+        <item>[Select human player...]</item>
+        <item>None</item>
+        <item>At Source</item>
+        <item>At Amp</item>
+    </string-array>
 
     <string-array name="robotStates">
         <item>No points</item>

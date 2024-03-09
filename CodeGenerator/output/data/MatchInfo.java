@@ -51,7 +51,7 @@ public class MatchInfo implements Serializable
     public Integer autoMissedShots;
 
     @SerializedName("providedHumanPlayer")
-    public Boolean providedHumanPlayer;
+    public String providedHumanPlayer;
 
     @SerializedName("amplifiedCount")
     public Integer amplifiedCount;
