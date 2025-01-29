@@ -32,77 +32,89 @@ public class MatchInfo implements Serializable
     @SerializedName("leftStartingZone")
     public Boolean leftStartingZone;
 
-    @SerializedName("preloaded")
-    public String preloaded;
+    @SerializedName("autoTrough")
+    public Integer autoTrough;
 
-    @SerializedName("pickedHomeZoneNotes")
-    public Boolean pickedHomeZoneNotes;
+    @SerializedName("autoL2branch")
+    public Integer autoL2branch;
 
-    @SerializedName("pickedMiddleZoneNotes")
-    public Boolean pickedMiddleZoneNotes;
+    @SerializedName("autoL3branch")
+    public Integer autoL3branch;
 
-    @SerializedName("scoredSpeakerNotes")
-    public Integer scoredSpeakerNotes;
+    @SerializedName("autoL4branch")
+    public Integer autoL4branch;
 
-    @SerializedName("scoredAmpNotes")
-    public Integer scoredAmpNotes;
+    @SerializedName("autoProcessor")
+    public Integer autoProcessor;
 
-    @SerializedName("autoMissedShots")
-    public Integer autoMissedShots;
+    @SerializedName("autoNet")
+    public Integer autoNet;
 
-    @SerializedName("providedHumanPlayer")
-    public String providedHumanPlayer;
+    @SerializedName("autoMissedCoral")
+    public Integer autoMissedCoral;
 
-    @SerializedName("amplifiedCount")
-    public Integer amplifiedCount;
+    @SerializedName("autoMissedAlgae")
+    public Integer autoMissedAlgae;
 
-    @SerializedName("pickedNotesFromFloor")
-    public Integer pickedNotesFromFloor;
+    @SerializedName("teleopTrough")
+    public Integer teleopTrough;
 
-    @SerializedName("pickedNotesFromWall")
-    public Integer pickedNotesFromWall;
+    @SerializedName("teleopPickedFromFloor")
+    public Integer teleopPickedFromFloor;
 
-    @SerializedName("scoredNotesSpeakerUnamplified")
-    public Integer scoredNotesSpeakerUnamplified;
+    @SerializedName("teleopPickedFromStation")
+    public Integer teleopPickedFromStation;
 
-    @SerializedName("scoredNotesSpeakerAmplified")
-    public Integer scoredNotesSpeakerAmplified;
+    @SerializedName("teleopL2")
+    public Integer teleopL2;
 
-    @SerializedName("scoredNotesAmplifier")
-    public Integer scoredNotesAmplifier;
+    @SerializedName("teleopL3")
+    public Integer teleopL3;
 
-    @SerializedName("teleopMissedShots")
-    public Integer teleopMissedShots;
+    @SerializedName("teleopL4")
+    public Integer teleopL4;
 
-    @SerializedName("coopertitionPoint")
-    public Boolean coopertitionPoint;
+    @SerializedName("teleopProcessor")
+    public Integer teleopProcessor;
 
-    @SerializedName("teleopPlaystyle")
-    public String teleopPlaystyle;
+    @SerializedName("teleopNet")
+    public Integer teleopNet;
 
-    @SerializedName("fouls")
-    public Integer fouls;
+    @SerializedName("teleopMissedCoral")
+    public Integer teleopMissedCoral;
 
-    @SerializedName("techFouls")
-    public Integer techFouls;
+    @SerializedName("teleopMissedAlgae")
+    public Integer teleopMissedAlgae;
+
+    @SerializedName("minorFoul")
+    public Integer minorFoul;
+
+    @SerializedName("majorFoul")
+    public Integer majorFoul;
+
+    @SerializedName("coopBonus")
+    public Boolean coopBonus;
+
+    @SerializedName("playstyle")
+    public String playstyle;
 
     @SerializedName("finalState")
     public String finalState;
 
-    @SerializedName("trapPoint")
-    public Boolean trapPoint;
+    @SerializedName("didShallowCageAttempt")
+    public Boolean didShallowCageAttempt;
 
-    @SerializedName("harmonized")
-    public Boolean harmonized;
+    @SerializedName("didDeepCageAttempt")
+    public Boolean didDeepCageAttempt;
 
-    @SerializedName("highNote")
-    public Boolean highNote;
+    @SerializedName("autoRP")
+    public Boolean autoRP;
 
-    @SerializedName("melody")
-    public Boolean melody;
+    @SerializedName("coralRP")
+    public Boolean coralRP;
 
-    @SerializedName("ensemble")
-    public Boolean ensemble;
+    @SerializedName("bargeRP")
+    public Boolean bargeRP;
 
     @SerializedName("robotBrokeDown")
     public Boolean robotBrokeDown;
@@ -175,7 +187,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,preloaded,pickedHomeZoneNotes,pickedMiddleZoneNotes,scoredSpeakerNotes,scoredAmpNotes,autoMissedShots,providedHumanPlayer,amplifiedCount,pickedNotesFromFloor,pickedNotesFromWall,scoredNotesSpeakerUnamplified,scoredNotesSpeakerAmplified,scoredNotesAmplifier,teleopMissedShots,coopertitionPoint,teleopPlaystyle,fouls,techFouls,finalState,trapPoint,harmonized,highNote,melody,ensemble,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgae,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

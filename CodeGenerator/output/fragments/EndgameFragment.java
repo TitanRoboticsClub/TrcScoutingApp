@@ -17,11 +17,11 @@ import trc3543.trcscoutingapp.uiutil.UIUtils;
 public class EndgameFragment extends AbstractPageFragment
 {
     private Spinner finalStateSpinner;
-    private CheckBox trapPointCB;
-    private CheckBox harmonizedCB;
-    private CheckBox highNoteCB;
-    private CheckBox melodyCB;
-    private CheckBox ensembleCB;
+    private CheckBox didShallowCageAttemptCB;
+    private CheckBox didDeepCageAttemptCB;
+    private CheckBox autoRPCB;
+    private CheckBox coralRPCB;
+    private CheckBox bargeRPCB;
     private CheckBox robotBrokeDownCB;
     private CheckBox yellowCard1CB;
     private CheckBox yellowCard2CB;
@@ -34,11 +34,11 @@ public class EndgameFragment extends AbstractPageFragment
     {
         view = inflater.inflate(R.layout.fragment_endgame_page, container, false);
         finalStateSpinner = (Spinner) view.findViewById(R.id.finalStateSpinner);
-        trapPointCB = (CheckBox) view.findViewById(R.id.trapPointCB);
-        harmonizedCB = (CheckBox) view.findViewById(R.id.harmonizedCB);
-        highNoteCB = (CheckBox) view.findViewById(R.id.highNoteCB);
-        melodyCB = (CheckBox) view.findViewById(R.id.melodyCB);
-        ensembleCB = (CheckBox) view.findViewById(R.id.ensembleCB);
+        didShallowCageAttemptCB = (CheckBox) view.findViewById(R.id.didShallowCageAttemptCB);
+        didDeepCageAttemptCB = (CheckBox) view.findViewById(R.id.didDeepCageAttemptCB);
+        autoRPCB = (CheckBox) view.findViewById(R.id.autoRPCB);
+        coralRPCB = (CheckBox) view.findViewById(R.id.coralRPCB);
+        bargeRPCB = (CheckBox) view.findViewById(R.id.bargeRPCB);
         robotBrokeDownCB = (CheckBox) view.findViewById(R.id.robotBrokeDownCB);
         yellowCard1CB = (CheckBox) view.findViewById(R.id.yellowCard1CB);
         yellowCard2CB = (CheckBox) view.findViewById(R.id.yellowCard2CB);
@@ -53,20 +53,20 @@ public class EndgameFragment extends AbstractPageFragment
         if (fieldData.has("finalState")) {
             UIUtils.setSpinnerByTextValue(finalStateSpinner, fieldData.getString("finalState"));
         }
-        if (fieldData.has("trapPoint")) {
-            UIUtils.setCheckbox(trapPointCB, fieldData.getBoolean("trapPoint"));
+        if (fieldData.has("didShallowCageAttempt")) {
+            UIUtils.setCheckbox(didShallowCageAttemptCB, fieldData.getBoolean("didShallowCageAttempt"));
         }
-        if (fieldData.has("harmonized")) {
-            UIUtils.setCheckbox(harmonizedCB, fieldData.getBoolean("harmonized"));
+        if (fieldData.has("didDeepCageAttempt")) {
+            UIUtils.setCheckbox(didDeepCageAttemptCB, fieldData.getBoolean("didDeepCageAttempt"));
         }
-        if (fieldData.has("highNote")) {
-            UIUtils.setCheckbox(highNoteCB, fieldData.getBoolean("highNote"));
+        if (fieldData.has("autoRP")) {
+            UIUtils.setCheckbox(autoRPCB, fieldData.getBoolean("autoRP"));
         }
-        if (fieldData.has("melody")) {
-            UIUtils.setCheckbox(melodyCB, fieldData.getBoolean("melody"));
+        if (fieldData.has("coralRP")) {
+            UIUtils.setCheckbox(coralRPCB, fieldData.getBoolean("coralRP"));
         }
-        if (fieldData.has("ensemble")) {
-            UIUtils.setCheckbox(ensembleCB, fieldData.getBoolean("ensemble"));
+        if (fieldData.has("bargeRP")) {
+            UIUtils.setCheckbox(bargeRPCB, fieldData.getBoolean("bargeRP"));
         }
         if (fieldData.has("robotBrokeDown")) {
             UIUtils.setCheckbox(robotBrokeDownCB, fieldData.getBoolean("robotBrokeDown"));
@@ -95,11 +95,11 @@ public class EndgameFragment extends AbstractPageFragment
         {
             JSONObject data = new JSONObject();
             data.put("finalState", finalStateSpinner.getSelectedItem().toString());
-            data.put("trapPoint", trapPointCB.isChecked());
-            data.put("harmonized", harmonizedCB.isChecked());
-            data.put("highNote", highNoteCB.isChecked());
-            data.put("melody", melodyCB.isChecked());
-            data.put("ensemble", ensembleCB.isChecked());
+            data.put("didShallowCageAttempt", didShallowCageAttemptCB.isChecked());
+            data.put("didDeepCageAttempt", didDeepCageAttemptCB.isChecked());
+            data.put("autoRP", autoRPCB.isChecked());
+            data.put("coralRP", coralRPCB.isChecked());
+            data.put("bargeRP", bargeRPCB.isChecked());
             data.put("robotBrokeDown", robotBrokeDownCB.isChecked());
             data.put("yellowCard1", yellowCard1CB.isChecked());
             data.put("yellowCard2", yellowCard2CB.isChecked());

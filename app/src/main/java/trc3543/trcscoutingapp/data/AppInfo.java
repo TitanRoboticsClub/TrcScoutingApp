@@ -9,9 +9,9 @@ public class AppInfo
     //
     public static final String DATA_FOLDER_NAME = "TrcScoutingApp";
     public static final String SETTINGS_FILENAME = "app_settings.json";
-    public static final String CSV_HEADER = "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Preloaded,Picked Up Home Notes,Picked Up Middle Notes,Auto Speaker Notes,Auto Amp Notes,Auto Missed Shots,providedHumanPlayer,Amplified Count,Pickup from Floor,Pickup from Source,Teleop Scored Speaker Unamplified,Teleop Scored Speaker Amplified,Teleop Scored Amplifier,Teleop Missed Shots,Coopertition Bonus,Teleop Playstyle,Fouls,Tech Fouls,Engame Robot State,Endgame Scored Trap,Harmonized,highNote,Melody,Ensemble,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes";
+    public static final String CSV_HEADER = "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes";
     public static final String VERSION_NUMBER = "1.4.0-frc";
-    public static final int YEAR_NUMBER = 2024;
+    public static final int YEAR_NUMBER = 2025;
 
     //
     // SetMatchInfo and child Fragment settings.
