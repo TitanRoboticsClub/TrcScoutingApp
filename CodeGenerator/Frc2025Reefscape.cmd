@@ -5,12 +5,14 @@ field add teamNumber int
 field add alliance str
 field add matchType str
 field add leftStartingZone bool
-field add preloaded str
-field add pickedHomeZoneNotes bool
-field add pickedMiddleZoneNotes bool
-field add scoredSpeakerNotes int
-field add scoredAmpNotes int
-field add autoMissedShots int
+field add autoTrough int
+field add autoL2branch int
+field add autoL3branch int
+field add autoL4branch int
+field add autoProcessor int
+field add autoNet int
+field add autoMissedCoral int
+field add autoMissedAlgae int
 
 field add teleopTrough int
 field add teleopPickedFromFloor int
@@ -53,36 +55,40 @@ csv map 2 teamNumber
 csv map 3 matchType
 csv map 4 alliance
 csv map 5 leftStartingZone
-csv map 6 preloaded
-csv map 7 pickedHomeZoneNotes
-csv map 8 pickedMiddleZoneNotes
-csv map 9 scoredSpeakerNotes
-csv map 10 teleopTrough
-csv map 11 teleopPickedFromFloor
-csv map 12 teleopPickedFromStation
-csv map 13 teleopL2
-csv map 14 teleopL3
-csv map 15 teleopL4
-csv map 16 teleopProcessor
-csv map 17 teleopNet
-csv map 18 teleopMissedCoral
-csv map 19 teleopMissedAlgae
-csv map 20 minorFoul
-csv map 21 majorFoul
-csv map 22 coopBonus
-csv map 23 playstyle
-csv map 24 finalState
-csv map 25 didShallowCageAttempt
-csv map 26 didDeepCageAttempt
-csv map 27 autoRP
-csv map 28 coralRP
-csv map 29 bargeRP
-csv map 30 robotBrokeDown
-csv map 31 yellowCard1
-csv map 32 yellowCard2
-csv map 33 finalAllianceScore
-csv map 34 finalWLT
-csv map 35 notes
+csv map 6 autoTrough
+csv map 7 autoL2branch
+csv map 8 autoL3branch
+csv map 9 autoL4branch
+csv map 10 autoProcessor
+csv map 11 autoNet
+csv map 12 autoMissedCoral
+csv map 13 autoMissedAlgae
+csv map 14 teleopTrough
+csv map 15 teleopPickedFromFloor
+csv map 16 teleopPickedFromStation
+csv map 17 teleopL2
+csv map 18 teleopL3
+csv map 19 teleopL4
+csv map 20 teleopProcessor
+csv map 21 teleopNet
+csv map 22 teleopMissedCoral
+csv map 23 teleopMissedAlgae
+csv map 24 minorFoul
+csv map 25 majorFoul
+csv map 26 coopBonus
+csv map 27 playstyle
+csv map 28 finalState
+csv map 29 didShallowCageAttempt
+csv map 30 didDeepCageAttempt
+csv map 31 autoRP
+csv map 32 coralRP
+csv map 33 bargeRP
+csv map 34 robotBrokeDown
+csv map 35 yellowCard1
+csv map 36 yellowCard2
+csv map 37 finalAllianceScore
+csv map 38 finalWLT
+csv map 39 notes
 
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
@@ -94,12 +100,14 @@ elements add teamNum edittext teamNumber
 elements add spectatingTeamSpinner spinner alliance
 elements add matchTypeSpinner spinner matchType
 elements add leftStartingZoneCB checkbox leftStartingZone
-elements add preloadedSpinner spinner preloaded
-elements add pickedHomeZoneNotesCB checkbox pickedHomeZoneNotes
-elements add pickedMiddleZoneNotesCB checkbox pickedMiddleZoneNotes
-elements add scoredSpeakerNotesCounter numberpicker scoredSpeakerNotes
-elements add scoredAmpNotesCounter numberpicker scoredAmpNotes
-elements add autoMissedShotsCounter numberpicker autoMissedShots
+elements add autoTroughCounter numberpicker autoTrough
+elements add autoL2branchCounter numberpicker autoL2branch
+elements add autoL3branchCounter numberpicker autoL3branch
+elements add autoL4branchCounter numberpicker autoL4branch
+elements add autoProcessorCounter numberpicker autoProcessor
+elements add autoNet numberpicker autoNet
+elements add autoMissedAlgae numberpicker autoMissedAlgae
+elements add autoMissedCoral numberpicker autoMissedCoral
 wp set TeleOpFragment
 elements add teleopTroughCounter numberpicker teleopTrough
 elements add teleopL2Counter numberpicker teleopL2
@@ -126,7 +134,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Preloaded,Picked Up Home Notes,Picked Up Middle Notes,Auto Speaker Notes,Auto Amp Notes,Auto Missed Shots,providedHumanPlayer,Amplified Count,Pickup from Floor,Pickup from Source,Teleop Scored Speaker Unamplified,Teleop Scored Speaker Amplified,Teleop Scored Amplifier,Teleop Missed Shots,Coopertition Bonus,Teleop Playstyle,Fouls,Tech Fouls,Endgame Robot State,Endgame Scored Trap,Harmonized,highNote,Melody,Ensemble,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2025
 generatecode
 
