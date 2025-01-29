@@ -11,16 +11,21 @@ field add pickedMiddleZoneNotes bool
 field add scoredSpeakerNotes int
 field add scoredAmpNotes int
 field add autoMissedShots int
-field add providedHumanPlayer str
-field add amplifiedCount int
-field add pickedNotesFromFloor int
-field add pickedNotesFromWall int
-field add scoredNotesSpeakerUnamplified int
-field add scoredNotesSpeakerAmplified int
-field add scoredNotesAmplifier int
-field add teleopMissedShots int
-field add coopertitionPoint bool
-field add teleopPlaystyle str
+
+field add teleopTrough int
+field add teleopPickedFromFloor int
+field add teleopPickedFromStation int
+field add teleopL2 int
+field add teleopL3 int
+field add teleopL4 int
+field add teleopProcessor int
+field add teleopNet int
+field add teleopMissedCoral int
+field add teleopMissedAlgae int
+field add minorFoul int
+field add majorFoul int
+field add coopBonus bool
+field add playstyle str 
 
 
 field add finalState str
@@ -52,20 +57,20 @@ csv map 6 preloaded
 csv map 7 pickedHomeZoneNotes
 csv map 8 pickedMiddleZoneNotes
 csv map 9 scoredSpeakerNotes
-csv map 10 scoredAmpNotes
-csv map 11 autoMissedShots
-csv map 12 providedHumanPlayer
-csv map 13 amplifiedCount
-csv map 14 pickedNotesFromFloor
-csv map 15 pickedNotesFromWall
-csv map 16 scoredNotesSpeakerUnamplified
-csv map 17 scoredNotesSpeakerAmplified
-csv map 18 scoredNotesAmplifier
-csv map 19 teleopMissedShots
-csv map 20 coopertitionPoint
-csv map 21 teleopPlaystyle
-csv map 22 fouls
-csv map 23 techFouls
+csv map 10 teleopTrough
+csv map 11 teleopPickedFromFloor
+csv map 12 teleopPickedFromStation
+csv map 13 teleopL2
+csv map 14 teleopL3
+csv map 15 teleopL4
+csv map 16 teleopProcessor
+csv map 17 teleopNet
+csv map 18 teleopMissedCoral
+csv map 19 teleopMissedAlgae
+csv map 20 minorFoul
+csv map 21 majorFoul
+csv map 22 coopBonus
+csv map 23 playstyle
 csv map 24 finalState
 csv map 25 didShallowCageAttempt
 csv map 26 didDeepCageAttempt
@@ -96,18 +101,18 @@ elements add scoredSpeakerNotesCounter numberpicker scoredSpeakerNotes
 elements add scoredAmpNotesCounter numberpicker scoredAmpNotes
 elements add autoMissedShotsCounter numberpicker autoMissedShots
 wp set TeleOpFragment
-elements add providedHumanPlayerSpinner spinner providedHumanPlayer
-elements add amplifiedCountCounter numberpicker amplifiedCount
-elements add pickedNotesFromFloorCounter numberpicker pickedNotesFromFloor
-elements add pickedNotesFromWallCounter numberpicker pickedNotesFromWall
-elements add scoredNotesSpeakerUnamplifiedCounter numberpicker scoredNotesSpeakerUnamplified
-elements add scoredNotesSpeakerAmplifiedCounter numberpicker scoredNotesSpeakerAmplified
-elements add scoredNotesAmplifierCounter numberpicker scoredNotesAmplifier
-elements add teleopMissedShotsCounter numberpicker teleopMissedShots
-elements add coopertitionPointCB checkbox coopertitionPoint
-elements add teleopPlaystyleSpinner spinner teleopPlaystyle
-elements add foulsCounter numberpicker fouls
-elements add techFoulsCounter numberpicker techFouls
+elements add teleopTroughCounter numberpicker teleopTrough
+elements add teleopL2Counter numberpicker teleopL2
+elements add teleopL3Counter numberpicker teleopL3
+elements add teleopL4Counter numberpicker teleopL4
+elements add teleopProcessorCounter numberpicker teleopProcessor
+elements add teleopNetCounter numberpicker teleopNet
+elements add teleopMissedCoralCounter numberpicker teleopMissedCoral
+elements add teleopMissedAlgaeCounter numberpicker teleopMissedAlgae
+elements add minorFoulCounter numberpicker minorFoul
+elements add majorFoulCounter numberpicker majorFoul
+elements add hasCoopBonus checkbox coopBonus
+elements add playstyleType spinner playstyle
 wp set EndgameFragment
 elements add finalStateSpinner spinner finalState
 elements add didShallowCageAttemptCB checkbox didShallowCageAttempt
