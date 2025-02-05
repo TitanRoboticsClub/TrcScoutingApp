@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/minorFoulCounter"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="-8dp"
@@ -16,26 +16,11 @@
         tools:layout_editor_absoluteY="-21dp">
 
 
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/teleopMissedAlgaeCounter"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.74"
-            app:layout_constraintStart_toStartOf="parent"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="772dp">
-
-        </com.travijuu.numberpicker.library.NumberPicker>
-
         <CheckBox
             android:id="@+id/hasCoopBonus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
             android:minHeight="48dp"
             android:scaleX="1.5"
             android:scaleY="1.5"
@@ -44,18 +29,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="84dp" />
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
         <TextView
             android:id="@+id/teleopPowerPortsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="48dp"
             android:text="Play Style"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:translationY="400dp"
+            android:translationY="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.158"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,21 +51,19 @@
             android:id="@+id/teleopMissedCoralCounter"
             android:layout_width="100dp"
             android:layout_height="300dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/teleopMissedAlgaeCounter"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/teleopNetCounter"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/innerCellsText2"
+            app:layout_constraintTop_toBottomOf="@+id/missedCoralText"
             app:max="50"
             app:min="0"
             app:unit="1"
             app:value="0" />
 
         <TextView
-            android:id="@+id/innerCellsText2"
+            android:id="@+id/scoreProcessorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -89,36 +72,35 @@
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="@+id/teleopProcessorCounter"
-            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintHorizontal_bias="0.50"
             app:layout_constraintStart_toStartOf="@+id/teleopProcessorCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
 
         <TextView
-            android:id="@+id/innerCellsText4"
+            android:id="@+id/missedAlgaeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Score\nNet"
+            android:text="Missed\nAlgae"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/teleopNetCounter"
-            app:layout_constraintStart_toStartOf="@+id/teleopNetCounter"
+            app:layout_constraintEnd_toEndOf="@+id/teleopMissedAlgaeCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopMissedAlgaeCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
 
         <TextView
-            android:id="@+id/innerCellsText5"
+            android:id="@+id/missedCoralText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="40dp"
             android:text="Missed\nCoral"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="@+id/teleopMissedCoralCounter"
-            app:layout_constraintEnd_toStartOf="@+id/lowerCellsText4"
+
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/innerCellsText4"
             app:layout_constraintStart_toStartOf="@+id/teleopMissedCoralCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
 
@@ -126,59 +108,12 @@
             android:id="@+id/teleopProcessorCounter"
             android:layout_width="100dp"
             android:layout_height="300dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.037"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/innerCellsText2"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0" />
-
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/teleopNetCounter"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="8dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.237"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/innerCellsText2"
-            app:max="50"
-            app:min="0"
-            app:unit="1"
-            app:value="0" />
-
-
-        <TextView
-            android:id="@+id/majorFoulCounter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:gravity="center"
-            android:text="Fouls\n "
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/foulsCounter"
-            app:layout_constraintHorizontal_bias="0.272"
-            app:layout_constraintStart_toStartOf="@+id/foulsCounter"
-            app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
-
-        <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/foulsCounter"
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-
-            android:layout_marginTop="28dp"
-            app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.941"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/majorFoulCounter"
+            app:layout_constraintTop_toBottomOf="@+id/scoreProcessorText"
             app:max="50"
             app:min="0"
             app:unit="1"
@@ -188,27 +123,91 @@
             android:id="@+id/teleopMissedAlgaeCounter"
             android:layout_width="100dp"
             android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/missedAlgaeText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" />
+
+
+        <TextView
+            android:id="@+id/majorFoulText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Major\nFouls"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toEndOf="@+id/majorFoulCounter"
+            app:layout_constraintStart_toStartOf="@+id/majorFoulCounter"
+            app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/minorFoulCounter"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minorFoulText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/majorFoulCounter"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.73"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/majorFoulText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0" />
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/teleopNetCounter"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowerCellsText5"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="251dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/lowerCellsText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Tech\nFouls"
+            android:text="Score\nNet"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            tools:layout_editor_absoluteX="654dp"
-            tools:layout_editor_absoluteY="140dp" />
+            app:layout_constraintEnd_toEndOf="@+id/teleopNetCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopNetCounter"
+            app:layout_constraintTop_toBottomOf="@+id/hasCoopBonus" />
 
         <TextView
             android:id="@+id/teleOpText"
@@ -268,7 +267,7 @@
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
             app:max="50"
@@ -284,7 +283,6 @@
             android:layout_marginTop="20dp"
             app:custom_layout="@layout/custom_number_picker"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
             app:max="50"
@@ -298,6 +296,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Score\nL3"
+            android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintEnd_toEndOf="@+id/teleopL3Counter"
@@ -345,15 +344,17 @@
             app:layout_constraintTop_toBottomOf="@+id/hasCoopBonus" />
 
         <TextView
-            android:id="@+id/lowerCellsText4"
+            android:id="@+id/minorFoulText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="Missed\nAlgae"
+            android:text="Minor\nFouls"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            tools:layout_editor_absoluteX="514dp"
-            tools:layout_editor_absoluteY="581dp" />
+            app:layout_constraintEnd_toEndOf="@+id/minorFoulCounter"
+            app:layout_constraintStart_toStartOf="@+id/minorFoulCounter"
+            app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
 
         <Spinner
             android:id="@+id/playstyleType"
@@ -361,7 +362,8 @@
             android:layout_height="76dp"
             android:entries="@array/play_styles"
             android:theme="@style/customSpinnerItemStyle"
-            tools:layout_editor_absoluteX="370dp"
-            tools:layout_editor_absoluteY="1149dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/teleopPowerPortsText2"
+            app:layout_constraintTop_toTopOf="@+id/teleopPowerPortsText2"
+            tools:layout_editor_absoluteX="370dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
