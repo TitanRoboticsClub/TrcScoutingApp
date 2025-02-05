@@ -11,47 +11,53 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="400dp"
-            android:layout_height="64dp"
-            android:text="This robot and another shared a chain"
+            android:layout_width="340dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="Scored at least 14 Barge points"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/harmonizedCB" />
+            app:layout_constraintTop_toTopOf="@+id/bargeRPCB" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="400dp"
-            android:layout_height="64dp"
-            android:text="This robot's human player scored a high note"
+            android:layout_width="372dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:text="Off the ground on deep cage"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/highNoteCB" />
+            app:layout_constraintTop_toTopOf="@+id/didDeepCageAttemptCB" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="400dp"
-            android:layout_height="64dp"
-            android:text="At least 18 (15 if coopertition bonus) Amp and Speaker notes"
+            android:layout_width="318dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:text="Off ground on shallow cage"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/melodyCB" />
+            app:layout_constraintTop_toTopOf="@+id/didShallowCageAttemptCB" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="400dp"
-            android:layout_height="64dp"
-            android:text="At least 10 Stage points and at least two OnStage robots"
+            android:layout_width="357dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="Scored >5 coral on each level"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ensembleCB" />
+            app:layout_constraintTop_toTopOf="@+id/coralRPCB" />
 
         <Spinner
             android:id="@+id/finalStateSpinner"
@@ -80,56 +86,56 @@
             app:layout_constraintTop_toTopOf="@+id/finalStateSpinner" />
 
         <CheckBox
-            android:id="@+id/harmonizedCB"
+            android:id="@+id/bargeRPCB"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:minHeight="48dp"
-            android:text="  Harmonized"
+            android:text="Barge Ranking Point"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trapPointCB" />
+            app:layout_constraintTop_toBottomOf="@+id/autoRPCB" />
 
         <CheckBox
-            android:id="@+id/highNoteCB"
+            android:id="@+id/didDeepCageAttemptCB"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
-            android:text="  High Note"
+            android:text="Deep Cage Attempt"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/harmonizedCB" />
+            app:layout_constraintTop_toBottomOf="@id/bargeRPCB" />
 
         <CheckBox
-            android:id="@+id/melodyCB"
+            android:id="@+id/didShallowCageAttemptCB"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
-            android:text="  Melody"
+            android:text="Shallow Cage Attempt"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/highNoteCB" />
+            app:layout_constraintTop_toBottomOf="@id/didDeepCageAttemptCB" />
 
         <CheckBox
-            android:id="@+id/ensembleCB"
+            android:id="@+id/coralRPCB"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:minHeight="48dp"
-            android:text="  Ensemble"
+            android:text="Coral Ranking Point"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/melodyCB" />
+            app:layout_constraintTop_toBottomOf="@id/didShallowCageAttemptCB" />
 
         <Button
             android:id="@+id/finishedButton"
@@ -180,7 +186,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ensembleCB" />
+            app:layout_constraintTop_toBottomOf="@+id/coralRPCB" />
 
         <CheckBox
             android:id="@+id/yellowCard1CB"
@@ -241,12 +247,12 @@
             app:layout_constraintTop_toTopOf="@+id/finalAllianceScoreInt" />
 
         <CheckBox
-            android:id="@+id/trapPointCB"
+            android:id="@+id/autoRPCB"
             android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:minHeight="48dp"
-            android:text="  Trap Point"
+            android:text="Auto Ranking Point"
             android:textColor="@color/colorPrimary"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -297,15 +303,16 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="400dp"
-            android:layout_height="64dp"
-            android:text="This robot scored the trap point"
+            android:layout_width="393dp"
+            android:layout_height="32dp"
+            android:text="Scored at least one coral in AUTO"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/harmonizedCB"
+            app:layout_constraintBottom_toTopOf="@+id/bargeRPCB"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/trapPointCB" />
+            app:layout_constraintTop_toTopOf="@+id/autoRPCB"
+            app:layout_constraintVertical_bias="0.382" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
