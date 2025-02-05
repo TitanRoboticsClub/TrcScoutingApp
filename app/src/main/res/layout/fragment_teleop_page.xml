@@ -360,10 +360,11 @@
             android:id="@+id/playstyleType"
             android:layout_width="315dp"
             android:layout_height="76dp"
+            android:layout_marginStart="32dp"
             android:entries="@array/play_styles"
             android:theme="@style/customSpinnerItemStyle"
             app:layout_constraintBottom_toBottomOf="@+id/teleopPowerPortsText2"
-            app:layout_constraintTop_toTopOf="@+id/teleopPowerPortsText2"
-            tools:layout_editor_absoluteX="370dp" />
+            app:layout_constraintStart_toEndOf="@+id/teleopPowerPortsText2"
+            app:layout_constraintTop_toTopOf="@+id/teleopPowerPortsText2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
