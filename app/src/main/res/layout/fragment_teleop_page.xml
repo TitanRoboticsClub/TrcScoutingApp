@@ -261,6 +261,42 @@
         </com.travijuu.numberpicker.library.NumberPicker>
 
         <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/teleopPickedFromFloorCounter"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/teleopPickedFromStationCounter"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="20dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lowerCellsText"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopL2Counter"
             android:layout_width="100dp"
             android:layout_height="300dp"
