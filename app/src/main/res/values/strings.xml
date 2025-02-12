@@ -107,7 +107,8 @@
     <string-array name="robotStates">
         <item>No points</item>
         <item>Parked</item>
-        <item>On Stage</item>
+        <item>Shallow Cage</item>
+        <item>Deep Cage</item>
     </string-array>
 
 
@@ -115,7 +116,8 @@
         <item>[Select outcome...]</item>
         <item>Win</item>
         <item>Loss</item>
-        <item>Tie</item>        
+        <item>Tie</item>
+        <item>Rematch</item>
     </string-array>
 
     <string-array name="save_times">
