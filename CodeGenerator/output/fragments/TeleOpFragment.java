@@ -16,6 +16,8 @@ import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class TeleOpFragment extends AbstractPageFragment
 {
+    private NumberPicker teleopPickedFromFloorCounter;
+    private NumberPicker teleopPickedFromStationCounter;
     private NumberPicker teleopTroughCounter;
     private NumberPicker teleopL2Counter;
     private NumberPicker teleopL3Counter;
@@ -33,6 +35,8 @@ public class TeleOpFragment extends AbstractPageFragment
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_teleop_page, container, false);
+        teleopPickedFromFloorCounter = (NumberPicker) view.findViewById(R.id.teleopPickedFromFloorCounter);
+        teleopPickedFromStationCounter = (NumberPicker) view.findViewById(R.id.teleopPickedFromStationCounter);
         teleopTroughCounter = (NumberPicker) view.findViewById(R.id.teleopTroughCounter);
         teleopL2Counter = (NumberPicker) view.findViewById(R.id.teleopL2Counter);
         teleopL3Counter = (NumberPicker) view.findViewById(R.id.teleopL3Counter);
@@ -50,6 +54,12 @@ public class TeleOpFragment extends AbstractPageFragment
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
+        if (fieldData.has("teleopPickedFromFloor")) {
+            UIUtils.setNumberPickerVal(teleopPickedFromFloorCounter, fieldData.getInt("teleopPickedFromFloor"));
+        }
+        if (fieldData.has("teleopPickedFromStation")) {
+            UIUtils.setNumberPickerVal(teleopPickedFromStationCounter, fieldData.getInt("teleopPickedFromStation"));
+        }
         if (fieldData.has("teleopTrough")) {
             UIUtils.setNumberPickerVal(teleopTroughCounter, fieldData.getInt("teleopTrough"));
         }
@@ -94,6 +104,8 @@ public class TeleOpFragment extends AbstractPageFragment
         try
         {
             JSONObject data = new JSONObject();
+            data.put("teleopPickedFromFloor", teleopPickedFromFloorCounter.getValue());
+            data.put("teleopPickedFromStation", teleopPickedFromStationCounter.getValue());
             data.put("teleopTrough", teleopTroughCounter.getValue());
             data.put("teleopL2", teleopL2Counter.getValue());
             data.put("teleopL3", teleopL3Counter.getValue());

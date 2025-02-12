@@ -109,6 +109,8 @@ elements add autoNet numberpicker autoNet
 elements add autoMissedAlgae numberpicker autoMissedAlgae
 elements add autoMissedCoral numberpicker autoMissedCoral
 wp set TeleOpFragment
+elements add teleopPickedFromFloorCounter numberpicker teleopPickedFromFloor
+elements add teleopPickedFromStationCounter numberpicker teleopPickedFromStation
 elements add teleopTroughCounter numberpicker teleopTrough
 elements add teleopL2Counter numberpicker teleopL2
 elements add teleopL3Counter numberpicker teleopL3
