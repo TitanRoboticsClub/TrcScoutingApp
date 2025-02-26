@@ -22,10 +22,13 @@ public class TeleOpFragment extends AbstractPageFragment
     private NumberPicker teleopL2Counter;
     private NumberPicker teleopL3Counter;
     private NumberPicker teleopL4Counter;
+    private NumberPicker teleopHumanNetCounter;
+    private NumberPicker teleopHumanMissedNetCounter;
     private NumberPicker teleopProcessorCounter;
     private NumberPicker teleopNetCounter;
     private NumberPicker teleopMissedCoralCounter;
-    private NumberPicker teleopMissedAlgaeCounter;
+    private NumberPicker teleopMissedAlgaeProcessorCounter;
+    private NumberPicker teleopMissedAlgaeNetCounter;
     private NumberPicker minorFoulCounter;
     private NumberPicker majorFoulCounter;
     private CheckBox hasCoopBonus;
@@ -41,10 +44,13 @@ public class TeleOpFragment extends AbstractPageFragment
         teleopL2Counter = (NumberPicker) view.findViewById(R.id.teleopL2Counter);
         teleopL3Counter = (NumberPicker) view.findViewById(R.id.teleopL3Counter);
         teleopL4Counter = (NumberPicker) view.findViewById(R.id.teleopL4Counter);
+        teleopHumanNetCounter = (NumberPicker) view.findViewById(R.id.teleopHumanNetCounter);
+        teleopHumanMissedNetCounter = (NumberPicker) view.findViewById(R.id.teleopHumanMissedNetCounter);
         teleopProcessorCounter = (NumberPicker) view.findViewById(R.id.teleopProcessorCounter);
         teleopNetCounter = (NumberPicker) view.findViewById(R.id.teleopNetCounter);
         teleopMissedCoralCounter = (NumberPicker) view.findViewById(R.id.teleopMissedCoralCounter);
-        teleopMissedAlgaeCounter = (NumberPicker) view.findViewById(R.id.teleopMissedAlgaeCounter);
+        teleopMissedAlgaeProcessorCounter = (NumberPicker) view.findViewById(R.id.teleopMissedAlgaeProcessorCounter);
+        teleopMissedAlgaeNetCounter = (NumberPicker) view.findViewById(R.id.teleopMissedAlgaeNetCounter);
         minorFoulCounter = (NumberPicker) view.findViewById(R.id.minorFoulCounter);
         majorFoulCounter = (NumberPicker) view.findViewById(R.id.majorFoulCounter);
         hasCoopBonus = (CheckBox) view.findViewById(R.id.hasCoopBonus);
@@ -72,6 +78,12 @@ public class TeleOpFragment extends AbstractPageFragment
         if (fieldData.has("teleopL4")) {
             UIUtils.setNumberPickerVal(teleopL4Counter, fieldData.getInt("teleopL4"));
         }
+        if (fieldData.has("teleopHumanNet")) {
+            UIUtils.setNumberPickerVal(teleopHumanNetCounter, fieldData.getInt("teleopHumanNet"));
+        }
+        if (fieldData.has("teleopHumanMissedNet")) {
+            UIUtils.setNumberPickerVal(teleopHumanMissedNetCounter, fieldData.getInt("teleopHumanMissedNet"));
+        }
         if (fieldData.has("teleopProcessor")) {
             UIUtils.setNumberPickerVal(teleopProcessorCounter, fieldData.getInt("teleopProcessor"));
         }
@@ -81,8 +93,11 @@ public class TeleOpFragment extends AbstractPageFragment
         if (fieldData.has("teleopMissedCoral")) {
             UIUtils.setNumberPickerVal(teleopMissedCoralCounter, fieldData.getInt("teleopMissedCoral"));
         }
-        if (fieldData.has("teleopMissedAlgae")) {
-            UIUtils.setNumberPickerVal(teleopMissedAlgaeCounter, fieldData.getInt("teleopMissedAlgae"));
+        if (fieldData.has("teleopMissedAlgaeProcessor")) {
+            UIUtils.setNumberPickerVal(teleopMissedAlgaeProcessorCounter, fieldData.getInt("teleopMissedAlgaeProcessor"));
+        }
+        if (fieldData.has("teleopMissedAlgaeNet")) {
+            UIUtils.setNumberPickerVal(teleopMissedAlgaeNetCounter, fieldData.getInt("teleopMissedAlgaeNet"));
         }
         if (fieldData.has("minorFoul")) {
             UIUtils.setNumberPickerVal(minorFoulCounter, fieldData.getInt("minorFoul"));
@@ -110,10 +125,13 @@ public class TeleOpFragment extends AbstractPageFragment
             data.put("teleopL2", teleopL2Counter.getValue());
             data.put("teleopL3", teleopL3Counter.getValue());
             data.put("teleopL4", teleopL4Counter.getValue());
+            data.put("teleopHumanNet", teleopHumanNetCounter.getValue());
+            data.put("teleopHumanMissedNet", teleopHumanMissedNetCounter.getValue());
             data.put("teleopProcessor", teleopProcessorCounter.getValue());
             data.put("teleopNet", teleopNetCounter.getValue());
             data.put("teleopMissedCoral", teleopMissedCoralCounter.getValue());
-            data.put("teleopMissedAlgae", teleopMissedAlgaeCounter.getValue());
+            data.put("teleopMissedAlgaeProcessor", teleopMissedAlgaeProcessorCounter.getValue());
+            data.put("teleopMissedAlgaeNet", teleopMissedAlgaeNetCounter.getValue());
             data.put("minorFoul", minorFoulCounter.getValue());
             data.put("majorFoul", majorFoulCounter.getValue());
             data.put("coopBonus", hasCoopBonus.isChecked());

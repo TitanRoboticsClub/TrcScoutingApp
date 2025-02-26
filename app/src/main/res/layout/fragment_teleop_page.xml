@@ -315,17 +315,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Missed\nAlgae"
+            android:text="Missed\nProcessor"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/teleopMissedAlgaeCounter"
-            app:layout_constraintStart_toStartOf="@+id/teleopMissedAlgaeCounter"
+            app:layout_constraintEnd_toEndOf="@+id/teleopMissedAlgaeProcessorCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopMissedAlgaeProcessorCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopL3Counter" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/teleopMissedAlgaeCounter"
+            android:id="@+id/teleopMissedAlgaeProcessorCounter"
             android:layout_width="100dp"
             android:layout_height="300dp"
             android:layout_marginTop="20dp"

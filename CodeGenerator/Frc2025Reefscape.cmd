@@ -20,10 +20,13 @@ field add teleopPickedFromStation int
 field add teleopL2 int
 field add teleopL3 int
 field add teleopL4 int
+field add teleopHumanNet int
+field add teleopHumanMissedNet int
 field add teleopProcessor int
 field add teleopNet int
 field add teleopMissedCoral int
-field add teleopMissedAlgae int
+field add teleopMissedAlgaeProcessor int
+field add teleopMissedAlgaeNet int
 field add minorFoul int
 field add majorFoul int
 field add coopBonus bool
@@ -69,26 +72,29 @@ csv map 16 teleopPickedFromStation
 csv map 17 teleopL2
 csv map 18 teleopL3
 csv map 19 teleopL4
-csv map 20 teleopProcessor
-csv map 21 teleopNet
-csv map 22 teleopMissedCoral
-csv map 23 teleopMissedAlgae
-csv map 24 minorFoul
-csv map 25 majorFoul
-csv map 26 coopBonus
-csv map 27 playstyle
-csv map 28 finalState
-csv map 29 didShallowCageAttempt
-csv map 30 didDeepCageAttempt
-csv map 31 autoRP
-csv map 32 coralRP
-csv map 33 bargeRP
-csv map 34 robotBrokeDown
-csv map 35 yellowCard1
-csv map 36 yellowCard2
-csv map 37 finalAllianceScore
-csv map 38 finalWLT
-csv map 39 notes
+csv map 20 teleopHumanNet
+csv map 21 teleopHumanMissedNet
+csv map 22 teleopProcessor
+csv map 23 teleopNet
+csv map 24 teleopMissedCoral
+csv map 25 teleopMissedAlgaeProcessor
+csv map 26 teleopMissedAlgaeNet
+csv map 27 minorFoul
+csv map 28 majorFoul
+csv map 29 coopBonus
+csv map 30 playstyle
+csv map 31 finalState
+csv map 32 didShallowCageAttempt
+csv map 33 didDeepCageAttempt
+csv map 34 autoRP
+csv map 35 coralRP
+csv map 36 bargeRP
+csv map 37 robotBrokeDown
+csv map 38 yellowCard1
+csv map 39 yellowCard2
+csv map 40 finalAllianceScore
+csv map 41 finalWLT
+csv map 42 notes
 
 page add Autonomous AutonomousFragment fragment_autonomous_page 1
 page add Teleoperated TeleOpFragment fragment_teleop_page 2
@@ -115,10 +121,13 @@ elements add teleopTroughCounter numberpicker teleopTrough
 elements add teleopL2Counter numberpicker teleopL2
 elements add teleopL3Counter numberpicker teleopL3
 elements add teleopL4Counter numberpicker teleopL4
+elements add teleopHumanNetCounter numberpicker teleopHumanNet
+elements add teleopHumanMissedNetCounter numberpicker teleopHumanMissedNet
 elements add teleopProcessorCounter numberpicker teleopProcessor
 elements add teleopNetCounter numberpicker teleopNet
 elements add teleopMissedCoralCounter numberpicker teleopMissedCoral
-elements add teleopMissedAlgaeCounter numberpicker teleopMissedAlgae
+elements add teleopMissedAlgaeProcessorCounter numberpicker teleopMissedAlgaeProcessor
+elements add teleopMissedAlgaeNetCounter numberpicker teleopMissedAlgaeNet
 elements add minorFoulCounter numberpicker minorFoul
 elements add majorFoulCounter numberpicker majorFoul
 elements add hasCoopBonus checkbox coopBonus
@@ -136,7 +145,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Human Net,Teleop Human Missed Net,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae Processor,Teleop Missed Algae Net,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2025
 generatecode
 

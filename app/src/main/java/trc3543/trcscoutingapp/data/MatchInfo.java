@@ -74,6 +74,12 @@ public class MatchInfo implements Serializable
     @SerializedName("teleopL4")
     public Integer teleopL4;
 
+    @SerializedName("teleopHumanNet")
+    public Integer teleopHumanNet;
+
+    @SerializedName("teleopHumanMissedNet")
+    public Integer teleopHumanMissedNet;
+
     @SerializedName("teleopProcessor")
     public Integer teleopProcessor;
 
@@ -83,8 +89,11 @@ public class MatchInfo implements Serializable
     @SerializedName("teleopMissedCoral")
     public Integer teleopMissedCoral;
 
-    @SerializedName("teleopMissedAlgae")
-    public Integer teleopMissedAlgae;
+    @SerializedName("teleopMissedAlgaeProcessor")
+    public Integer teleopMissedAlgaeProcessor;
+
+    @SerializedName("teleopMissedAlgaeNet")
+    public Integer teleopMissedAlgaeNet;
 
     @SerializedName("minorFoul")
     public Integer minorFoul;
@@ -187,7 +196,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgae,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopHumanNet,teleopHumanMissedNet,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgaeProcessor,teleopMissedAlgaeNet,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 
