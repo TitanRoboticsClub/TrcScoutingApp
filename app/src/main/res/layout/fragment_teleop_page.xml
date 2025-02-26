@@ -20,28 +20,30 @@
             android:id="@+id/hasCoopBonus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:minHeight="48dp"
             android:scaleX="1.5"
             android:scaleY="1.5"
             android:text="Coop Point"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintHorizontal_bias="0.924"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
         <TextView
             android:id="@+id/pickedFromFloorText"
-            android:layout_width="wrap_content"
+            android:layout_width="198dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Picked fr\nFloor"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:text="Floor Pickup"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="@+id/teleopPickedFromFloorCounter"
-            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintHorizontal_bias="0.483"
             app:layout_constraintStart_toStartOf="@+id/teleopPickedFromFloorCounter"
             app:layout_constraintTop_toBottomOf="@+id/hasCoopBonus" />
 
@@ -63,15 +65,17 @@
 
         <TextView
             android:id="@+id/pickedFromStationText"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Picked fr\nStation"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="-20dp"
+            android:text="Station Pickup"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="@+id/teleopPickedFromStationCounter"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/teleopPickedFromStationCounter"
             app:layout_constraintTop_toBottomOf="@+id/hasCoopBonus" />
 
