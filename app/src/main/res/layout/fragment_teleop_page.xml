@@ -213,8 +213,8 @@
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopL4Counter"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
 
             android:layout_marginStart="432dp"
             app:custom_layout="@layout/custom_number_picker"
@@ -238,7 +238,7 @@
             tools:layout_editor_absoluteX="529dp" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/humanNetCounter"
+            android:id="@+id/teleopHumanNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
@@ -252,7 +252,7 @@
             tools:layout_editor_absoluteY="909dp" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/missedAlgaeNetCounter"
+            android:id="@+id/teleopMissedAlgaeNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
@@ -265,6 +265,23 @@
             app:value="0"
             tools:layout_editor_absoluteY="909dp" />
 
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/teleopMissedAlgaeProcessorCounter"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:layout_marginStart="0dp"
+            app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:max="50"
+            app:min="0"
+            app:unit="1"
+            app:value="0"
+            tools:layout_editor_absoluteY="909dp" />
+
+
+
         <TextView
             android:id="@+id/missedAlgaeNetText"
             android:layout_width="wrap_content"
@@ -275,11 +292,11 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/missedAlgaeNetCounter"
+            app:layout_constraintBottom_toTopOf="@+id/teleopMissedAlgaeNetCounter"
             tools:layout_editor_absoluteX="376dp" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/humanMissedNetCounter"
+            android:id="@+id/teleopHumanMissedNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
@@ -302,7 +319,7 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/humanMissedNetCounter"
+            app:layout_constraintBottom_toTopOf="@+id/teleopHumanMissedNetCounter"
             tools:layout_editor_absoluteX="652dp" />
 
         <TextView
@@ -315,7 +332,7 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/humanNetCounter"
+            app:layout_constraintBottom_toTopOf="@+id/teleopHumanNetCounter"
             tools:layout_editor_absoluteX="517dp" />
 
 
