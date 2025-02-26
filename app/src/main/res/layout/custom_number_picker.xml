@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/increment"
-        android:layout_width="100dp"
-        android:layout_height="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="0dp"
         android:text="+"
         android:textSize="25sp" />
 
     <EditText
         android:id="@+id/display"
-        android:layout_width="100dp"
-        android:layout_height="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:gravity="center"
         android:inputType="number"
         android:text="1"
@@ -24,8 +26,9 @@
 
     <Button
         android:id="@+id/decrement"
-        android:layout_width="100dp"
-        android:layout_height="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="0dp"
         android:text="-"
         android:textSize="25sp"
