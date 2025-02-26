@@ -350,12 +350,12 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/humanNetCounter"
-            app:layout_constraintStart_toStartOf="@+id/humanNetCounter"
+            app:layout_constraintEnd_toEndOf="@+id/teleopHumanNetCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopHumanNetCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopProcessorCounter" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/humanNetCounter"
+            android:id="@+id/teleopHumanNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
@@ -381,12 +381,12 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/humanMissedNetCounter"
-            app:layout_constraintStart_toStartOf="@+id/humanMissedNetCounter"
+            app:layout_constraintEnd_toEndOf="@+id/teleopHumanMissedNetCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopHumanMissedNetCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopProcessorCounter" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/humanMissedNetCounter"
+            android:id="@+id/teleopHumanMissedNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
@@ -412,12 +412,12 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
-            app:layout_constraintEnd_toEndOf="@+id/missedAlgaeNetCounter"
-            app:layout_constraintStart_toStartOf="@+id/missedAlgaeNetCounter"
+            app:layout_constraintEnd_toEndOf="@+id/teleopMissedAlgaeNetCounter"
+            app:layout_constraintStart_toStartOf="@+id/teleopMissedAlgaeNetCounter"
             app:layout_constraintTop_toBottomOf="@+id/teleopProcessorCounter" />
 
         <com.travijuu.numberpicker.library.NumberPicker
-            android:id="@+id/missedAlgaeNetCounter"
+            android:id="@+id/teleopMissedAlgaeNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
