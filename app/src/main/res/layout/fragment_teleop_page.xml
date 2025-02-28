@@ -20,40 +20,43 @@
             android:id="@+id/teleopFoulLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="357dp"
             android:rotation="-90"
             android:text="Fouls"
             android:textColor="@color/colorPrimary"
             android:textSize="50sp"
             android:textStyle="bold"
             android:translationY="0dp"
-            tools:layout_editor_absoluteX="357dp"
-            tools:layout_editor_absoluteY="295dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/teleopPickupLabel" />
 
         <TextView
             android:id="@+id/teleopAlgaeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="283dp"
             android:rotation="-90"
             android:text="Algae"
             android:textColor="@color/colorPrimary"
             android:textSize="50sp"
             android:textStyle="bold"
             android:translationY="0dp"
-            tools:layout_editor_absoluteX="-24dp"
-            tools:layout_editor_absoluteY="980dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleopCoralLabel" />
 
         <CheckBox
             android:id="@+id/hasCoopBonus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="50dp"
             android:minHeight="48dp"
             android:scaleX="1.5"
             android:scaleY="1.5"
             android:text="Coop Point"
             android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/playstyleType"
-            tools:layout_editor_absoluteY="77dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
@@ -61,14 +64,17 @@
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="133dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopPickupLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.269"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="243dp" />
+            app:value="0" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopPickedFromFloorCounter"
@@ -76,264 +82,299 @@
             android:layout_height="200dp"
 
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopPickupLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26999998"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="243dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/pickedFromStationText"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="122dp"
+            android:layout_marginBottom="9dp"
             android:text="Station"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/teleopPickedFromStationCounter"
-            tools:layout_editor_absoluteX="235dp" />
+            app:layout_constraintEnd_toStartOf="@+id/majorFoulText" />
 
         <TextView
             android:id="@+id/pickedFromFloorText"
             android:layout_width="198dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginBottom="10dp"
             android:text="Floor"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/teleopPickedFromFloorCounter"
-            tools:layout_editor_absoluteX="64dp" />
+            app:layout_constraintEnd_toStartOf="@+id/pickedFromStationText"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopTroughCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="5dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopCoralLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.653"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="594dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/innerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="19dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginBottom="18dp"
             android:text="Score\nTrough"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/teleopTroughCounter"
-            tools:layout_editor_absoluteX="92dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopL3Counter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="291dp"
+            android:layout_marginStart="42dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopCoralLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.652"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="594dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/lowerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="19dp"
+            android:layout_marginStart="46dp"
+            android:layout_marginBottom="17dp"
             android:text="Score\nL3"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopL3Counter"
-            tools:layout_editor_absoluteX="388dp" />
+            app:layout_constraintStart_toEndOf="@+id/outerCellsText" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopL2Counter"
             android:layout_width="100dp"
             android:layout_height="200dp"
-            android:layout_marginStart="149dp"
+            android:layout_marginStart="44dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopCoralLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.652"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="594dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/outerCellsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="5dp"
             android:text="Score\nL2"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/teleopL2Counter"
-            tools:layout_editor_absoluteX="250dp" />
+            app:layout_constraintStart_toEndOf="@+id/innerCellsText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
-            android:layout_marginStart="136dp"
+            android:layout_marginStart="40dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.304"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.986"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="909dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/lowerCellsText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="39dp"
             android:gravity="center"
             android:text="Score\nNet"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopNetCounter"
-            tools:layout_editor_absoluteX="246dp" />
+            app:layout_constraintEnd_toStartOf="@+id/missedAlgaeNetText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopL4Counter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="432dp"
+            android:layout_marginStart="40dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopCoralLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/teleopHumanNetCounter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.728"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.652"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="596dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/scoreL4Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginBottom="8dp"
             android:text="Score\nL4"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/teleopL4Counter"
-            tools:layout_editor_absoluteX="529dp" />
+            app:layout_constraintStart_toEndOf="@+id/lowerCellsText" />
+
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopHumanNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="419dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.744"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.986"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="909dp" />
+            app:value="0" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopMissedAlgaeNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="278dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.985"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="909dp" />
-
+            app:value="0" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopMissedAlgaeProcessorCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
             android:visibility="gone"
-            android:layout_marginStart="0dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
             app:max="50"
             app:min="0"
             app:unit="1"
             app:value="0"
             tools:layout_editor_absoluteY="909dp" />
-
 
 
         <TextView
             android:id="@+id/missedAlgaeNetText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="24dp"
             android:gravity="center"
             android:text="Missed\nNet"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopMissedAlgaeNetCounter"
-            tools:layout_editor_absoluteX="376dp" />
+            app:layout_constraintEnd_toStartOf="@+id/humanNetText" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopHumanMissedNetCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="562dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="68dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:layout_constraintStart_toEndOf="@+id/teleopHumanNetCounter"
+            app:layout_constraintTop_toBottomOf="@+id/teleopMissedCoralCounter"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="909dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/humanMissedNetText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="11dp"
             android:gravity="center"
             android:text="Missed\n(Human)"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopHumanMissedNetCounter"
-            tools:layout_editor_absoluteX="652dp" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/humanNetText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="17dp"
             android:gravity="center"
             android:text="Human\nNet"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopHumanNetCounter"
-            tools:layout_editor_absoluteX="517dp" />
+            app:layout_constraintEnd_toStartOf="@+id/humanMissedNetText" />
 
 
         <com.travijuu.numberpicker.library.NumberPicker
@@ -341,96 +382,119 @@
             android:layout_width="100dp"
             android:layout_height="200dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopAlgaeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.986"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="909dp" />
-
+            app:value="0" />
 
         <TextView
             android:id="@+id/scoreProcessorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="10dp"
             android:text="Score\nProcessor"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopProcessorCounter"
-            tools:layout_editor_absoluteX="72dp" />
+            app:layout_constraintEnd_toStartOf="@+id/lowerCellsText5"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/teleopMissedCoralCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
-            android:layout_marginStart="575dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopCoralLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.652"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="594dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/missedCoralText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="39dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="18dp"
+
             android:text="Missed\nCoral"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/teleopMissedCoralCounter"
-            tools:layout_editor_absoluteX="660dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scoreL4Text" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/minorFoulCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="154dp"
+            android:layout_marginStart="41dp"
             app:custom_layout="@layout/custom_number_picker"
-            app:layout_constraintStart_toEndOf="@+id/teleopFoulLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintStart_toEndOf="@+id/majorFoulCounter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.269"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="243dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/minorFoulText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="13dp"
             android:gravity="center"
             android:text="Minor\nFouls"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/minorFoulCounter"
-            tools:layout_editor_absoluteX="638dp" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <com.travijuu.numberpicker.library.NumberPicker
             android:id="@+id/majorFoulCounter"
             android:layout_width="100dp"
             android:layout_height="200dp"
 
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="13dp"
             app:custom_layout="@layout/custom_number_picker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.704"
             app:layout_constraintStart_toEndOf="@+id/teleopFoulLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.267"
             app:max="50"
             app:min="0"
             app:unit="1"
-            app:value="0"
-            tools:layout_editor_absoluteY="243dp" />
+            app:value="0" />
 
         <TextView
             android:id="@+id/majorFoulText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
             android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="Major\nFouls"
@@ -438,12 +502,14 @@
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/majorFoulCounter"
-            tools:layout_editor_absoluteX="496dp" />
+            app:layout_constraintEnd_toStartOf="@+id/minorFoulText" />
 
         <TextView
             android:id="@+id/teleopPowerPortsText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="32dp"
             android:text="Play Style"
             android:textColor="@color/colorPrimary"
@@ -451,55 +517,62 @@
             android:textStyle="bold"
             android:translationY="0dp"
             app:layout_constraintEnd_toStartOf="@+id/playstyleType"
-            tools:layout_editor_absoluteY="80dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/teleopCoralLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="252dp"
             android:rotation="-90"
             android:text="Coral"
             android:textColor="@color/colorPrimary"
             android:textSize="50sp"
             android:textStyle="bold"
             android:translationY="0dp"
-            tools:layout_editor_absoluteX="-25dp"
-            tools:layout_editor_absoluteY="630dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleopFoulLabel" />
 
         <TextView
             android:id="@+id/teleopPickupLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="169dp"
             android:rotation="-90"
             android:text="Pickup"
             android:textColor="@color/colorPrimary"
             android:textSize="50sp"
             android:textStyle="bold"
             android:translationY="0dp"
-            tools:layout_editor_absoluteX="-41dp"
-            tools:layout_editor_absoluteY="310dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playstyleType" />
 
         <TextView
             android:id="@+id/teleOpText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
+            android:layout_marginStart="235dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="240dp"
             android:text="Teleoperated Period"
             android:textColor="@color/colorPrimary"
             android:textSize="36dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/playstyleType"
-            tools:layout_editor_absoluteX="235dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <Spinner
             android:id="@+id/playstyleType"
             android:layout_width="315dp"
             android:layout_height="76dp"
-            android:layout_marginBottom="153dp"
+            android:layout_marginStart="254dp"
+            android:layout_marginTop="1dp"
             android:entries="@array/play_styles"
             android:theme="@style/customSpinnerItemStyle"
-            app:layout_constraintBottom_toTopOf="@+id/teleopFoulLabel"
-            tools:layout_editor_absoluteX="254dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teleOpText" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

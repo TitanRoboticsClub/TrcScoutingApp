@@ -169,28 +169,37 @@
             android:id="@+id/autoRankingPointSymbol"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="237dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginEnd="6dp"
             app:layout_constraintEnd_toStartOf="@+id/sustainabilityBonus"
-            app:srcCompat="@drawable/auto_rp"
-            tools:layout_editor_absoluteY="580dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/auto_rp" />
 
         <ImageView
             android:id="@+id/coralRankingPointSymbol"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_marginStart="238dp"
+            android:layout_marginTop="740dp"
             android:layout_marginEnd="5dp"
             app:layout_constraintEnd_toStartOf="@+id/activationBonus"
-            app:srcCompat="@drawable/coral_rp"
-            tools:layout_editor_absoluteY="740dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/coral_rp" />
 
         <ImageView
             android:id="@+id/bargeRankingPointSymbol"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="227dp"
+            android:layout_marginTop="937dp"
+            android:layout_marginEnd="6dp"
             app:layout_constraintEnd_toStartOf="@+id/textView6"
-            app:srcCompat="@drawable/barge_rp"
-            tools:layout_editor_absoluteY="937.5dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/barge_rp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

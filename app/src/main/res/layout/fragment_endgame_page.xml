@@ -303,9 +303,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="393dp"
-            android:layout_height="32dp"
-            android:text="Scored at least one coral in AUTO"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:text="Scored at least one coral in AUTO \n + Left starting zone"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
