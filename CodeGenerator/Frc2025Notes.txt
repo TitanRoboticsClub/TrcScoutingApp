@@ -1,0 +1,47 @@
+FRC REEFSCAPE Scouting Questions
+Short Response – Red
+Dropdown – Green
+Checkbox – Blue
+Counter - Purple
+ 
+Auto / Pre-Match
+Team Number -
+Alliance – Red 1 / Red 2 / Red 3 / Blue 1 / Blue 2 / Blue 3
+Left Starting Zone
+Trough
+L2 Branch
+L3 Branch
+L4 Branch
+Processor
+Net
+Missed Coral
+Missed Algae
+ 
+Tele-Op
+Trough
+L2 Branch
+L3 Branch
+L4 Branch
+Intake from ground
+Intake from station
+Processor
+Net
+Missed Coral
+Missed Algae
+Minor Foul
+Major Foul
+Coopertition Bonus?
+Play Style – Offensive / Defensive
+ 
+Endgame / Post – Match
+Final Position – Park, Shallow Cage, Deep Cage, Not in Barge Zone
+Attempted shallow cage?
+Attempted deep cage?
+Auto RP?
+Coral RP?
+Barge RP?
+Yellow Card – 2 checkboxes, one for each yellow card
+Match Result – Win, Loss, Tie, Replay
+Match Score
+Comments? Anything that stood out as particularly beneficial or detrimental. Any interesting strategies? Reliability?
+

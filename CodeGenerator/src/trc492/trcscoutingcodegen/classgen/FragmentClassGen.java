@@ -33,7 +33,7 @@ public class FragmentClassGen extends ClassGenerator
         {
             Field field = element.field;
             views += String.format("    private %s %s;\n", element.elementType, element.elementId);
-            instantiateViewsCode += String.format("        %s = (%s) findViewById(R.id.%s);\n", element.elementId,
+            instantiateViewsCode += String.format("        %s = (%s) view.findViewById(R.id.%s);\n", element.elementId,
                 element.elementType, element.elementId);
             switch (element.elementType)
             {
@@ -64,7 +64,7 @@ public class FragmentClassGen extends ClassGenerator
                             break;
                     }
 
-                    setFieldsCode += String.format("        if (fieldData.has(\"%s\") {\n", field.fieldName);
+                    setFieldsCode += String.format("        if (fieldData.has(\"%s\")) {\n", field.fieldName);
                     setFieldsCode += String.format("            UIUtils.setEditTextValue(%s, fieldData.%s);\n",
                         element.elementId, jsonFieldData);
                     setFieldsCode += "        }\n";
@@ -92,7 +92,7 @@ public class FragmentClassGen extends ClassGenerator
                     break;
 
                 case CheckBox:
-                    setFieldsCode += String.format("        if (fieldData.has(\"%s\") {\n", field.fieldName);
+                    setFieldsCode += String.format("        if (fieldData.has(\"%s\")) {\n", field.fieldName);
                     setFieldsCode += String.format(
                         "            UIUtils.setCheckbox(%s, fieldData.getBoolean(\"%s\"));\n", element.elementId,
                         field.fieldName);
@@ -102,7 +102,7 @@ public class FragmentClassGen extends ClassGenerator
                     break;
 
                 case NumberPicker:
-                    setFieldsCode += String.format("        if (fieldData.has(\"%s\") {\n", field.fieldName);
+                    setFieldsCode += String.format("        if (fieldData.has(\"%s\")) {\n", field.fieldName);
                     setFieldsCode += String.format(
                         "            UIUtils.setNumberPickerVal(%s, fieldData.getInt(\"%s\"));\n", element.elementId,
                         field.fieldName);
@@ -112,7 +112,7 @@ public class FragmentClassGen extends ClassGenerator
                     break;
 
                 case Spinner:
-                    setFieldsCode += String.format("        if (fieldData.has(\"%s\") {\n", field.fieldName);
+                    setFieldsCode += String.format("        if (fieldData.has(\"%s\")) {\n", field.fieldName);
                     setFieldsCode += String.format(
                         "            UIUtils.setSpinnerByTextValue(%s, fieldData.getString(\"%s\"));\n",
                         element.elementId, field.fieldName);
@@ -122,7 +122,7 @@ public class FragmentClassGen extends ClassGenerator
                     break;
 
                 case Switch:
-                    setFieldsCode += String.format("        if (fieldData.has(\"%s\") {\n", field.fieldName);
+                    setFieldsCode += String.format("        if (fieldData.has(\"%s\")) {\n", field.fieldName);
                     setFieldsCode += String.format("            %s.setChecked(fieldData.getBoolean(\"%s\"));\n",
                         element.elementId, field.fieldName);
                     setFieldsCode += "        }\n";

@@ -22,7 +22,7 @@ import trc3543.trcscoutingapp.fragments.TeleOpFragment;
 public class CustomFragmentPagerAdapter extends FragmentPagerAdapter
 {
     public static final String MODULE_NAME = "CustomFragmentPagerAdap";
-    static final int PAGE_COUNT = 3;
+    static final int PAGE_COUNT = AppInfo.NUM_PAGES;
     private String[] tabTitles = new String[PAGE_COUNT];
     private AbstractPageFragment[] fragments = new AbstractPageFragment[PAGE_COUNT];
 

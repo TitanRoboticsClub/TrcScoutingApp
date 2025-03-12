@@ -44,6 +44,7 @@ import trc3543.trcscoutingapp.data.AppInfo;
 import trc3543.trcscoutingapp.data.AppSettings;
 import trc3543.trcscoutingapp.threads.AutoSaveThread;
 import trc3543.trcscoutingapp.data.IOUtils;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 import trc3543.trcscoutingapp.data.MatchInfo;
 import trc3543.trcscoutingapp.R;
 
@@ -458,8 +459,9 @@ public class AddMatches extends AppCompatActivity
             if (prev != null)
             {
                 intent.putExtra("PrevMatch", prev.matchNumber);
-                intent.putExtra("PrevAlliance", prev.alliance);
-                intent.putExtra("PrevMatchType", prev.matchType);
+		intent.putExtra("PrevAlliance", prev.alliance);
+		intent.putExtra("PrevMatchType", prev.matchType);
+		
             }
         }
         else

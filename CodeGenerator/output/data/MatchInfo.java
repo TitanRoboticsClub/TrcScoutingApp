@@ -26,65 +26,122 @@ public class MatchInfo implements Serializable
     @SerializedName("alliance")
     public String alliance;
 
-    @SerializedName("matchtype")
-    public String matchtype;
+    @SerializedName("matchType")
+    public String matchType;
+
+    @SerializedName("leftStartingZone")
+    public Boolean leftStartingZone;
+
+    @SerializedName("autoTrough")
+    public Integer autoTrough;
+
+    @SerializedName("autoL2branch")
+    public Integer autoL2branch;
+
+    @SerializedName("autoL3branch")
+    public Integer autoL3branch;
+
+    @SerializedName("autoL4branch")
+    public Integer autoL4branch;
+
+    @SerializedName("autoProcessor")
+    public Integer autoProcessor;
+
+    @SerializedName("autoNet")
+    public Integer autoNet;
+
+    @SerializedName("autoMissedCoral")
+    public Integer autoMissedCoral;
+
+    @SerializedName("autoMissedAlgae")
+    public Integer autoMissedAlgae;
+
+    @SerializedName("teleopTrough")
+    public Integer teleopTrough;
+
+    @SerializedName("teleopPickedFromFloor")
+    public Integer teleopPickedFromFloor;
+
+    @SerializedName("teleopPickedFromStation")
+    public Integer teleopPickedFromStation;
+
+    @SerializedName("teleopL2")
+    public Integer teleopL2;
+
+    @SerializedName("teleopL3")
+    public Integer teleopL3;
+
+    @SerializedName("teleopL4")
+    public Integer teleopL4;
+
+    @SerializedName("teleopHumanNet")
+    public Integer teleopHumanNet;
+
+    @SerializedName("teleopRemovedAlgae")
+    public Integer teleopRemovedAlgae;
+
+    @SerializedName("teleopProcessor")
+    public Integer teleopProcessor;
+
+    @SerializedName("teleopNet")
+    public Integer teleopNet;
+
+    @SerializedName("teleopMissedCoral")
+    public Integer teleopMissedCoral;
+
+    @SerializedName("teleopMissedAlgaeProcessor")
+    public Integer teleopMissedAlgaeProcessor;
+
+    @SerializedName("teleopMissedAlgaeNet")
+    public Integer teleopMissedAlgaeNet;
+
+    @SerializedName("minorFoul")
+    public Integer minorFoul;
+
+    @SerializedName("majorFoul")
+    public Integer majorFoul;
+
+    @SerializedName("coopBonus")
+    public Boolean coopBonus;
+
+    @SerializedName("playstyle")
+    public String playstyle;
+
+    @SerializedName("finalState")
+    public String finalState;
+
+    @SerializedName("didShallowCageAttempt")
+    public Boolean didShallowCageAttempt;
+
+    @SerializedName("didDeepCageAttempt")
+    public Boolean didDeepCageAttempt;
+
+    @SerializedName("autoRP")
+    public Boolean autoRP;
+
+    @SerializedName("coralRP")
+    public Boolean coralRP;
+
+    @SerializedName("bargeRP")
+    public Boolean bargeRP;
+
+    @SerializedName("robotBrokeDown")
+    public Boolean robotBrokeDown;
+
+    @SerializedName("yellowCard1")
+    public Boolean yellowCard1;
+
+    @SerializedName("yellowCard2")
+    public Boolean yellowCard2;
+
+    @SerializedName("finalAllianceScore")
+    public Integer finalAllianceScore;
+
+    @SerializedName("finalWLT")
+    public String finalWLT;
 
     @SerializedName("notes")
     public String notes;
-
-    @SerializedName("initLineCrossed")
-    public Boolean initLineCrossed;
-
-    @SerializedName("autonomousLower")
-    public Integer autonomousLower;
-
-    @SerializedName("autonomousMissed")
-    public Integer autonomousMissed;
-
-    @SerializedName("teleopLower")
-    public Integer teleopLower;
-
-    @SerializedName("teleopOuter")
-    public Integer teleopOuter;
-
-    @SerializedName("teleopInner")
-    public Integer teleopInner;
-
-    @SerializedName("teleopMissed")
-    public Integer teleopMissed;
-
-    @SerializedName("shieldStage1")
-    public Boolean shieldStage1;
-
-    @SerializedName("shieldStage2")
-    public Boolean shieldStage2;
-
-    @SerializedName("shieldStage3")
-    public Boolean shieldStage3;
-
-    @SerializedName("controlPanelRotated")
-    public Boolean controlPanelRotated;
-
-    @SerializedName("controlPanelPositioned")
-    public Boolean controlPanelPositioned;
-
-    @SerializedName("generatorSwitchParked")
-    public Boolean generatorSwitchParked;
-
-    @SerializedName("generatorSwitchHanging")
-    public Boolean generatorSwitchHanging;
-
-    @SerializedName("generatorSwitchSupportingMechanism")
-    public Boolean generatorSwitchSupportingMechanism;
-
-    @SerializedName("generatorSwitchLevel")
-    public Boolean generatorSwitchLevel;
-
-    @SerializedName("autonomousOuter")
-    public Integer autonomousOuter;
-
-    @SerializedName("autonomousInner")
-    public Integer autonomousInner;
 
 
 
@@ -134,12 +191,12 @@ public class MatchInfo implements Serializable
 
     public String getDisplayString()
     {
-        return String.format("Match # %d (%s) Team: %d", matchNumber, matchtype, teamNumber);
+        return String.format("Match # %d (%s) Team: %d", matchNumber, matchType, teamNumber);
     }
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchtype,alliance,initLineCrossed,autonomousLower,autonomousOuter,autonomousInner,autonomousMissed,teleopLower,teleopOuter,teleopInner,teleopMissed,shieldStage1,shieldStage2,shieldStage3,controlPanelRotated,controlPanelPositioned,generatorSwitchParked,generatorSwitchHanging,generatorSwitchSupportingMechanism,generatorSwitchLevel,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopHumanNet,teleopRemovedAlgae,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgaeProcessor,teleopMissedAlgaeNet,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

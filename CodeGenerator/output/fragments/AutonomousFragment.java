@@ -2,7 +2,9 @@ package trc3543.trcscoutingapp.fragments;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.travijuu.numberpicker.library.*;
 
@@ -10,63 +12,84 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 
 public class AutonomousFragment extends AbstractPageFragment
 {
     private EditText matchNum;
     private EditText teamNum;
-    private Spinner matchTypeSpinner;
     private Spinner spectatingTeamSpinner;
-    private CheckBox initLineCrossedCB;
-    private NumberPicker lowerCellsCounter;
-    private NumberPicker outerCellsCounter;
-    private NumberPicker innerCellsCounter;
-    private NumberPicker missedCellsCounter;
+    private Spinner matchTypeSpinner;
+    private CheckBox leftStartingZoneCB;
+    private NumberPicker autoTroughCounter;
+    private NumberPicker autoL2branchCounter;
+    private NumberPicker autoL3branchCounter;
+    private NumberPicker autoL4branchCounter;
+    private NumberPicker autoProcessorCounter;
+    private NumberPicker autoNet;
+    private NumberPicker autoMissedAlgae;
+    private NumberPicker autoMissedCoral;
 
     @Override
     public void instantiateViews(LayoutInflater inflater, ViewGroup container)
     {
         view = inflater.inflate(R.layout.fragment_autonomous_page, container, false);
-        matchNum = (EditText) findViewById(R.id.matchNum);
-        teamNum = (EditText) findViewById(R.id.teamNum);
-        matchTypeSpinner = (Spinner) findViewById(R.id.matchTypeSpinner);
-        spectatingTeamSpinner = (Spinner) findViewById(R.id.spectatingTeamSpinner);
-        initLineCrossedCB = (CheckBox) findViewById(R.id.initLineCrossedCB);
-        lowerCellsCounter = (NumberPicker) findViewById(R.id.lowerCellsCounter);
-        outerCellsCounter = (NumberPicker) findViewById(R.id.outerCellsCounter);
-        innerCellsCounter = (NumberPicker) findViewById(R.id.innerCellsCounter);
-        missedCellsCounter = (NumberPicker) findViewById(R.id.missedCellsCounter);
+        matchNum = (EditText) view.findViewById(R.id.matchNum);
+        teamNum = (EditText) view.findViewById(R.id.teamNum);
+        spectatingTeamSpinner = (Spinner) view.findViewById(R.id.spectatingTeamSpinner);
+        matchTypeSpinner = (Spinner) view.findViewById(R.id.matchTypeSpinner);
+        leftStartingZoneCB = (CheckBox) view.findViewById(R.id.leftStartingZoneCB);
+        autoTroughCounter = (NumberPicker) view.findViewById(R.id.autoTroughCounter);
+        autoL2branchCounter = (NumberPicker) view.findViewById(R.id.autoL2branchCounter);
+        autoL3branchCounter = (NumberPicker) view.findViewById(R.id.autoL3branchCounter);
+        autoL4branchCounter = (NumberPicker) view.findViewById(R.id.autoL4branchCounter);
+        autoProcessorCounter = (NumberPicker) view.findViewById(R.id.autoProcessorCounter);
+        autoNet = (NumberPicker) view.findViewById(R.id.autoNet);
+        autoMissedAlgae = (NumberPicker) view.findViewById(R.id.autoMissedAlgae);
+        autoMissedCoral = (NumberPicker) view.findViewById(R.id.autoMissedCoral);
     }
 
     @Override
     public void setFields(JSONObject fieldData) throws JSONException
     {
-        if (fieldData.has("matchNumber") {
+        if (fieldData.has("matchNumber")) {
             UIUtils.setEditTextValue(matchNum, fieldData.getInt("matchNumber"));
         }
-        if (fieldData.has("teamNumber") {
+        if (fieldData.has("teamNumber")) {
             UIUtils.setEditTextValue(teamNum, fieldData.getInt("teamNumber"));
         }
-        if (fieldData.has("matchtype") {
-            UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchtype"));
-        }
-        if (fieldData.has("alliance") {
+        if (fieldData.has("alliance")) {
             UIUtils.setSpinnerByTextValue(spectatingTeamSpinner, fieldData.getString("alliance"));
         }
-        if (fieldData.has("initLineCrossed") {
-            UIUtils.setCheckbox(initLineCrossedCB, fieldData.getBoolean("initLineCrossed"));
+        if (fieldData.has("matchType")) {
+            UIUtils.setSpinnerByTextValue(matchTypeSpinner, fieldData.getString("matchType"));
         }
-        if (fieldData.has("autonomousLower") {
-            UIUtils.setNumberPickerVal(lowerCellsCounter, fieldData.getInt("autonomousLower"));
+        if (fieldData.has("leftStartingZone")) {
+            UIUtils.setCheckbox(leftStartingZoneCB, fieldData.getBoolean("leftStartingZone"));
         }
-        if (fieldData.has("autonomousOuter") {
-            UIUtils.setNumberPickerVal(outerCellsCounter, fieldData.getInt("autonomousOuter"));
+        if (fieldData.has("autoTrough")) {
+            UIUtils.setNumberPickerVal(autoTroughCounter, fieldData.getInt("autoTrough"));
         }
-        if (fieldData.has("autonomousInner") {
-            UIUtils.setNumberPickerVal(innerCellsCounter, fieldData.getInt("autonomousInner"));
+        if (fieldData.has("autoL2branch")) {
+            UIUtils.setNumberPickerVal(autoL2branchCounter, fieldData.getInt("autoL2branch"));
         }
-        if (fieldData.has("autonomousMissed") {
-            UIUtils.setNumberPickerVal(missedCellsCounter, fieldData.getInt("autonomousMissed"));
+        if (fieldData.has("autoL3branch")) {
+            UIUtils.setNumberPickerVal(autoL3branchCounter, fieldData.getInt("autoL3branch"));
+        }
+        if (fieldData.has("autoL4branch")) {
+            UIUtils.setNumberPickerVal(autoL4branchCounter, fieldData.getInt("autoL4branch"));
+        }
+        if (fieldData.has("autoProcessor")) {
+            UIUtils.setNumberPickerVal(autoProcessorCounter, fieldData.getInt("autoProcessor"));
+        }
+        if (fieldData.has("autoNet")) {
+            UIUtils.setNumberPickerVal(autoNet, fieldData.getInt("autoNet"));
+        }
+        if (fieldData.has("autoMissedAlgae")) {
+            UIUtils.setNumberPickerVal(autoMissedAlgae, fieldData.getInt("autoMissedAlgae"));
+        }
+        if (fieldData.has("autoMissedCoral")) {
+            UIUtils.setNumberPickerVal(autoMissedCoral, fieldData.getInt("autoMissedCoral"));
         }
     }
 
@@ -88,13 +111,17 @@ public class AutonomousFragment extends AbstractPageFragment
                 UIUtils.launchPopUpMessage(getContext(), "Error", "teamNum cannot be empty!");
                 return null;
             }
-            data.put("matchtype", matchTypeSpinner.getSelectedItem().toString());
             data.put("alliance", spectatingTeamSpinner.getSelectedItem().toString());
-            data.put("initLineCrossed", initLineCrossedCB.isChecked());
-            data.put("autonomousLower", lowerCellsCounter.getValue());
-            data.put("autonomousOuter", outerCellsCounter.getValue());
-            data.put("autonomousInner", innerCellsCounter.getValue());
-            data.put("autonomousMissed", missedCellsCounter.getValue());
+            data.put("matchType", matchTypeSpinner.getSelectedItem().toString());
+            data.put("leftStartingZone", leftStartingZoneCB.isChecked());
+            data.put("autoTrough", autoTroughCounter.getValue());
+            data.put("autoL2branch", autoL2branchCounter.getValue());
+            data.put("autoL3branch", autoL3branchCounter.getValue());
+            data.put("autoL4branch", autoL4branchCounter.getValue());
+            data.put("autoProcessor", autoProcessorCounter.getValue());
+            data.put("autoNet", autoNet.getValue());
+            data.put("autoMissedAlgae", autoMissedAlgae.getValue());
+            data.put("autoMissedCoral", autoMissedCoral.getValue());
             return data;
         }
         catch (Exception e)

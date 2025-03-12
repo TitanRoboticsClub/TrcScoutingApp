@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 import trc3543.trcscoutingapp.data.MatchInfo;
 import trc3543.trcscoutingapp.R;
+import trc3543.trcscoutingapp.uiutil.UIUtils;
 import trc3543.trcscoutingapp.fragutil.FragmentsDataViewModel;
 import trc3543.trcscoutingapp.fragutil.CustomFragmentPagerAdapter;
 

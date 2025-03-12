@@ -7,20 +7,258 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="340dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="Scored at least 14 Barge points"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bargeRPCB" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="372dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:text="Off the ground on deep cage"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/didDeepCageAttemptCB" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="318dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:text="Off ground on shallow cage"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/didShallowCageAttemptCB" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="357dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="Scored >5 coral on each level"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/coralRPCB" />
+
+        <Spinner
+            android:id="@+id/finalStateSpinner"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/robotStates"
+            android:scaleX="1"
+            android:theme="@style/customSpinnerItemStyle"
+            app:layout_constraintStart_toEndOf="@+id/lowerCellsText2"
+            app:layout_constraintTop_toBottomOf="@+id/robotBrokeDownCB" />
+
+        <TextView
+            android:id="@+id/lowerCellsText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Final State"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@+id/finalStateSpinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/finalStateSpinner" />
+
+        <CheckBox
+            android:id="@+id/bargeRPCB"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:text="Barge Ranking Point"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/autoRPCB" />
+
+        <CheckBox
+            android:id="@+id/didDeepCageAttemptCB"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:text="Deep Cage Attempt"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bargeRPCB" />
+
+        <CheckBox
+            android:id="@+id/didShallowCageAttemptCB"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:text="Shallow Cage Attempt"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/didDeepCageAttemptCB" />
+
+        <CheckBox
+            android:id="@+id/coralRPCB"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:text="Coral Ranking Point"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/didShallowCageAttemptCB" />
 
         <Button
             android:id="@+id/finishedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="512dp"
+            android:layout_marginTop="36dp"
             android:onClick="confirmTypes"
             android:text="Finished"
+            android:textSize="100sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/generatorSwitchText" />
+            app:layout_constraintTop_toBottomOf="@+id/notesET" />
+
+        <Spinner
+            android:id="@+id/finalLWTSpinner"
+            android:layout_width="400dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/outcomes"
+            android:theme="@style/customSpinnerItemStyle"
+            app:layout_constraintStart_toEndOf="@+id/lowerCellsText10"
+            app:layout_constraintTop_toBottomOf="@+id/yellowCard2CB" />
+
+        <EditText
+            android:id="@+id/finalAllianceScoreInt"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="40sp"
+            app:layout_constraintStart_toEndOf="@+id/lowerCellsText11"
+            app:layout_constraintTop_toBottomOf="@+id/finalLWTSpinner" />
+
+        <CheckBox
+            android:id="@+id/yellowCard2CB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text="  Yellow Card"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coralRPCB" />
+
+        <CheckBox
+            android:id="@+id/yellowCard1CB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text=" "
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/yellowCard2CB" />
+
+        <EditText
+            android:id="@+id/notesET"
+            android:layout_width="692dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Notes (optional)..."
+            android:inputType="textMultiLine"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finalAllianceScoreInt" />
+
+        <TextView
+            android:id="@+id/lowerCellsText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Outcome"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/finalLWTSpinner" />
+
+        <TextView
+            android:id="@+id/lowerCellsText11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Score"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.31"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/finalAllianceScoreInt" />
+
+        <CheckBox
+            android:id="@+id/autoRPCB"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:minHeight="48dp"
+            android:text="Auto Ranking Point"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finalStateSpinner" />
 
         <TextView
             android:id="@+id/endgameText"
@@ -28,95 +266,53 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Endgame Period"
-            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/generatorSwitchText"
+        <CheckBox
+            android:id="@+id/robotBrokeDownCB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Generator Switch"
-            android:textColor="@android:color/black"
+            android:layout_marginTop="24dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text="  Broke Down"
             android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/endgameText" />
 
-        <Space
-            android:layout_width="7dp"
-            android:layout_height="635dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/endgameText" />
-
         <CheckBox
-            android:id="@+id/endgameParkedCB"
-            android:layout_width="128dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="20dp"
-            android:text="Parked"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/generatorSwitchText" />
-
-        <CheckBox
-            android:id="@+id/endgameHangingCB"
-            android:layout_width="124dp"
+            android:id="@+id/blockedHangCB"
+            android:layout_width="200dp"
             android:layout_height="38dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Hanging"
+            android:text="Blocked Hang"
             android:textSize="24sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/endgameParkedCB" />
+            app:layout_constraintTop_toBottomOf="@+id/robotBrokeDownCB" />
 
-        <CheckBox
-            android:id="@+id/endgameSupportingMechanismCB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Supporting Mechanism"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/endgameHangingCB" />
-
-        <CheckBox
-            android:id="@+id/endgameLevelCB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Level"
-            android:textColor="@android:color/black"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="385dp"
+            android:layout_height="60dp"
+            android:text="Scored at least one coral in AUTO \n + Left starting zone"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/bargeRPCB"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/endgameSupportingMechanismCB" />
-
-        <EditText
-            android:id="@+id/gameNotes"
-            android:layout_width="337dp"
-            android:layout_height="203dp"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="Notes (optional)..."
-            android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/endgameLevelCB" />
+            app:layout_constraintTop_toTopOf="@+id/autoRPCB"
+            app:layout_constraintVertical_bias="0.382" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
