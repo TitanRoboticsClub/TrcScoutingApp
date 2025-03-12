@@ -77,8 +77,8 @@ public class MatchInfo implements Serializable
     @SerializedName("teleopHumanNet")
     public Integer teleopHumanNet;
 
-    @SerializedName("teleopHumanMissedNet")
-    public Integer teleopHumanMissedNet;
+    @SerializedName("teleopRemovedAlgae")
+    public Integer teleopRemovedAlgae;
 
     @SerializedName("teleopProcessor")
     public Integer teleopProcessor;
@@ -196,7 +196,7 @@ public class MatchInfo implements Serializable
 
     public String getCsvString()
     {
-        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopHumanNet,teleopHumanMissedNet,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgaeProcessor,teleopMissedAlgaeNet,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
+        CsvOrder csvOrder = new CsvOrder(matchNumber,teamNumber,matchType,alliance,leftStartingZone,autoTrough,autoL2branch,autoL3branch,autoL4branch,autoProcessor,autoNet,autoMissedCoral,autoMissedAlgae,teleopTrough,teleopPickedFromFloor,teleopPickedFromStation,teleopL2,teleopL3,teleopL4,teleopHumanNet,teleopRemovedAlgae,teleopProcessor,teleopNet,teleopMissedCoral,teleopMissedAlgaeProcessor,teleopMissedAlgaeNet,minorFoul,majorFoul,coopBonus,playstyle,finalState,didShallowCageAttempt,didDeepCageAttempt,autoRP,coralRP,bargeRP,robotBrokeDown,yellowCard1,yellowCard2,finalAllianceScore,finalWLT,notes);
         return csvOrder.csvString;
     }
 

@@ -23,7 +23,7 @@ public class TeleOpFragment extends AbstractPageFragment
     private NumberPicker teleopL3Counter;
     private NumberPicker teleopL4Counter;
     private NumberPicker teleopHumanNetCounter;
-    private NumberPicker teleopHumanMissedNetCounter;
+    private NumberPicker teleopRemovedAlgaeCounter;
     private NumberPicker teleopProcessorCounter;
     private NumberPicker teleopNetCounter;
     private NumberPicker teleopMissedCoralCounter;
@@ -45,7 +45,7 @@ public class TeleOpFragment extends AbstractPageFragment
         teleopL3Counter = (NumberPicker) view.findViewById(R.id.teleopL3Counter);
         teleopL4Counter = (NumberPicker) view.findViewById(R.id.teleopL4Counter);
         teleopHumanNetCounter = (NumberPicker) view.findViewById(R.id.teleopHumanNetCounter);
-        teleopHumanMissedNetCounter = (NumberPicker) view.findViewById(R.id.teleopHumanMissedNetCounter);
+        teleopRemovedAlgaeCounter = (NumberPicker) view.findViewById(R.id.teleopRemovedAlgaeCounter);
         teleopProcessorCounter = (NumberPicker) view.findViewById(R.id.teleopProcessorCounter);
         teleopNetCounter = (NumberPicker) view.findViewById(R.id.teleopNetCounter);
         teleopMissedCoralCounter = (NumberPicker) view.findViewById(R.id.teleopMissedCoralCounter);
@@ -81,8 +81,8 @@ public class TeleOpFragment extends AbstractPageFragment
         if (fieldData.has("teleopHumanNet")) {
             UIUtils.setNumberPickerVal(teleopHumanNetCounter, fieldData.getInt("teleopHumanNet"));
         }
-        if (fieldData.has("teleopHumanMissedNet")) {
-            UIUtils.setNumberPickerVal(teleopHumanMissedNetCounter, fieldData.getInt("teleopHumanMissedNet"));
+        if (fieldData.has("teleopRemovedAlgae")) {
+            UIUtils.setNumberPickerVal(teleopRemovedAlgaeCounter, fieldData.getInt("teleopRemovedAlgae"));
         }
         if (fieldData.has("teleopProcessor")) {
             UIUtils.setNumberPickerVal(teleopProcessorCounter, fieldData.getInt("teleopProcessor"));
@@ -126,7 +126,7 @@ public class TeleOpFragment extends AbstractPageFragment
             data.put("teleopL3", teleopL3Counter.getValue());
             data.put("teleopL4", teleopL4Counter.getValue());
             data.put("teleopHumanNet", teleopHumanNetCounter.getValue());
-            data.put("teleopHumanMissedNet", teleopHumanMissedNetCounter.getValue());
+            data.put("teleopRemovedAlgae", teleopRemovedAlgaeCounter.getValue());
             data.put("teleopProcessor", teleopProcessorCounter.getValue());
             data.put("teleopNet", teleopNetCounter.getValue());
             data.put("teleopMissedCoral", teleopMissedCoralCounter.getValue());

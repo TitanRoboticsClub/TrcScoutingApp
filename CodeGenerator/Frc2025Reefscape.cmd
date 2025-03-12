@@ -21,7 +21,7 @@ field add teleopL2 int
 field add teleopL3 int
 field add teleopL4 int
 field add teleopHumanNet int
-field add teleopHumanMissedNet int
+field add teleopRemovedAlgae int
 field add teleopProcessor int
 field add teleopNet int
 field add teleopMissedCoral int
@@ -73,7 +73,7 @@ csv map 17 teleopL2
 csv map 18 teleopL3
 csv map 19 teleopL4
 csv map 20 teleopHumanNet
-csv map 21 teleopHumanMissedNet
+csv map 21 teleopRemovedAlgae
 csv map 22 teleopProcessor
 csv map 23 teleopNet
 csv map 24 teleopMissedCoral
@@ -122,7 +122,7 @@ elements add teleopL2Counter numberpicker teleopL2
 elements add teleopL3Counter numberpicker teleopL3
 elements add teleopL4Counter numberpicker teleopL4
 elements add teleopHumanNetCounter numberpicker teleopHumanNet
-elements add teleopHumanMissedNetCounter numberpicker teleopHumanMissedNet
+elements add teleopRemovedAlgaeCounter numberpicker teleopRemovedAlgae
 elements add teleopProcessorCounter numberpicker teleopProcessor
 elements add teleopNetCounter numberpicker teleopNet
 elements add teleopMissedCoralCounter numberpicker teleopMissedCoral
@@ -145,7 +145,7 @@ elements add yellowCard2CB checkbox yellowCard2
 elements add finalAllianceScoreInt edittext finalAllianceScore
 elements add finalLWTSpinner spinner finalWLT
 elements add notesET edittext notes
-appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Human Net,Teleop Human Missed Net,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae Processor,Teleop Missed Algae Net,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
+appinfo set csv_header "Match Number,Team Number,Match Type,Alliance,Left Starting Zone,Auto Trough,Auto L2 Branch,Auto L3 Branch,Auto L4 Branch,Auto Processor,Auto Net,Auto Missed Coral,Auto Missed Algae,Teleop Trough,Teleop Picked From Floor,Teleop Picked From Station,Teleop L2,Teleop L3,Teleop L4,Teleop Human Net,Teleop Removed Algae,Teleop Processor,Teleop Net,Teleop Missed Coral,Teleop Missed Algae Processor,Teleop Missed Algae Net,Minor Foul,Major Foul,Coop Bonus,Playstyle,Final State,Shallow Cage Attempt,Deep Cage Attempt,Auto RP,Coral RP,Barge RP,Robot Broke Down,Yellow Card 1,Yellow Card 2,Final Alliance Score,Final WLT,Notes"
 appinfo set year_number 2025
 generatecode
 
